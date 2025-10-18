@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Campus DineHub</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="https://kit.fontawesome.com/42f44dae01.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Navigation -->
+<nav>
+    <div class="logo">
+        <a href="index.html"><h2><i class="fa-solid fa-utensils"></i> Campus DineHub</h2></a>
+    </div>
+
+    <div class="nav-links">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html" class="active">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="cart-btn" class="btn-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </button>
+            <button id="order-btn" class="btn-primary">Order Now</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Menu Header -->
+<section class="menu-header">
+    <div class="container">
+        <h1>Our Menu</h1>
+        <p>Discover delicious meals prepared fresh daily on campus</p>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for meals...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+</section>
+
+<!-- Menu Filters -->
+<section class="menu-filters">
+    <div class="container">
+        <div class="filter-categories">
+            <button class="filter-btn active" data-category="all">All Items</button>
+            <button class="filter-btn" data-category="main">Main Courses</button>
+            <button class="filter-btn" data-category="salad">Salads</button>
+            <button class="filter-btn" data-category="snack">Snacks</button>
+            <button class="filter-btn" data-category="breakfast">Breakfast</button>
+            <button class="filter-btn" data-category="vegetarian">Vegetarian</button>
+            <button class="filter-btn" data-category="beverages">Beverages</button>
+        </div>
+
+        <div class="filter-sort">
+            <label for="sort-select">Sort by:</label>
+            <select id="sort-select">
+                <option value="name">Name</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="popular">Most Popular</option>
+            </select>
+        </div>
+    </div>
+</section>
+
+<!-- Menu Grid -->
+<section class="menu-grid-section">
+    <div class="container">
+        <div class="menu-stats">
+            <span id="items-count">0</span> items found
+        </div>
+
+        <div class="menu-grid" id="menu-container">
+            <!-- Menu items will be loaded dynamically -->
+        </div>
+
+        <div class="load-more">
+            <button id="load-more-btn" class="btn-secondary">Load More</button>
+        </div>
+    </div>
+</section>
+
+<!-- Cart Sidebar -->
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button id="close-cart" class="close-btn">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+        <!-- Cart items will be loaded dynamically -->
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total">R0.00</span>
+        </div>
+        <button id="checkout-btn" class="btn-primary">Checkout</button>
+        <button id="clear-cart" class="btn-text">Clear Cart</button>
+    </div>
+</div>
+
+<!-- Meal Modal -->
+<div id="meal-modal" class="meal-modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div id="meal-modal-content">
+            <!-- Meal details will be loaded dynamically -->
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fa-solid fa-utensils"></i> Campus DineHub</h3>
+                <p>Your campus food solution for delicious, affordable meals delivered fast.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Student Center, Campus</p>
+                <p><i class="fa-solid fa-phone"></i> (012) 345-6789</p>
+                <p><i class="fa-solid fa-envelope"></i> info@campusdinehub.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Opening Hours</h4>
+                <p>Monday - Friday: 7:00 AM - 8:00 PM</p>
+                <p>Saturday: 8:00 AM - 6:00 PM</p>
+                <p>Sunday: 9:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copy">
+                <p>&copy; <span id="year"></span> Campus DineHub. All rights reserved.</p>
+            </div>
+            <div class="policy">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="JS/menu.js"></script>
+</body>
+</html>

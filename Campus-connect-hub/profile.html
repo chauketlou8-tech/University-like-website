@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Campus Connect Hub</title>
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-university"></i>
+                <h1>Campus <span>Connect</span> Hub</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="clubs&societies.html">Clubs & Societies</a>
+                <a href="resources.html">Student Resources</a>
+                <a href="forum.html">Forum</a>
+                <a href="profile.html" class="active" style="padding: 0.75rem">Profile</a>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Profile Hero -->
+<section class="profile-hero">
+    <div class="container">
+        <div class="profile-header">
+            <div class="profile-image-section">
+                <div class="profile-image-container">
+                    <img src="#" id="profile-image" alt="Profile Picture" class="profile-image">
+                    <div class="profile-image-overlay">
+                        <label for="profile-upload" class="upload-btn">
+                            <i class="fas fa-camera"></i>
+                            Change Photo
+                        </label>
+                        <input type="file" id="profile-upload" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+            </div>
+            <div class="profile-info">
+                <h1 id="profile-name">Loading...</h1>
+                <p class="profile-title" id="profile-title">Student at Campus University</p>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <span class="number" id="events-count">0</span>
+                        <span class="label">Events</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number" id="clubs-count">0</span>
+                        <span class="label">Clubs</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number" id="posts-count">0</span>
+                        <span class="label">Posts</span>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn-primary" id="edit-profile-btn">
+                        <i class="fas fa-edit"></i> Edit Profile
+                    </button>
+                    <button class="btn-secondary" id="settings-btn">
+                        <i class="fas fa-cog"></i> Settings
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Profile Content -->
+<section class="profile-content">
+    <div class="container">
+        <div class="profile-grid">
+            <!-- Left Column -->
+            <div class="profile-left">
+                <!-- About Section -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <h3>About Me</h3>
+                        <button class="btn-edit" data-section="about">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <p id="about-text">I am a computer science major interested in web development. The coding languages I use are HTML, CSS, JavaScript and Python. In my free time, I like playing music and chilling with friends.</p>
+                    </div>
+                </div>
+
+                <!-- Interests & Skills -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <h3>Interests & Skills</h3>
+                        <button class="btn-edit" data-section="interests">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <div class="tags-container" id="interests-tags">
+                            <span class="tag">Web Development</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Music</span>
+                            <span class="tag">Photography</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <h3>Contact Information</h3>
+                        <button class="btn-edit" data-section="contact">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span id="contact-email">loading@example.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span id="contact-phone">+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="contact-location">Campus University</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="profile-right">
+                <!-- Quick Stats -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <h3>My Activity</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="activity-stats">
+                            <div class="activity-item">
+                                <div class="activity-icon upcoming">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <div class="activity-info">
+                                    <span class="activity-count" id="upcoming-events">2</span>
+                                    <span class="activity-label">Upcoming Events</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon clubs">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="activity-info">
+                                    <span class="activity-count" id="my-clubs">3</span>
+                                    <span class="activity-label">My Clubs</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon posts">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <div class="activity-info">
+                                    <span class="activity-count" id="forum-posts">12</span>
+                                    <span class="activity-label">Forum Posts</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Events -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <h3>My Upcoming Events</h3>
+                        <a href="events.html" class="view-all">View All</a>
+                    </div>
+                    <div class="card-content">
+                        <div class="events-list" id="upcoming-events-list">
+                            <!-- Events will be loaded by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My Clubs -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <h3>My Clubs</h3>
+                        <a href="clubs&societies.html" class="view-all">View All</a>
+                    </div>
+                    <div class="card-content">
+                        <div class="clubs-list" id="my-clubs-list">
+                            <!-- Clubs will be loaded by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Edit Profile Modal -->
+<div id="edit-profile-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Edit Profile</h2>
+        <form id="edit-profile-form">
+            <div class="form-group">
+                <label for="edit-name">Full Name</label>
+                <input type="text" id="edit-name" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-major">Major</label>
+                <input type="text" id="edit-major" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-year">Academic Year</label>
+                <select id="edit-year" required>
+                    <option value="freshman">First Year</option>
+                    <option value="sophomore">Second Year</option>
+                    <option value="junior">Third Year</option>
+                    <option value="senior">Fourth Year</option>
+                    <option value="graduate">Graduate Student</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="edit-pronouns">Pronouns</label>
+                <input type="text" id="edit-pronouns" placeholder="e.g., He/Him, She/Her, They/Them">
+            </div>
+            <div class="form-group">
+                <label for="edit-about">About Me</label>
+                <textarea id="edit-about" rows="4" placeholder="Tell us about yourself..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="edit-interests">Interests & Skills</label>
+                <textarea id="edit-interests" rows="3" placeholder="Enter your interests and skills separated by commas (e.g., Web Development, JavaScript, Photography)"></textarea>
+                <small class="form-hint">Separate each interest with a comma</small>
+            </div>
+            <div class="form-actions">
+                <button type="button" class="btn-secondary" id="cancel-edit">Cancel</button>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-check"></i> Done
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-university"></i>
+                    <h2>Campus <span>Connect</span> Hub</h2>
+                </div>
+                <p>Your personal campus profile and activity center</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="clubs&societies.html">Clubs</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Account</h3>
+                <ul>
+                    <li><a href="#">Privacy Settings</a></li>
+                    <li><a href="#">Notification Preferences</a></li>
+                    <li><a href="#">Connected Accounts</a></li>
+                    <li><a href="#">Download Data</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Need Help?</h3>
+                <p>Contact support for profile assistance</p>
+                <form class="support-form">
+                    <label><textarea placeholder="Describe your issue..."></textarea></label>
+                    <button type="submit">Contact Support</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Accessibility</a>
+            </div>
+            <p>&copy; <span id="current-year"></span> Campus Connect Hub. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="JS/profile.js"></script>
+</body>
+</html>

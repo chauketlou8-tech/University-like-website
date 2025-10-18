@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Campus DineHub</title>
+    <link rel="stylesheet" href="css/order.css">
+    <script src="https://kit.fontawesome.com/42f44dae01.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Navigation -->
+<nav>
+    <div class="logo">
+        <a href="index.html"><h2><i class="fa-solid fa-utensils"></i> Campus DineHub</h2></a>
+    </div>
+
+    <div class="nav-links">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html" class="active">Order</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="cart-btn" class="btn-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Order Header -->
+<section class="order-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="menu.html">Menu</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Checkout</span>
+        </div>
+        <h1>Checkout</h1>
+        <p>Review your order and complete your purchase</p>
+    </div>
+</section>
+
+<!-- Order Progress -->
+<section class="order-progress">
+    <div class="container">
+        <div class="progress-steps">
+            <div class="step active">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    <span class="step-title">Cart</span>
+                    <span class="step-subtitle">Review Items</span>
+                </div>
+            </div>
+            <div class="step active">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                    <span class="step-title">Details</span>
+                    <span class="step-subtitle">Your Information</span>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                    <span class="step-title">Payment</span>
+                    <span class="step-subtitle">Secure Checkout</span>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-text">
+                    <span class="step-title">Confirmation</span>
+                    <span class="step-subtitle">Order Complete</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Order Content -->
+<section class="order-content">
+    <div class="container">
+        <div class="order-layout">
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <div class="summary-header">
+                    <h2>Order Summary</h2>
+                    <a href="menu.html" class="btn-text">
+                        <i class="fa-solid fa-plus"></i> Add More Items
+                    </a>
+                </div>
+
+                <div class="order-items" id="order-items">
+                    <!-- Order items will be loaded dynamically -->
+                </div>
+
+                <div class="order-totals">
+                    <div class="total-line">
+                        <span>Subtotal</span>
+                        <span id="subtotal">R0.00</span>
+                    </div>
+                    <div class="total-line">
+                        <span>Service Fee</span>
+                        <span id="service-fee">R0.00</span>
+                    </div>
+                    <div class="total-line discount-line">
+                        <span>Student Discount (10%)</span>
+                        <span id="discount">-R0.00</span>
+                    </div>
+                    <div class="total-line grand-total">
+                        <span>Total</span>
+                        <span id="grand-total">R0.00</span>
+                    </div>
+                </div>
+
+                <div class="promo-code">
+                    <input type="text" id="promo-input" placeholder="Enter promo code">
+                    <button id="apply-promo" class="btn-secondary">Apply</button>
+                </div>
+            </div>
+
+            <!-- Checkout Form -->
+            <div class="checkout-form">
+                <form id="order-form">
+                    <!-- Delivery Information -->
+                    <div class="form-section">
+                        <h3>Delivery Information</h3>
+
+                        <div class="form-group">
+                            <label>Delivery Option</label>
+                            <div class="delivery-options">
+                                <label class="option-card">
+                                    <input type="radio" name="delivery-option" value="pickup" checked>
+                                    <div class="option-content">
+                                        <i class="fa-solid fa-store"></i>
+                                        <div>
+                                            <strong>Campus Pickup</strong>
+                                            <span>Pick up from selected location</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="delivery-option" value="delivery">
+                                    <div class="option-content">
+                                        <i class="fa-solid fa-motorcycle"></i>
+                                        <div>
+                                            <strong>Delivery</strong>
+                                            <span>Deliver to my location (R15.00)</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="pickup-location">Pickup Location</label>
+                                <select id="pickup-location" name="pickup-location">
+                                    <option value="">Select location</option>
+                                    <option value="library">Main Library</option>
+                                    <option value="student-center">Student Center</option>
+                                    <option value="science-building">Science Building</option>
+                                    <option value="arts-building">Arts Building</option>
+                                    <option value="sports-complex">Sports Complex</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="delivery-time">Preferred Time</label>
+                                <select id="delivery-time" name="delivery-time">
+                                    <option value="asap">As soon as possible</option>
+                                    <option value="30min">In 30 minutes</option>
+                                    <option value="45min">In 45 minutes</option>
+                                    <option value="60min">In 1 hour</option>
+                                    <option value="custom">Custom time</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Information -->
+                    <div class="form-section">
+                        <h3>Personal Information</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First Name *</label>
+                                <input type="text" id="first-name" name="first-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name *</label>
+                                <input type="text" id="last-name" name="last-name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="student-id">Student ID *</label>
+                                <input type="text" id="student-id" name="student-id" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <!-- Delivery Address (only for delivery option) -->
+                    <div class="form-section delivery-address" style="display: none;">
+                        <h3>Delivery Address</h3>
+
+                        <div class="form-group">
+                            <label for="residence">Campus Residence *</label>
+                            <select id="residence" name="residence">
+                                <option value="">Select residence</option>
+                                <option value="residence-a">Residence A</option>
+                                <option value="residence-b">Residence B</option>
+                                <option value="residence-c">Residence C</option>
+                                <option value="residence-d">Residence D</option>
+                                <option value="off-campus">Off Campus</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="room-number">Room Number</label>
+                            <input type="text" id="room-number" name="room-number" placeholder="e.g., Room 205">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="delivery-notes">Delivery Notes</label>
+                            <textarea id="delivery-notes" name="delivery-notes" rows="3" placeholder="Any special delivery instructions..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="form-section">
+                        <h3>Payment Method</h3>
+
+                        <div class="payment-options">
+                            <label class="payment-card">
+                                <input type="radio" name="payment-method" value="card" checked>
+                                <div class="payment-content">
+                                    <i class="fa-solid fa-credit-card"></i>
+                                    <span>Credit/Debit Card</span>
+                                </div>
+                            </label>
+                            <label class="payment-card">
+                                <input type="radio" name="payment-method" value="mobile">
+                                <div class="payment-content">
+                                    <i class="fa-solid fa-mobile-screen"></i>
+                                    <span>Mobile Payment</span>
+                                </div>
+                            </label>
+                            <label class="payment-card">
+                                <input type="radio" name="payment-method" value="cash">
+                                <div class="payment-content">
+                                    <i class="fa-solid fa-money-bill-wave"></i>
+                                    <span>Cash on Pickup</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Card Details (only for card payment) -->
+                        <div class="card-details" id="card-details">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="card-number">Card Number *</label>
+                                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiry-date">Expiry Date *</label>
+                                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV *</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="123">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="card-name">Name on Card *</label>
+                                <input type="text" id="card-name" name="card-name">
+                            </div>
+                        </div>
+
+                        <!-- Mobile Payment Details -->
+                        <div class="mobile-details" id="mobile-details" style="display: none;">
+                            <div class="form-group">
+                                <label for="mobile-provider">Mobile Provider</label>
+                                <select id="mobile-provider" name="mobile-provider">
+                                    <option value="">Select provider</option>
+                                    <option value="mpesa">M-Pesa</option>
+                                    <option value="airtel">Airtel Money</option>
+                                    <option value="mtn">MTN Mobile Money</option>
+                                    <option value="vodacom">Vodacom M-Pesa</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile-number">Mobile Number</label>
+                                <input type="tel" id="mobile-number" name="mobile-number" placeholder="07XX XXX XXX">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Conditions -->
+                    <div class="form-section">
+                        <div class="terms-agreement">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms-agree" name="terms-agree" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a> *
+                            </label>
+
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Send me special offers and updates (optional)
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-actions">
+                        <button type="button" id="back-to-menu" class="btn-secondary">
+                            <i class="fa-solid fa-arrow-left"></i> Back to Menu
+                        </button>
+                        <button type="submit" id="place-order-btn" class="btn-primary">
+                            Place Order <i class="fa-solid fa-lock"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Order Confirmation Modal -->
+<div id="order-confirmation" class="confirmation-modal">
+    <div class="modal-content">
+        <div class="confirmation-header">
+            <i class="fa-solid fa-circle-check"></i>
+            <h2>Order Confirmed!</h2>
+            <p>Thank you for your order</p>
+        </div>
+
+        <div class="confirmation-details">
+            <div class="order-number">
+                <strong>Order #:</strong>
+                <span id="confirmed-order-number">CDH-123456</span>
+            </div>
+            <div class="estimated-time">
+                <strong>Estimated Ready:</strong>
+                <span id="estimated-ready-time">20 minutes</span>
+            </div>
+            <div class="pickup-location">
+                <strong>Pickup Location:</strong>
+                <span id="confirmed-pickup-location">Student Center</span>
+            </div>
+            <div class="order-total-confirm">
+                <strong>Total Paid:</strong>
+                <span id="confirmed-total">R0.00</span>
+            </div>
+        </div>
+
+        <div class="confirmation-actions">
+            <button id="view-order-status" class="btn-primary">View Order Status</button>
+            <button id="new-order" class="btn-secondary">Place New Order</button>
+        </div>
+
+        <div class="confirmation-note">
+            <p><i class="fa-solid fa-envelope"></i> A confirmation email has been sent to your student email</p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fa-solid fa-utensils"></i> Campus DineHub</h3>
+                <p>Your campus food solution for delicious, affordable meals delivered fast.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Student Center, Campus</p>
+                <p><i class="fa-solid fa-phone"></i> (012) 345-6789</p>
+                <p><i class="fa-solid fa-envelope"></i> info@campusdinehub.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Order Tracking</a></li>
+                    <li><a href="#">Contact Support</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copy">
+                <p>&copy; 2023 Campus DineHub. All rights reserved.</p>
+            </div>
+            <div class="policy">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Cart Sidebar -->
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button id="close-cart" class="close-btn">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+        <!-- Cart items will be loaded dynamically -->
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total">R0.00</span>
+        </div>
+        <button id="checkout-btn" class="btn-primary">Checkout</button>
+        <button id="clear-cart" class="btn-text">Clear Cart</button>
+    </div>
+</div>
+
+<script src="JS/order.js"></script>
+</body>
+</html>

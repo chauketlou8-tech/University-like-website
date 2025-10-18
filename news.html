@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stay updated with the latest news and events from our University">
+    <title>University Website - News & Events</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/news.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/42f44dae01.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Header Section -->
+<header class="header" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="University Logo - Return to homepage" class="logo">
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+
+            <div class="nav-links" id="navLinks" role="navigation" aria-label="Main menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="departments.html" class="nav-link">Departments</a></li>
+                    <li><a href="admissions.html" class="nav-link">Admission</a></li>
+                    <li><a href="courses.html" class="nav-link">Courses</a></li>
+                    <li><a href="news.html" class="nav-link active" aria-current="page">News</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="news-hero">
+        <div class="container">
+            <h1>University News & Events</h1>
+            <p>Stay informed about the latest developments, achievements, and upcoming events across our campus community.</p>
+            <div class="hero-actions">
+                <a href="#news-grid" class="btn btn-primary">Latest News</a>
+                <a href="#events" class="btn btn-secondary">Upcoming Events</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- News Filter Section -->
+<section class="news-filter" aria-labelledby="filter-heading">
+    <div class="container">
+        <h2 class="sr-only" id="filter-heading">News Filter Options</h2>
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="category-filter">Category</label>
+                <select id="category-filter" class="filter-select">
+                    <option value="all">All Categories</option>
+                    <option value="academic">Academic</option>
+                    <option value="research">Research</option>
+                    <option value="campus">Campus Life</option>
+                    <option value="sports">Sports</option>
+                    <option value="alumni">Alumni</option>
+                    <option value="events">Events</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="date-filter">Time Period</label>
+                <select id="date-filter" class="filter-select">
+                    <option value="all">All Time</option>
+                    <option value="week">Past Week</option>
+                    <option value="month">Past Month</option>
+                    <option value="year">Past Year</option>
+                </select>
+            </div>
+
+            <div class="search-box">
+                <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                <label><input type="text" id="news-search" class="search-input" placeholder="Search news..."></label>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured News Section -->
+<section class="featured-news" aria-labelledby="featured-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="featured-heading">Featured Stories</h2>
+            <p class="section-subtitle">Highlighting the most important news from our university</p>
+        </div>
+
+        <div class="featured-grid">
+            <article class="featured-card featured-main">
+                <div class="featured-image">
+                    <img src="images/featured-news-1.png" alt="University researchers in laboratory">
+                </div>
+                <div class="featured-content">
+                    <span class="news-category research">Research</span>
+                    <h3 class="featured-title">Breakthrough in Renewable Energy Research</h3>
+                    <p class="featured-excerpt">Our engineering department has developed a new solar cell technology that could revolutionize renewable energy efficiency by 40%.</p>
+                    <div class="news-meta">
+                        <time datetime="2024-04-10">April 10, 2024</time>
+                        <span class="read-time">5 min read</span>
+                    </div>
+                    <a href="news-article.html" class="btn btn-primary">Read Full Story</a>
+                </div>
+            </article>
+
+            <div class="featured-sidebar">
+                <article class="featured-card featured-side">
+                    <div class="featured-image">
+                        <img src="images/featured-news-2.png" alt="Students participating in community service">
+                    </div>
+                    <div class="featured-content">
+                        <span class="news-category campus">Campus Life</span>
+                        <h4 class="featured-title">Students Lead Community Outreach Program</h4>
+                        <div class="news-meta">
+                            <time datetime="2024-04-08">April 8, 2024</time>
+                            <span class="read-time">3 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="featured-card featured-side">
+                    <div class="featured-image">
+                        <img src="images/featured-news-3.png" alt="Basketball team celebrating victory">
+                    </div>
+                    <div class="featured-content">
+                        <span class="news-category sports">Sports</span>
+                        <h4 class="featured-title">University Team Wins Regional Championship</h4>
+                        <div class="news-meta">
+                            <time datetime="2024-04-05">April 5, 2024</time>
+                            <span class="read-time">4 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- News Grid Section -->
+<section class="news-section" aria-labelledby="news-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="news-heading">Latest News</h2>
+            <p class="section-subtitle">All the recent updates from across the university</p>
+        </div>
+
+        <div class="news-grid" id="news-grid">
+            <!-- Academic News -->
+            <article class="news-card" data-category="academic" data-date="2024-04-12">
+                <div class="news-image">
+                    <img src="images/news-1.png" alt="Professor teaching in classroom">
+                </div>
+                <div class="news-content">
+                    <span class="news-category academic">Academic</span>
+                    <h3 class="news-title">New Interdisciplinary Program Launched</h3>
+                    <p class="news-excerpt">The university introduces a new Data Science and Ethics program combining computer science with philosophy and social sciences.</p>
+                    <div class="news-meta">
+                        <time datetime="2024-04-12">April 12, 2024</time>
+                        <span class="read-time">4 min read</span>
+                    </div>
+                    <a href="news-article.html" class="news-link">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card" data-category="research" data-date="2024-04-09">
+                <div class="news-image">
+                    <img src="images/news-2.png" alt="Scientist working in lab">
+                </div>
+                <div class="news-content">
+                    <span class="news-category research">Research</span>
+                    <h3 class="news-title">$2M Grant Awarded for Climate Research</h3>
+                    <p class="news-excerpt">Our environmental science department receives major funding to study climate change impacts on coastal communities.</p>
+                    <div class="news-meta">
+                        <time datetime="2024-04-09">April 9, 2024</time>
+                        <span class="read-time">5 min read</span>
+                    </div>
+                    <a href="news-article.html" class="news-link">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card" data-category="campus" data-date="2024-04-07">
+                <div class="news-image">
+                    <img src="images/news-3.png" alt="New campus building">
+                </div>
+                <div class="news-content">
+                    <span class="news-category campus">Campus Life</span>
+                    <h3 class="news-title">New Student Center Opening in Fall 2024</h3>
+                    <p class="news-excerpt">State-of-the-art facility will provide enhanced spaces for student activities, dining, and collaborative learning.</p>
+                    <div class="news-meta">
+                        <time datetime="2024-04-07">April 7, 2024</time>
+                        <span class="read-time">3 min read</span>
+                    </div>
+                    <a href="news-article.html" class="news-link">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card" data-category="alumni" data-date="2024-04-04">
+                <div class="news-image">
+                    <img src="images/news-4.png" alt="Alumni award ceremony">
+                </div>
+                <div class="news-content">
+                    <span class="news-category alumni">Alumni</span>
+                    <h3 class="news-title">Distinguished Alumni Awards 2024</h3>
+                    <p class="news-excerpt">Celebrating the outstanding achievements of our graduates in various fields including technology, arts, and public service.</p>
+                    <div class="news-meta">
+                        <time datetime="2024-04-04">April 4, 2024</time>
+                        <span class="read-time">6 min read</span>
+                    </div>
+                    <a href="news-article.html" class="news-link">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card" data-category="sports" data-date="2024-04-02">
+                <div class="news-image">
+                    <img src="images/news-5.png" alt="Swimming competition">
+                </div>
+                <div class="news-content">
+                    <span class="news-category sports">Sports</span>
+                    <h3 class="news-title">Swimming Team Breaks Three Records</h3>
+                    <p class="news-excerpt">University athletes set new conference records in freestyle and butterfly events during the regional championships.</p>
+                    <div class="news-meta">
+                        <time datetime="2024-04-02">April 2, 2024</time>
+                        <span class="read-time">3 min read</span>
+                    </div>
+                    <a href="news-article.html" class="news-link">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card" data-category="academic" data-date="2024-03-30">
+                <div class="news-image">
+                    <img src="images/news-6.png" alt="International students on campus">
+                </div>
+                <div class="news-content">
+                    <span class="news-category academic">Academic</span>
+                    <h3 class="news-title">International Student Enrollment Reaches Record High</h3>
+                    <p class="news-excerpt">University welcomes students from 65 countries, strengthening our global community and cultural diversity on campus.</p>
+                    <div class="news-meta">
+                        <time datetime="2024-03-30">March 30, 2024</time>
+                        <span class="read-time">4 min read</span>
+                    </div>
+                    <a href="news-article.html" class="news-link">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </article>
+        </div>
+
+        <div class="no-results" id="no-results" style="display: none;">
+            <div class="no-results-content">
+                <i class="fas fa-newspaper fa-3x" aria-hidden="true"></i>
+                <h3>No news articles found</h3>
+                <p>Try adjusting your filters or search terms</p>
+                <button id="reset-filters" class="btn btn-primary">Reset All Filters</button>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <span class="pagination-ellipsis">...</span>
+            <button class="pagination-btn">Next <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- Events Section -->
+<section class="events-section" id="events" aria-labelledby="events-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="events-heading">Upcoming Events</h2>
+            <p class="section-subtitle">Join us for these exciting campus events</p>
+        </div>
+
+        <div class="events-timeline">
+            <article class="event-item">
+                <div class="event-date">
+                    <span class="event-day">25</span>
+                    <span class="event-month">APR</span>
+                </div>
+                <div class="event-content">
+                    <h3 class="event-title">Annual Science Symposium</h3>
+                    <p class="event-description">Join us for our annual showcase of student research and innovation across all scientific disciplines.</p>
+                    <div class="event-meta">
+                        <span class="event-time"><i class="far fa-clock" aria-hidden="true"></i> 9:00 AM - 5:00 PM</span>
+                        <span class="event-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Science Building Auditorium</span>
+                    </div>
+                    <a href="#" class="event-register">Register Now</a>
+                </div>
+            </article>
+
+            <article class="event-item">
+                <div class="event-date">
+                    <span class="event-day">20</span>
+                    <span class="event-month">APR</span>
+                </div>
+                <div class="event-content">
+                    <h3 class="event-title">Campus Open House</h3>
+                    <p class="event-description">Prospective students and families are invited to tour our campus and meet with faculty members.</p>
+                    <div class="event-meta">
+                        <span class="event-time"><i class="far fa-clock" aria-hidden="true"></i> 10:00 AM - 3:00 PM</span>
+                        <span class="event-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Main Campus</span>
+                    </div>
+                    <a href="#" class="event-register">Register Now</a>
+                </div>
+            </article>
+
+            <article class="event-item">
+                <div class="event-date">
+                    <span class="event-day">15</span>
+                    <span class="event-month">APR</span>
+                </div>
+                <div class="event-content">
+                    <h3 class="event-title">Guest Lecture Series: Dr. Jane Smith</h3>
+                    <p class="event-description">Renowned author Dr. Jane Smith will discuss the future of literature in the digital age.</p>
+                    <div class="event-meta">
+                        <span class="event-time"><i class="far fa-clock" aria-hidden="true"></i> 2:00 PM - 4:00 PM</span>
+                        <span class="event-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Humanities Building, Room 101</span>
+                    </div>
+                    <a href="#" class="event-register">Register Now</a>
+                </div>
+            </article>
+
+            <article class="event-item">
+                <div class="event-date">
+                    <span class="event-day">05</span>
+                    <span class="event-month">MAY</span>
+                </div>
+                <div class="event-content">
+                    <h3 class="event-title">Spring Music Festival</h3>
+                    <p class="event-description">Annual celebration featuring performances by university music ensembles and student groups.</p>
+                    <div class="event-meta">
+                        <span class="event-time"><i class="far fa-clock" aria-hidden="true"></i> 6:00 PM - 9:00 PM</span>
+                        <span class="event-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> University Amphitheater</span>
+                    </div>
+                    <a href="#" class="event-register">Register Now</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="section-footer">
+            <a href="events.html" class="btn btn-secondary">View All Events</a>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+    <div class="container">
+        <div class="newsletter-content">
+            <div class="newsletter-text">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter to receive the latest news and event updates directly in your inbox.</p>
+            </div>
+            <form class="newsletter-form" id="newsletter-form">
+                <div class="form-group">
+                    <label><input type="email" id="newsletter-email" placeholder="Enter your email address" required></label>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </div>
+                <p class="newsletter-note">By subscribing, you agree to our Privacy Policy</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="../index.html" class="footer-logo">
+                    <img src="images/logo.png" alt="University Logo">
+                </a>
+                <p class="footer-description">Dedicated to excellence in education, research, and community engagement since 1965.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="departments.html">Academic Departments</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="news.html">News & Events</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <address>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 University Ave, City, State 12345</p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> info@university.edu</p>
+                </address>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> University Name. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="JS/news.js"></script>
+</body>
+</html>

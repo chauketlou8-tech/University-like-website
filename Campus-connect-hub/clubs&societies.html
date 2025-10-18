@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubs & Societies - Campus Connect Hub</title>
+    <link rel="stylesheet" href="css/clubs&societies.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-university"></i>
+                <h1>Campus <span>Connect</span> Hub</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="clubs&societies.html" class="active">Clubs & Societies</a>
+                <a href="resources.html">Student Resources</a>
+                <a href="forum.html">Forum</a>
+                <a href="profile.html" class="btn-login" style="padding: 0.75rem">Profile <i class="fas fa-user"></i></a>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Clubs & Societies</h1>
+            <p>Discover and join student organizations that match your interests</p>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <label><input type="text" id="search-input" placeholder="Search clubs by name, category, or interest..."></label>
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Clubs Section -->
+<section class="clubs-section">
+    <div class="container">
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">All Clubs</button>
+            <button class="filter-tab" data-filter="academic">Academic</button>
+            <button class="filter-tab" data-filter="sports">Sports</button>
+            <button class="filter-tab" data-filter="arts">Arts & Culture</button>
+            <button class="filter-tab" data-filter="technology">Technology</button>
+            <button class="filter-tab" data-filter="community">Community Service</button>
+        </div>
+
+        <!-- Clubs Grid -->
+        <div class="clubs-grid" id="clubs-container">
+            <!-- Clubs will be loaded by JavaScript -->
+        </div>
+
+        <!-- No Results Message -->
+        <div id="no-results" class="no-results">
+            <i class="fas fa-users-slash"></i>
+            <h3>No clubs found</h3>
+            <p>Try adjusting your search or filters</p>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more-container">
+            <button id="load-more" class="load-more-btn">Load More Clubs</button>
+        </div>
+    </div>
+</section>
+
+<!-- Create Club CTA -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <div class="cta-text">
+                <h2>Can't find what you're looking for?</h2>
+                <p>Start your own club or society and build your community on campus</p>
+                <div class="cta-features">
+                    <div class="feature">
+                        <i class="fas fa-rocket"></i>
+                        <span>Easy setup process</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <span>Find like-minded students</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <span>Access to funding</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-actions">
+                <button class="btn-primary" id="create-club-btn">Create a Club</button>
+                <button class="btn-secondary">Learn More</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Popular Clubs -->
+<section class="popular-section">
+    <div class="container">
+        <h2>Most Popular Clubs</h2>
+        <div class="popular-grid">
+            <div class="popular-card">
+                <div class="popular-badge">
+                    <i class="fas fa-fire"></i>
+                    Most Active
+                </div>
+                <img src="images/computer-science-club.png" alt="Computer Science Club">
+                <div class="popular-content">
+                    <h3>Computer Science Club</h3>
+                    <p>Join us for coding workshops, hackathons, and tech talks</p>
+                    <div class="club-stats">
+                            <span class="members">
+                                <i class="fas fa-users"></i>
+                                156 members
+                            </span>
+                        <span class="rating">
+                                <i class="fas fa-star"></i>
+                                4.8/5
+                            </span>
+                    </div>
+                    <button class="btn-primary">Join Club</button>
+                </div>
+            </div>
+
+            <div class="popular-card">
+                <div class="popular-badge">
+                    <i class="fas fa-trophy"></i>
+                    Award Winning
+                </div>
+                <img src="images/debate-society.png" alt="Debate Society">
+                <div class="popular-content">
+                    <h3>Debate Society</h3>
+                    <p>Develop public speaking and critical thinking skills</p>
+                    <div class="club-stats">
+                            <span class="members">
+                                <i class="fas fa-users"></i>
+                                89 members
+                            </span>
+                        <span class="rating">
+                                <i class="fas fa-star"></i>
+                                4.9/5
+                            </span>
+                    </div>
+                    <button class="btn-primary">Join Club</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-university"></i>
+                    <h2>Campus <span>Connect</span> Hub</h2>
+                </div>
+                <p>Connecting students with clubs, societies, and campus communities</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="clubs&societies.html">Clubs</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Club Categories</h3>
+                <ul>
+                    <li><a href="#">Academic Clubs</a></li>
+                    <li><a href="#">Sports Clubs</a></li>
+                    <li><a href="#">Arts & Culture</a></li>
+                    <li><a href="#">Technology</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Get Involved</h3>
+                <p>Start your journey with campus communities</p>
+                <form class="newsletter-form">
+                    <label><input type="email" placeholder="Your email address"></label>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Campus Connect Hub. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Create Club Modal -->
+<div id="create-club-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Create New Club</h2>
+        <form id="create-club-form">
+            <div class="form-group">
+                <label for="club-name">Club Name</label>
+                <input type="text" id="club-name" required>
+            </div>
+            <div class="form-group">
+                <label for="club-category">Category</label>
+                <select id="club-category" required>
+                    <option value="">Select Category</option>
+                    <option value="academic">Academic</option>
+                    <option value="sports">Sports</option>
+                    <option value="arts">Arts & Culture</option>
+                    <option value="technology">Technology</option>
+                    <option value="community">Community Service</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="club-description">Description</label>
+                <textarea id="club-description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="club-image">Club Image</label>
+                <div class="image-upload-container">
+                    <div class="image-upload-box" id="image-upload-box">
+                        <i class="fas fa-cloud-upload-alt image-upload-icon"></i>
+                        <p class="image-upload-text">Click to upload club image</p>
+                        <p class="image-upload-hint">Recommended: 400x300px JPG or PNG</p>
+                        <input type="file" id="club-image" accept="image/*" style="display: none;">
+                    </div>
+                    <div class="image-preview" id="image-preview" style="display: none;">
+                        <img id="preview-img" src="" alt="Preview">
+                        <button type="button" class="btn-remove-image" id="remove-image">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="button" class="btn-secondary" id="cancel-club">Cancel</button>
+                <button type="submit" class="btn-primary">Create Club</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="JS/clubs&societies.js"></script>
+</body>
+</html>

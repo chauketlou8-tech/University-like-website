@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Campus DineHub</title>
+    <link rel="stylesheet" href="css/feedback.css">
+    <script src="https://kit.fontawesome.com/42f44dae01.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Navigation -->
+<nav>
+    <div class="logo">
+        <a href="index.html"><h2><i class="fa-solid fa-utensils"></i> Campus DineHub</h2></a>
+    </div>
+
+    <div class="nav-links">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="feedback.html" class="active">Feedback</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="cart-btn" class="btn-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </button>
+            <button id="order-btn" class="btn-primary">Order Now</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Feedback Header -->
+<section class="feedback-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Feedback</span>
+        </div>
+        <h1>Share Your Experience</h1>
+        <p>Your feedback helps us improve our service and create a better campus dining experience</p>
+    </div>
+</section>
+
+<!-- Feedback Overview -->
+<section class="feedback-overview">
+    <div class="container">
+        <div class="overview-grid">
+            <div class="overview-card">
+                <div class="overview-icon">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="overview-content">
+                    <h3 id="average-rating">4.8</h3>
+                    <p>Average Rating</p>
+                    <div class="rating-stars">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <span class="rating-count">(Based on <span id="total-reviews">124</span> reviews)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overview-card">
+                <div class="overview-icon">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                </div>
+                <div class="overview-content">
+                    <h3>94%</h3>
+                    <p>Would Recommend</p>
+                    <div class="recommendation-bar">
+                        <div class="recommendation-fill" style="width: 94%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overview-card">
+                <div class="overview-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="overview-content">
+                    <h3>12min</h3>
+                    <p>Average Wait Time</p>
+                    <div class="time-trend">
+                        <span class="trend-up"><i class="fa-solid fa-arrow-trend-down"></i> 2min faster</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Rating Distribution -->
+<section class="rating-distribution">
+    <div class="container">
+        <div class="distribution-grid">
+            <div class="distribution-chart">
+                <h3>Rating Distribution</h3>
+                <div class="distribution-bars">
+                    <div class="distribution-bar">
+                        <span class="star-label">5 stars</span>
+                        <div class="bar-container">
+                            <div class="bar-fill" data-percentage="72"></div>
+                        </div>
+                        <span class="percentage">72%</span>
+                    </div>
+                    <div class="distribution-bar">
+                        <span class="star-label">4 stars</span>
+                        <div class="bar-container">
+                            <div class="bar-fill" data-percentage="18"></div>
+                        </div>
+                        <span class="percentage">18%</span>
+                    </div>
+                    <div class="distribution-bar">
+                        <span class="star-label">3 stars</span>
+                        <div class="bar-container">
+                            <div class="bar-fill" data-percentage="6"></div>
+                        </div>
+                        <span class="percentage">6%</span>
+                    </div>
+                    <div class="distribution-bar">
+                        <span class="star-label">2 stars</span>
+                        <div class="bar-container">
+                            <div class="bar-fill" data-percentage="3"></div>
+                        </div>
+                        <span class="percentage">3%</span>
+                    </div>
+                    <div class="distribution-bar">
+                        <span class="star-label">1 star</span>
+                        <div class="bar-container">
+                            <div class="bar-fill" data-percentage="1"></div>
+                        </div>
+                        <span class="percentage">1%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rating-highlights">
+                <h3>What Students Love</h3>
+                <div class="highlights-list">
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Fast delivery and pickup</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Fresh and tasty food</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Affordable student prices</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Easy to use app/website</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Friendly staff</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feedback Form -->
+<section class="feedback-form-section">
+    <div class="container">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Share Your Feedback</h2>
+                <p>Tell us about your recent experience with Campus DineHub</p>
+            </div>
+
+            <form id="feedback-form">
+                <!-- Overall Rating -->
+                <div class="form-section">
+                    <label class="section-label">Overall Experience</label>
+                    <div class="rating-input">
+                        <div class="stars-rating">
+                            <input type="radio" id="star5" name="rating" value="5">
+                            <label for="star5"><i class="fa-solid fa-star"></i></label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4"><i class="fa-solid fa-star"></i></label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3"><i class="fa-solid fa-star"></i></label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2"><i class="fa-solid fa-star"></i></label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1"><i class="fa-solid fa-star"></i></label>
+                        </div>
+                        <div class="rating-labels">
+                            <span class="rating-text" id="rating-text">Select your rating</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category Ratings -->
+                <div class="form-section">
+                    <label class="section-label">Rate Specific Areas</label>
+                    <div class="category-ratings">
+                        <div class="category-rating">
+                            <label>Food Quality</label>
+                            <div class="category-stars" data-category="food-quality">
+                                <i class="fa-regular fa-star" data-rating="1"></i>
+                                <i class="fa-regular fa-star" data-rating="2"></i>
+                                <i class="fa-regular fa-star" data-rating="3"></i>
+                                <i class="fa-regular fa-star" data-rating="4"></i>
+                                <i class="fa-regular fa-star" data-rating="5"></i>
+                            </div>
+                        </div>
+                        <div class="category-rating">
+                            <label>Delivery Speed</label>
+                            <div class="category-stars" data-category="delivery-speed">
+                                <i class="fa-regular fa-star" data-rating="1"></i>
+                                <i class="fa-regular fa-star" data-rating="2"></i>
+                                <i class="fa-regular fa-star" data-rating="3"></i>
+                                <i class="fa-regular fa-star" data-rating="4"></i>
+                                <i class="fa-regular fa-star" data-rating="5"></i>
+                            </div>
+                        </div>
+                        <div class="category-rating">
+                            <label>Customer Service</label>
+                            <div class="category-stars" data-category="customer-service">
+                                <i class="fa-regular fa-star" data-rating="1"></i>
+                                <i class="fa-regular fa-star" data-rating="2"></i>
+                                <i class="fa-regular fa-star" data-rating="3"></i>
+                                <i class="fa-regular fa-star" data-rating="4"></i>
+                                <i class="fa-regular fa-star" data-rating="5"></i>
+                            </div>
+                        </div>
+                        <div class="category-rating">
+                            <label>Value for Money</label>
+                            <div class="category-stars" data-category="value-money">
+                                <i class="fa-regular fa-star" data-rating="1"></i>
+                                <i class="fa-regular fa-star" data-rating="2"></i>
+                                <i class="fa-regular fa-star" data-rating="3"></i>
+                                <i class="fa-regular fa-star" data-rating="4"></i>
+                                <i class="fa-regular fa-star" data-rating="5"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Written Feedback -->
+                <div class="form-section">
+                    <div class="form-group">
+                        <label for="feedback-title">Review Title</label>
+                        <input type="text" id="feedback-title" name="title" placeholder="Summarize your experience...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedback-comment">Your Review</label>
+                        <textarea id="feedback-comment" name="comment" rows="5" placeholder="Tell us more about your experience... What did you like? What could be improved?"></textarea>
+                        <div class="char-count">
+                            <span id="char-counter">0</span>/500 characters
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Details -->
+                <div class="form-section">
+                    <label class="section-label">Order Details (Optional)</label>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="order-date">Order Date</label>
+                            <input type="date" id="order-date" name="order-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="order-items">What did you order?</label>
+                            <input type="text" id="order-items" name="order-items" placeholder="e.g., Grilled Chicken Salad, Pizza...">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendation -->
+                <div class="form-section">
+                    <label class="section-label">Would you recommend Campus DineHub to other students?</label>
+                    <div class="recommendation-options">
+                        <label class="option-button">
+                            <input type="radio" name="recommend" value="yes">
+                            <span class="option-content">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    Yes, definitely
+                                </span>
+                        </label>
+                        <label class="option-button">
+                            <input type="radio" name="recommend" value="maybe">
+                            <span class="option-content">
+                                    <i class="fa-solid fa-meh"></i>
+                                    Maybe
+                                </span>
+                        </label>
+                        <label class="option-button">
+                            <input type="radio" name="recommend" value="no">
+                            <span class="option-content">
+                                    <i class="fa-solid fa-thumbs-down"></i>
+                                    Probably not
+                                </span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Personal Info -->
+                <div class="form-section">
+                    <label class="section-label">About You (Optional)</label>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="user-name">Your Name</label>
+                            <input type="text" id="user-name" name="user-name" placeholder="How should we call you?">
+                        </div>
+                        <div class="form-group">
+                            <label for="user-course">Your Course/Program</label>
+                            <input type="text" id="user-course" name="user-course" placeholder="e.g., Computer Science">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="submit" id="submit-feedback" class="btn-primary">
+                        <i class="fa-solid fa-paper-plane"></i> Submit Feedback
+                    </button>
+                    <button type="button" id="clear-form" class="btn-text">
+                        Clear Form
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Recent Reviews -->
+<section class="recent-reviews">
+    <div class="container">
+        <div class="section-header">
+            <h2>Recent Reviews from Students</h2>
+            <div class="review-filters">
+                <button class="filter-btn active" data-filter="all">All Reviews</button>
+                <button class="filter-btn" data-filter="5">5 Stars</button>
+                <button class="filter-btn" data-filter="4">4 Stars</button>
+                <button class="filter-btn" data-filter="3">3 Stars</button>
+            </div>
+        </div>
+
+        <div class="reviews-grid" id="reviews-container">
+            <!-- Reviews will be loaded dynamically -->
+        </div>
+
+        <div class="load-more">
+            <button id="load-more-reviews" class="btn-secondary">
+                <i class="fa-solid fa-rotate"></i> Load More Reviews
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How long does it take for my review to appear?</h3>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Reviews are typically posted within 24 hours after moderation. We review all feedback to ensure it meets our community guidelines.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can I edit my review after submitting?</h3>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, you can edit your review within 7 days of submission. After that, you'll need to contact our support team to make changes.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you respond to all reviews?</h3>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We read every review and respond to feedback that requires specific follow-up or addresses important issues. We're committed to continuous improvement.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What happens to negative feedback?</h3>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We value all feedback, including negative reviews. They help us identify areas for improvement and make meaningful changes to enhance your experience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cart Sidebar -->
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button id="close-cart" class="close-btn">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+        <!-- Cart items will be loaded dynamically -->
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total">R0.00</span>
+        </div>
+        <button id="checkout-btn" class="btn-primary">Checkout</button>
+        <button id="clear-cart" class="btn-text">Clear Cart</button>
+    </div>
+</div>
+
+<!-- Feedback Success Modal -->
+<div id="feedback-success" class="success-modal">
+    <div class="modal-content">
+        <div class="success-icon">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h2>Thank You for Your Feedback!</h2>
+        <p>Your review has been submitted and will help us improve our service.</p>
+        <div class="success-actions">
+            <button id="submit-another" class="btn-secondary">Submit Another Review</button>
+            <button id="back-to-home" class="btn-primary">Back to Home</button>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fa-solid fa-utensils"></i> Campus DineHub</h3>
+                <p>Your campus food solution for delicious, affordable meals delivered fast.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Student Center, Campus</p>
+                <p><i class="fa-solid fa-phone"></i> (012) 345-6789</p>
+                <p><i class="fa-solid fa-envelope"></i> feedback@campusdinehub.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copy">
+                <p>&copy; <span id="year"></span> Campus DineHub. All rights reserved.</p>
+            </div>
+            <div class="policy">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="JS/feedback.js"></script>
+</body>
+</html>

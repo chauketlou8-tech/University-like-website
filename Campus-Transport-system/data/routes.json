@@ -1,0 +1,158 @@
+{
+  "routes": [
+    {
+      "id": "upper-campus",
+      "name": "Upper Campus Loop",
+      "description": "Main campus route covering upper campus buildings",
+      "type": "campus",
+      "schedule": "6:00 AM - 10:00 PM, Every 15 min",
+      "stops": 5,
+      "status": "active"
+    },
+    {
+      "id": "middle-campus",
+      "name": "Middle Campus Express",
+      "description": "Express service between key campus locations",
+      "type": "express",
+      "schedule": "7:00 AM - 9:00 PM, Every 10 min",
+      "stops": 4,
+      "status": "active"
+    },
+    {
+      "id": "residence-circuit",
+      "name": "Residence Halls Circuit",
+      "description": "Route connecting all student residence halls",
+      "type": "residence",
+      "schedule": "6:30 AM - 11:00 PM, Every 20 min",
+      "stops": 5,
+      "status": "active"
+    },
+    {
+      "id": "lower-campus",
+      "name": "Lower Campus Connector",
+      "description": "Connects lower campus with main facilities",
+      "type": "city",
+      "schedule": "7:30 AM - 8:30 PM, Every 30 min",
+      "stops": 4,
+      "status": "active"
+    },
+    {
+      "id": "hiddingh-campus",
+      "name": "Hiddingh Campus Shuttle",
+      "description": "Shuttle service to Hiddingh campus",
+      "type": "city",
+      "schedule": "8:00 AM - 6:00 PM, Every 45 min",
+      "stops": 3,
+      "status": "maintenance"
+    },
+    {
+      "id": "breakfast-express",
+      "name": "Breakfast Express",
+      "description": "Morning express service for early classes",
+      "type": "express",
+      "schedule": "6:00 AM - 9:00 AM, Every 20 min",
+      "stops": 2,
+      "status": "active"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "BKG-001",
+      "bookingId": "UT-123456-ABC",
+      "user": "John Smith",
+      "route": "Upper Campus Loop",
+      "date": "2023-10-20",
+      "time": "08:30",
+      "seats": 2,
+      "status": "confirmed"
+    },
+    {
+      "id": "BKG-002",
+      "bookingId": "UT-123457-DEF",
+      "user": "Maria Garcia",
+      "route": "Residence Halls Circuit",
+      "date": "2023-10-20",
+      "time": "14:15",
+      "seats": 1,
+      "status": "completed"
+    },
+    {
+      "id": "BKG-003",
+      "bookingId": "UT-123458-GHI",
+      "user": "David Chen",
+      "route": "Middle Campus Express",
+      "date": "2023-10-21",
+      "time": "10:00",
+      "seats": 3,
+      "status": "pending"
+    },
+    {
+      "id": "BKG-004",
+      "bookingId": "UT-123459-JKL",
+      "user": "Sarah Johnson",
+      "route": "Lower Campus Connector",
+      "date": "2023-10-19",
+      "time": "16:45",
+      "seats": 1,
+      "status": "cancelled"
+    },
+    {
+      "id": "BKG-005",
+      "bookingId": "UT-123460-MNO",
+      "user": "James Wilson",
+      "route": "Breakfast Express",
+      "date": "2023-10-22",
+      "time": "07:15",
+      "seats": 2,
+      "status": "confirmed"
+    }
+  ],
+  "shuttles": [
+    {
+      "id": "SH-001",
+      "shuttleId": "UCT-A01",
+      "route": "Upper Campus Loop",
+      "driver": "Sipho Mbeki",
+      "capacity": 24,
+      "status": "active",
+      "lastMaintenance": "2023-09-15",
+      "nextMaintenance": "2023-12-15"
+    },
+    {
+      "id": "SH-002",
+      "shuttleId": "UCT-B02",
+      "route": "Middle Campus Express",
+      "driver": "Nomvula Dlamini",
+      "capacity": 24,
+      "status": "active",
+      "lastMaintenance": "2023-10-01",
+      "nextMaintenance": "2024-01-01"
+    },
+    {
+      "id": "SH-003",
+      "shuttleId": "UCT-C03",
+      "route": "Residence Halls Circuit",
+      "driver": "Thabo van der Merwe",
+      "capacity": 24,
+      "status": "active",
+      "lastMaintenance": "2023-08-20",
+      "nextMaintenance": "2023-11-20"
+    },
+    {
+      "id": "SH-004",
+      "shuttleId": "UCT-D04",
+      "route": "Hiddingh Campus Shuttle",
+      "driver": "Anathi Jacobs",
+      "capacity": 32,
+      "status": "maintenance",
+      "lastMaintenance": "2023-10-10",
+      "nextMaintenance": "2023-10-25"
+    }
+  ],
+  "statistics": {
+    "totalRoutes": 6,
+    "todayBookings": 23,
+    "activeShuttles": 3,
+    "totalUsers": 1542
+  }
+}

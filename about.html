@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - University Website</title>
+    <link rel="stylesheet" type="text/css" href="styles/about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/42f44dae01.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Header Section -->
+<header class="aboutHeader" role="banner">
+    <div class="header-content">
+        <h1>About Our University</h1>
+        <p class="header-subtitle">Excellence in education since 1965</p>
+    </div>
+</header>
+
+<main class="main-content">
+    <!-- History Section -->
+    <section class="content-section history-section" aria-labelledby="history-heading">
+        <div class="container">
+            <div class="section-grid">
+                <div class="text-content">
+                    <h2 id="history-heading">Our History</h2>
+                    <p>Founded in 1965, our university has been at the forefront of academic excellence and innovation. From our humble beginnings as a small college, we've grown into a comprehensive institution serving thousands of students across diverse disciplines.</p>
+                    <p>Throughout our journey, we've remained committed to our founding principles of accessibility, excellence, and community engagement.</p>
+                </div>
+                <div class="image-content">
+                    <img src="images/history.jpg" alt="Historical campus building with traditional architecture" class="section-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="content-section mission-section" aria-labelledby="mission-heading">
+        <div class="container">
+            <div class="mission-content">
+                <h2 id="mission-heading">Our Mission & Vision</h2>
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <div class="card-icon">🎯</div>
+                        <h3>Our Mission</h3>
+                        <p>To provide transformative education that empowers students to become critical thinkers, ethical leaders, and engaged citizens in a global society.</p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="card-icon">🔭</div>
+                        <h3>Our Vision</h3>
+                        <p>To be a leading institution known for innovation, research excellence, and creating positive impact in our communities and beyond.</p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="card-icon">💡</div>
+                        <h3>Our Values</h3>
+                        <p>Excellence, Integrity, Diversity, Innovation, and Community Engagement guide everything we do.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="content-section leadership-section" aria-labelledby="leadership-heading">
+        <div class="container">
+            <h2 id="leadership-heading">University Leadership</h2>
+            <p class="section-intro">Meet the dedicated team guiding our university toward a brighter future</p>
+
+            <div class="leadership-grid">
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="images/John.jpg" alt="John Smith - University President" class="leader-photo">
+                        <div class="leader-overlay">
+                            <button class="leader-btn" data-leader="john">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="leader-info">
+                        <h3 class="leader-name">John Smith</h3>
+                        <p class="leader-role">President</p>
+                        <p class="leader-bio">With over 20 years in academic leadership, Dr. Smith champions innovation and student success.</p>
+                    </div>
+                </div>
+
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="images/Jane.webp" alt="Jane Doe - University Provost" class="leader-photo">
+                        <div class="leader-overlay">
+                            <button class="leader-btn" data-leader="jane">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="leader-info">
+                        <h3 class="leader-name">Jane Doe</h3>
+                        <p class="leader-role">Provost</p>
+                        <p class="leader-bio">Dr. Doe oversees academic affairs and curriculum development across all departments.</p>
+                    </div>
+                </div>
+
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="images/Michael.jpg" alt="Michael Johnson - Dean of Faculty" class="leader-photo">
+                        <div class="leader-overlay">
+                            <button class="leader-btn" data-leader="michael">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="leader-info">
+                        <h3 class="leader-name">Michael Johnson</h3>
+                        <p class="leader-role">Dean of Faculty</p>
+                        <p class="leader-bio">Leading our faculty development and research initiatives since 2015.</p>
+                    </div>
+                </div>
+
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="images/Emily.jpg" alt="Emily Davis - University Treasurer" class="leader-photo">
+                        <div class="leader-overlay">
+                            <button class="leader-btn" data-leader="emily">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="leader-info">
+                        <h3 class="leader-name">Emily Davis</h3>
+                        <p class="leader-role">Treasurer</p>
+                        <p class="leader-bio">Ensuring financial sustainability and strategic resource allocation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="content-section stats-section" aria-labelledby="stats-heading">
+        <div class="container">
+            <h2 id="stats-heading" class="sr-only">University Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="15000">0</div>
+                    <div class="stat-label">Students Enrolled</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="95">0</div>
+                    <div class="stat-label">Graduation Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="250">0</div>
+                    <div class="stat-label">Faculty Members</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Academic Programs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="index.html" class="footer-logo">
+                    <img src="images/logo.png" alt="University Logo">
+                </a>
+                <p class="footer-description">Dedicated to excellence in education, research, and community engagement since 1965.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="departments.html">Academic Departments</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Academic</h3>
+                <ul class="footer-links">
+                    <li><a href="courses.html">Course Catalog</a></li>
+                    <li><a href="faculty.html">Faculty Directory</a></li>
+                    <li><a href="research.html">Research Centers</a></li>
+                    <li><a href="library.html">University Library</a></li>
+                    <li><a href="calendar.html">Academic Calendar</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <address>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 University Ave, City, State 12345</p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> info@university.edu</p>
+                    <p><i class="fas fa-clock" aria-hidden="true"></i> Mon-Fri: 8:00 AM - 6:00 PM</p>
+                </address>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 University Name. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="accessibility.html">Accessibility</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Leader Modal -->
+<div class="modal" id="leaderModal">
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <div class="modal-body" id="modalBody">
+            <!-- Modal content will be inserted here by JavaScript -->
+        </div>
+    </div>
+</div>
+
+<script src="JS/about.js"></script>
+</body>
+</html>

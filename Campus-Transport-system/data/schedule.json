@@ -1,0 +1,240 @@
+{
+  "systemInfo": {
+    "universityName": "University Transit System",
+    "version": "1.0",
+    "lastUpdated": "2023-10-15"
+  },
+  "routes": [
+    {
+      "id": "north-campus",
+      "name": "North Campus Loop",
+      "description": "Connects main academic buildings on north campus",
+      "stops": ["Main Library", "Student Union", "North Campus Hub", "Science Building", "Engineering Complex"],
+      "schedule": {
+        "weekday": [
+          {"time": "07:00", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "07:30", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "08:00", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "08:30", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "09:00", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "09:30", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "10:00", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "10:30", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "11:00", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "11:30", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "12:00", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "12:30", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "13:00", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "13:30", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "14:00", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "14:30", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "15:00", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "15:30", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "16:00", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "16:30", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "17:00", "duration": "25 min", "frequency": "Every 30 min"},
+          {"time": "17:30", "duration": "25 min", "frequency": "Every 30 min"}
+        ],
+        "weekend": [
+          {"time": "08:00", "duration": "25 min", "frequency": "Every 45 min"},
+          {"time": "08:45", "duration": "25 min", "frequency": "Every 45 min"},
+          {"time": "09:30", "duration": "25 min", "frequency": "Every 45 min"},
+          {"time": "10:15", "duration": "25 min", "frequency": "Every 45 min"},
+          {"time": "11:00", "duration": "25 min", "frequency": "Every 45 min"},
+          {"time": "11:45", "duration": "25 min", "frequency": "Every 45 min"},
+          {"time": "12:30", "duration": "25 min", "frequency": "Every 45 min"},
+          {"time": "13:15", "duration": "25 min", "frequency": "Every 45 min"},
+          {"time": "14:00", "duration": "25 min", "frequency": "Every 45 min"},
+          {"time": "14:45", "duration": "25 min", "frequency": "Every 45 min"},
+          {"time": "15:30", "duration": "25 min", "frequency": "Every 45 min"},
+          {"time": "16:15", "duration": "25 min", "frequency": "Every 45 min"},
+          {"time": "17:00", "duration": "25 min", "frequency": "Every 45 min"}
+        ]
+      },
+      "status": "active",
+      "delay": 0
+    },
+    {
+      "id": "south-campus",
+      "name": "South Campus Express",
+      "description": "Direct service to south campus facilities",
+      "stops": ["Student Union", "Athletics Center", "South Campus Commons", "Arts Building", "Performing Arts Center"],
+      "schedule": {
+        "weekday": [
+          {"time": "07:15", "duration": "20 min", "frequency": "Every 45 min"},
+          {"time": "08:00", "duration": "20 min", "frequency": "Every 45 min"},
+          {"time": "08:45", "duration": "20 min", "frequency": "Every 45 min"},
+          {"time": "09:30", "duration": "20 min", "frequency": "Every 45 min"},
+          {"time": "10:15", "duration": "20 min", "frequency": "Every 45 min"},
+          {"time": "11:00", "duration": "20 min", "frequency": "Every 45 min"},
+          {"time": "11:45", "duration": "20 min", "frequency": "Every 45 min"},
+          {"time": "12:30", "duration": "20 min", "frequency": "Every 45 min"},
+          {"time": "13:15", "duration": "20 min", "frequency": "Every 45 min"},
+          {"time": "14:00", "duration": "20 min", "frequency": "Every 45 min"},
+          {"time": "14:45", "duration": "20 min", "frequency": "Every 45 min"},
+          {"time": "15:30", "duration": "20 min", "frequency": "Every 45 min"},
+          {"time": "16:15", "duration": "20 min", "frequency": "Every 45 min"},
+          {"time": "17:00", "duration": "20 min", "frequency": "Every 45 min"},
+          {"time": "17:45", "duration": "20 min", "frequency": "Every 45 min"}
+        ],
+        "weekend": [
+          {"time": "08:30", "duration": "20 min", "frequency": "Every 60 min"},
+          {"time": "09:30", "duration": "20 min", "frequency": "Every 60 min"},
+          {"time": "10:30", "duration": "20 min", "frequency": "Every 60 min"},
+          {"time": "11:30", "duration": "20 min", "frequency": "Every 60 min"},
+          {"time": "12:30", "duration": "20 min", "frequency": "Every 60 min"},
+          {"time": "13:30", "duration": "20 min", "frequency": "Every 60 min"},
+          {"time": "14:30", "duration": "20 min", "frequency": "Every 60 min"},
+          {"time": "15:30", "duration": "20 min", "frequency": "Every 60 min"},
+          {"time": "16:30", "duration": "20 min", "frequency": "Every 60 min"},
+          {"time": "17:30", "duration": "20 min", "frequency": "Every 60 min"}
+        ]
+      },
+      "status": "active",
+      "delay": 5
+    },
+    {
+      "id": "residence",
+      "name": "Residence Halls Circuit",
+      "description": "Service connecting all student residence areas",
+      "stops": ["Cedar Hall", "Maple Residence", "Oak Apartments", "Pine Dormitory", "Elm Housing"],
+      "schedule": {
+        "weekday": [
+          {"time": "06:45", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "07:15", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "07:45", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "08:15", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "08:45", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "09:15", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "09:45", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "10:15", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "10:45", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "11:15", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "11:45", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "12:15", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "12:45", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "13:15", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "13:45", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "14:15", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "14:45", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "15:15", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "15:45", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "16:15", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "16:45", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "17:15", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "17:45", "duration": "35 min", "frequency": "Every 30 min"},
+          {"time": "18:15", "duration": "35 min", "frequency": "Every 30 min"}
+        ],
+        "weekend": [
+          {"time": "07:30", "duration": "35 min", "frequency": "Every 45 min"},
+          {"time": "08:15", "duration": "35 min", "frequency": "Every 45 min"},
+          {"time": "09:00", "duration": "35 min", "frequency": "Every 45 min"},
+          {"time": "09:45", "duration": "35 min", "frequency": "Every 45 min"},
+          {"time": "10:30", "duration": "35 min", "frequency": "Every 45 min"},
+          {"time": "11:15", "duration": "35 min", "frequency": "Every 45 min"},
+          {"time": "12:00", "duration": "35 min", "frequency": "Every 45 min"},
+          {"time": "12:45", "duration": "35 min", "frequency": "Every 45 min"},
+          {"time": "13:30", "duration": "35 min", "frequency": "Every 45 min"},
+          {"time": "14:15", "duration": "35 min", "frequency": "Every 45 min"},
+          {"time": "15:00", "duration": "35 min", "frequency": "Every 45 min"},
+          {"time": "15:45", "duration": "35 min", "frequency": "Every 45 min"},
+          {"time": "16:30", "duration": "35 min", "frequency": "Every 45 min"},
+          {"time": "17:15", "duration": "35 min", "frequency": "Every 45 min"},
+          {"time": "18:00", "duration": "35 min", "frequency": "Every 45 min"}
+        ]
+      },
+      "status": "active",
+      "delay": 0
+    },
+    {
+      "id": "east-west",
+      "name": "East-West Connector",
+      "description": "Cross-campus service between east and west campuses",
+      "stops": ["East Campus Gate", "Central Plaza", "West Campus Entrance", "Business School", "Law Building"],
+      "schedule": {
+        "weekday": [
+          {"time": "07:30", "duration": "30 min", "frequency": "Every 60 min"},
+          {"time": "08:30", "duration": "30 min", "frequency": "Every 60 min"},
+          {"time": "09:30", "duration": "30 min", "frequency": "Every 60 min"},
+          {"time": "10:30", "duration": "30 min", "frequency": "Every 60 min"},
+          {"time": "11:30", "duration": "30 min", "frequency": "Every 60 min"},
+          {"time": "12:30", "duration": "30 min", "frequency": "Every 60 min"},
+          {"time": "13:30", "duration": "30 min", "frequency": "Every 60 min"},
+          {"time": "14:30", "duration": "30 min", "frequency": "Every 60 min"},
+          {"time": "15:30", "duration": "30 min", "frequency": "Every 60 min"},
+          {"time": "16:30", "duration": "30 min", "frequency": "Every 60 min"},
+          {"time": "17:30", "duration": "30 min", "frequency": "Every 60 min"}
+        ],
+        "weekend": [
+          {"time": "09:00", "duration": "30 min", "frequency": "Every 90 min"},
+          {"time": "10:30", "duration": "30 min", "frequency": "Every 90 min"},
+          {"time": "12:00", "duration": "30 min", "frequency": "Every 90 min"},
+          {"time": "13:30", "duration": "30 min", "frequency": "Every 90 min"},
+          {"time": "15:00", "duration": "30 min", "frequency": "Every 90 min"},
+          {"time": "16:30", "duration": "30 min", "frequency": "Every 90 min"},
+          {"time": "18:00", "duration": "30 min", "frequency": "Every 90 min"}
+        ]
+      },
+      "status": "active",
+      "delay": 2
+    },
+    {
+      "id": "library",
+      "name": "Library Express",
+      "description": "Direct service between all campus libraries",
+      "stops": ["Main Library", "Science Library", "Law Library", "Medical Library", "Archives Building"],
+      "schedule": {
+        "weekday": [
+          {"time": "08:00", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "08:30", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "09:00", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "09:30", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "10:00", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "10:30", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "11:00", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "11:30", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "12:00", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "12:30", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "13:00", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "13:30", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "14:00", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "14:30", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "15:00", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "15:30", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "16:00", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "16:30", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "17:00", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "17:30", "duration": "15 min", "frequency": "Every 30 min"},
+          {"time": "18:00", "duration": "15 min", "frequency": "Every 30 min"}
+        ],
+        "weekend": [
+          {"time": "09:00", "duration": "15 min", "frequency": "Every 45 min"},
+          {"time": "09:45", "duration": "15 min", "frequency": "Every 45 min"},
+          {"time": "10:30", "duration": "15 min", "frequency": "Every 45 min"},
+          {"time": "11:15", "duration": "15 min", "frequency": "Every 45 min"},
+          {"time": "12:00", "duration": "15 min", "frequency": "Every 45 min"},
+          {"time": "12:45", "duration": "15 min", "frequency": "Every 45 min"},
+          {"time": "13:30", "duration": "15 min", "frequency": "Every 45 min"},
+          {"time": "14:15", "duration": "15 min", "frequency": "Every 45 min"},
+          {"time": "15:00", "duration": "15 min", "frequency": "Every 45 min"},
+          {"time": "15:45", "duration": "15 min", "frequency": "Every 45 min"},
+          {"time": "16:30", "duration": "15 min", "frequency": "Every 45 min"},
+          {"time": "17:15", "duration": "15 min", "frequency": "Every 45 min"},
+          {"time": "18:00", "duration": "15 min", "frequency": "Every 45 min"}
+        ]
+      },
+      "status": "maintenance",
+      "delay": 0
+    }
+  ],
+  "announcements": [
+    {
+      "id": 1,
+      "title": "Holiday Schedule Update",
+      "message": "Shuttle services will operate on a reduced schedule during the fall break (Oct 20-22).",
+      "date": "2023-10-15",
+      "priority": "high",
+      "affectedRoutes": ["north-campus", "south-campus", "east-west"]
+    }
+  ]
+}

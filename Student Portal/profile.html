@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Student Portal</title>
+    <link rel="stylesheet" href="styles/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <h1>Student Portal</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="grades.html">Grades</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+            </ul>
+        </nav>
+        <button class="auth-btn" id="authBtn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="main-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Navigation</h3>
+                <button id="closeBtn" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="courses.html"><i class="fas fa-book"></i> Courses</a></li>
+                <li><a href="grades.html"><i class="fas fa-chart-bar"></i> Grades</a></li>
+                <li><a href="profile.html" class="active"><i class="fas fa-user"></i> Profile</a></li>
+            </ul>
+        </nav>
+
+        <!-- Profile Content -->
+        <div class="profile-content">
+            <div class="profile-header">
+                <button id="openBtn" class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Student Profile</h1>
+                <button class="btn-outline" id="editProfileBtn">
+                    <i class="fas fa-edit"></i> Edit Profile
+                </button>
+            </div>
+
+            <!-- Profile Overview -->
+            <div class="profile-overview">
+                <div class="profile-card">
+                    <div class="profile-picture-section">
+                        <div class="profile-pic-container">
+                            <div class="profile-pic-wrapper">
+                                <img src="#" id="profile-output" alt="Profile Picture" class="profile-image">
+                                <div class="profile-pic-overlay">
+                                    <i class="fas fa-camera"></i>
+                                    <span>Change Photo</span>
+                                </div>
+                                <input type="file" id="profile_pic" accept="image/*" class="profile-pic-input">
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h2 id="profile-name">Loading...</h2>
+                            <p id="profile-email">Loading...</p>
+                            <p class="profile-program" id="profile-program">Computer Science & Mathematics</p>
+                            <div class="profile-status">
+                                    <span class="status-badge status-active">
+                                        <i class="fas fa-circle"></i> Active Student
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="profile-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="stat-courses">4</span>
+                            <span class="stat-label">Courses</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="stat-gpa">3.8</span>
+                            <span class="stat-label">GPA</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="stat-credits">48</span>
+                            <span class="stat-label">Credits</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="stat-semester">3rd</span>
+                            <span class="stat-label">Semester</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Details Sections -->
+            <div class="profile-sections">
+                <!-- Personal Information -->
+                <div class="profile-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-user-circle"></i> Personal Information</h3>
+                        <button class="btn-edit" data-section="personal">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                    </div>
+                    <div class="section-content">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Student ID</span>
+                                <span class="info-value" id="info-student-id">CS2023001</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Date of Birth</span>
+                                <span class="info-value" id="info-dob">January 15, 2002</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Phone</span>
+                                <span class="info-value" id="info-phone">+1 (555) 123-4567</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Address</span>
+                                <span class="info-value" id="info-address">123 University Ave, Campus City</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Information -->
+                <div class="profile-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-graduation-cap"></i> Academic Information</h3>
+                        <button class="btn-edit" data-section="academic">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                    </div>
+                    <div class="section-content">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Program</span>
+                                <span class="info-value" id="info-program">Computer Science & Mathematics</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Major</span>
+                                <span class="info-value" id="info-major">Computer Science</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Enrollment Date</span>
+                                <span class="info-value" id="info-enrollment">September 2022</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Expected Graduation</span>
+                                <span class="info-value" id="info-graduation">May 2025</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Academic Standing</span>
+                                <span class="info-value status-good" id="info-standing">Good Standing</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Advisor</span>
+                                <span class="info-value" id="info-advisor">Dr. Sarah Johnson</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Contact -->
+                <div class="profile-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-phone-alt"></i> Emergency Contact</h3>
+                        <button class="btn-edit" data-section="emergency">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                    </div>
+                    <div class="section-content">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Contact Name</span>
+                                <span class="info-value" id="info-emergency-name">Jane Smith</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Relationship</span>
+                                <span class="info-value" id="info-emergency-relation">Parent</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Phone</span>
+                                <span class="info-value" id="info-emergency-phone">+1 (555) 987-6543</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email</span>
+                                <span class="info-value" id="info-emergency-email">jane.smith@email.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account Settings -->
+            <div class="profile-section">
+                <div class="section-header">
+                    <h3><i class="fas fa-cog"></i> Account Settings</h3>
+                </div>
+                <div class="section-content">
+                    <div class="settings-grid">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Password</h4>
+                                <p>Last changed 3 months ago</p>
+                            </div>
+                            <button class="btn-outline">Change Password</button>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Email Notifications</h4>
+                                <p>Receive updates about courses and grades</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Two-Factor Authentication</h4>
+                                <p>Add an extra layer of security</p>
+                            </div>
+                            <button class="btn-outline">Enable 2FA</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="JS/profile.js"></script>
+</body>
+</html>

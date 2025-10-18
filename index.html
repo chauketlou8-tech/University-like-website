@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to our University - A great place to learn and grow">
+    <title>University Website - Home</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/42f44dae01.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Header Section -->
+<header class="header" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="University Logo - Return to homepage" class="logo">
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+
+            <div class="nav-links" id="navLinks" role="navigation" aria-label="Main menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="departments.html" class="nav-link">Departments</a></li>
+                    <li><a href="admissions.html" class="nav-link">Admission</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="text-box">
+            <h1>Welcome to Our University</h1>
+            <p class="hero-subtitle">A great place to learn, discover, and grow</p>
+            <a href="about.html" class="btn btn-primary">Learn More</a>
+        </div>
+    </div>
+</header>
+
+<!-- Quick Links Section -->
+<section class="quick-links-section" aria-labelledby="quick-links-heading">
+    <div class="container">
+        <h2 class="sr-only" id="quick-links-heading">Quick Links</h2>
+        <div class="quick-links">
+            <div class="quick-link-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                </div>
+                <h3>Admissions</h3>
+                <p>Learn about our application process and requirements</p>
+                <a href="admissions.html" class="link-arrow">Explore Admissions <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="quick-link-card">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                </div>
+                <h3>Departments</h3>
+                <p>Explore our diverse academic departments</p>
+                <a href="departments.html" class="link-arrow">View Departments <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="quick-link-card">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-book" aria-hidden="true"></i>
+                </div>
+                <h3>Courses</h3>
+                <p>Discover the wide range of courses we offer</p>
+                <a href="courses.html" class="link-arrow">Browse Courses <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- News & Events Section -->
+<section class="news-section" aria-labelledby="news-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="news-heading">News & Events</h2>
+            <p class="section-subtitle">Stay updated with the latest happenings at our university</p>
+        </div>
+
+        <div class="events">
+            <article class="event-card">
+                <div class="event-date">
+                    <time datetime="2024-04-25">April 25, 2024</time>
+                </div>
+                <h3 class="event-title">Annual Science Symposium</h3>
+                <p class="event-description">Join us for our annual showcase of student research and innovation across all scientific disciplines.</p>
+                <a href="#" class="event-link">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="event-card">
+                <div class="event-date">
+                    <time datetime="2024-04-20">April 20, 2024</time>
+                </div>
+                <h3 class="event-title">Campus Open House</h3>
+                <p class="event-description">Prospective students and families are invited to tour our campus and meet with faculty members.</p>
+                <a href="#" class="event-link">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="event-card">
+                <div class="event-date">
+                    <time datetime="2024-04-15">April 15, 2024</time>
+                </div>
+                <h3 class="event-title">Guest Lecture Series</h3>
+                <p class="event-description">Renowned author Dr. Jane Smith will discuss the future of literature in the digital age.</p>
+                <a href="#" class="event-link">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+        </div>
+
+        <div class="section-footer">
+            <a href="news.html" class="btn btn-secondary">View All News & Events</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="index.html" class="footer-logo">
+                    <img src="images/logo.png" alt="University Logo">
+                </a>
+                <p class="footer-description">Dedicated to excellence in education, research, and community engagement since 1965.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="departments.html">Academic Departments</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <address>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 University Ave, City, State 12345</p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> info@university.edu</p>
+                </address>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> University Name. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="JS/index.js"></script>
+</body>
+</html>

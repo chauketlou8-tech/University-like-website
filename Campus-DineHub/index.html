@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus DineHub - Your Campus Food Solution</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/42f44dae01.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <h2><i class="fa-solid fa-utensils"></i> Campus DineHub</h2>
+        </div>
+
+        <div class="nav-links">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button id="order-btn" class="btn-primary">Order Now</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-content">
+        <div class="header-text">
+            <h1>Your Campus<span>.</span> Your Flavour<span>.</span></h1>
+            <p>Explore, order, and enjoy fresh meals right on campus with our convenient food ordering platform.</p>
+            <div class="button-group">
+                <button id="menu-btn" class="btn-primary">View Menu <i class="fa-solid fa-arrow-right"></i></button>
+                <button id="order-now" class="btn-secondary">Order Now</button>
+            </div>
+        </div>
+        <div class="header-image">
+            <img src="Assets/images/hero.jpg" alt="Delicious campus food">
+        </div>
+    </div>
+</header>
+
+<main>
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose Campus DineHub?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h3>Fast Delivery</h3>
+                    <p>Get your food delivered to your location in under 30 minutes</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-wallet"></i>
+                    <h3>Affordable Prices</h3>
+                    <p>Student-friendly prices that won't break your budget</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-heart"></i>
+                    <h3>Healthy Options</h3>
+                    <p>Fresh, nutritious meals prepared daily on campus</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>Featured Meals</h2>
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="main">Main Courses</button>
+                <button class="filter-btn" data-category="salad">Salads</button>
+                <button class="filter-btn" data-category="snack">Snacks</button>
+            </div>
+            <div class="meals-grid" id="meals-container">
+                <!-- Meals will be loaded dynamically with JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="order-section">
+        <div class="container">
+            <h2>How to Order</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Browse Menu</h3>
+                    <p>Explore our variety of delicious meals</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Customize</h3>
+                    <p>Select your preferences and extras</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Checkout</h3>
+                    <p>Pay securely and track your order</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial">
+        <div class="container">
+            <div class="quote">
+                <h3><span>"</span>We believe every meal should feel like a celebration.<span>"</span></h3>
+                <p>- Chef Lindiwe</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="feedback" class="feedback-section">
+        <div class="container">
+            <h2>What Students Say</h2>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <p>"The grilled chicken salad is my go-to! So fresh and affordable."</p>
+                    <div class="student">
+                        <h4>Sarah M.</h4>
+                        <p>Computer Science</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"I love how quickly I get my food between classes. Lifesaver!"</p>
+                    <div class="student">
+                        <h4>James K.</h4>
+                        <p>Engineering</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fa-solid fa-utensils"></i> Campus DineHub</h3>
+                <p>Your campus food solution for delicious, affordable meals delivered fast.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#order">How to Order</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Student Center, Campus</p>
+                <p><i class="fa-solid fa-phone"></i> (012) 345-6789</p>
+                <p><i class="fa-solid fa-envelope"></i> info@campusdinehub.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copy">
+                <p>&copy; <span id="year"></span> Campus DineHub. All rights reserved.</p>
+            </div>
+            <div class="policy">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Order Modal -->
+<div id="order-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Place Your Order</h2>
+        <div id="order-form">
+            <!-- Order form will be populated dynamically -->
+        </div>
+    </div>
+</div>
+
+<script src="JS/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Student Portal</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <h1>Student Portal</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="grades.html">Grades</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="main-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Navigation</h3>
+                <button id="closeBtn" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="dashboard.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="courses.html"><i class="fas fa-book"></i> Courses</a></li>
+                <li><a href="grades.html"><i class="fas fa-chart-bar"></i> Grades</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+            </ul>
+        </nav>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <div class="dashboard-header">
+                <button id="openBtn" class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Dashboard</h1>
+                <div class="user-welcome">
+                    Welcome, <span id="dashboard-username">Student</span>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Events Card -->
+                <div class="dashboard-card events-card">
+                    <div class="card-header">
+                        <i class="far fa-calendar"></i>
+                        <h3>Upcoming Events</h3>
+                    </div>
+                    <div class="card-content">
+                        <div id="program-events">
+                            <!-- Program-specific events will be loaded here -->
+                        </div>
+                        <div id="no-events-message" style="display: none;">
+                            <p>No upcoming events. Check back later for new events related to your courses.</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="view-all">View All Events</a>
+                    </div>
+                </div>
+
+                <!-- Courses Card -->
+                <div class="dashboard-card courses-card">
+                    <div class="card-header">
+                        <i class="fas fa-book"></i>
+                        <h3>Your Courses</h3>
+                    </div>
+                    <div class="card-content" id="courses-content">
+                        <!-- Courses will be dynamically populated based on application data -->
+                        <div class="no-courses-message" id="no-courses-message">
+                            <p>No courses selected yet. Complete your application to see your course schedule.</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="courses.html" class="view-all">View All Courses</a>
+                    </div>
+                </div>
+
+                <!-- Grades Card -->
+                <div class="dashboard-card grades-card">
+                    <div class="card-header">
+                        <i class="fas fa-chart-simple"></i>
+                        <h3>Grades Overview</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="gpa-display">
+                            <div class="gpa-circle">
+                                <span class="gpa-value">0.0</span>
+                                <span class="gpa-label">GPA</span>
+                            </div>
+                            <div class="grade-stats" id="grade-stats">
+                                <!-- Grade stats will be populated dynamically -->
+                            </div>
+                        </div>
+                        <div class="grade-summary">
+                            <h4>Current Semester Performance</h4>
+                            <p>Select your courses to see your performance summary.</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="grades.html" class="view-all">View Detailed Grades</a>
+                    </div>
+                </div>
+
+                <!-- Quick Stats Card -->
+                <div class="dashboard-card stats-card">
+                    <div class="card-header">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Quick Stats</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <i class="fas fa-tasks"></i>
+                                <span class="stat-number" id="pending-assignments">0</span>
+                                <span class="stat-name">Pending Assignments</span>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-clock"></i>
+                                <span class="stat-number" id="study-hours">0</span>
+                                <span class="stat-name">Study Hours This Week</span>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="stat-number" id="attendance-rate">0%</span>
+                                <span class="stat-name">Attendance Rate</span>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-award"></i>
+                                <span class="stat-number" id="completed-courses">0</span>
+                                <span class="stat-name">Completed Courses</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="JS/dashboard.js"></script>
+</body>
+</html>

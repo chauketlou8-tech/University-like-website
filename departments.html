@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Departments - University Website</title>
+    <link rel="stylesheet" type="text/css" href="styles/departments.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/42f44dae01.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Header Section -->
+<header class="departmentHeader" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="University Logo - Return to homepage" class="logo">
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+
+            <div class="nav-links" id="navLinks" role="navigation" aria-label="Main menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="departments.html" class="nav-link active" aria-current="page">Departments</a></li>
+                    <li><a href="admissions.html" class="nav-link">Admission</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-content">
+        <h1>Academic Departments</h1>
+        <p class="header-subtitle">Explore our diverse range of academic programs and discover your path to success</p>
+    </div>
+</header>
+
+<main class="main-content">
+    <!-- Departments Introduction -->
+    <section class="intro-section" aria-labelledby="intro-heading">
+        <div class="container">
+            <div class="intro-content">
+                <h2 id="intro-heading" class="sr-only">About Our Departments</h2>
+                <p class="intro-text">Our university offers comprehensive academic programs across multiple disciplines, each designed to provide students with the knowledge, skills, and experiences needed to excel in their chosen fields.</p>
+
+                <div class="stats-bar">
+                    <div class="stat">
+                        <span class="stat-number" data-target="25">0</span>
+                        <span class="stat-label">Departments</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="150">0</span>
+                        <span class="stat-label">Degree Programs</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="400">0</span>
+                        <span class="stat-label">Faculty Members</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Grid -->
+    <section class="departments-section" aria-labelledby="departments-heading">
+        <div class="container">
+            <h2 id="departments-heading" class="section-title">Our Academic Departments</h2>
+            <p class="section-subtitle">Browse through our diverse academic offerings and find the perfect program for your interests and career goals</p>
+
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Departments</button>
+                <button class="filter-btn" data-filter="stem">STEM</button>
+                <button class="filter-btn" data-filter="business">Business</button>
+                <button class="filter-btn" data-filter="humanities">Humanities</button>
+                <button class="filter-btn" data-filter="arts">Arts</button>
+            </div>
+
+            <div class="departments-grid">
+                <!-- Computer Science -->
+                <article class="department-card" data-category="stem">
+                    <div class="card-image">
+                        <img src="images/computerscience.png" alt="Computer Science laboratory with students working on projects" class="department-img">
+                        <div class="card-overlay">
+                            <button class="card-btn" data-dept="computer-science">Explore Department</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="department-name">Computer Science</h3>
+                        <p class="department-description">Master algorithms, programming, data structures, and cutting-edge technologies that shape our digital world.</p>
+                        <div class="department-meta">
+                                <span class="meta-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    B.S., M.S., Ph.D.
+                                </span>
+                            <span class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    1,200+ Students
+                                </span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#" class="action-link">View Programs</a>
+                            <a href="#" class="action-link">Faculty Directory</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Mathematics -->
+                <article class="department-card" data-category="stem">
+                    <div class="card-image">
+                        <img src="images/Maths.jpg" alt="Mathematical equations and formulas on a chalkboard" class="department-img">
+                        <div class="card-overlay">
+                            <button class="card-btn" data-dept="mathematics">Explore Department</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="department-name">Mathematics</h3>
+                        <p class="department-description">Explore calculus, linear algebra, topology, and other fundamental branches that form the language of science.</p>
+                        <div class="department-meta">
+                                <span class="meta-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    B.A., B.S., M.S., Ph.D.
+                                </span>
+                            <span class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    800+ Students
+                                </span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#" class="action-link">View Programs</a>
+                            <a href="#" class="action-link">Faculty Directory</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Engineering -->
+                <article class="department-card" data-category="stem">
+                    <div class="card-image">
+                        <img src="images/Engineering.jpg" alt="Engineering students working on a robotics project" class="department-img">
+                        <div class="card-overlay">
+                            <button class="card-btn" data-dept="engineering">Explore Department</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="department-name">Engineering</h3>
+                        <p class="department-description">Learn design principles, mechanics, materials science, and innovative engineering solutions.</p>
+                        <div class="department-meta">
+                                <span class="meta-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    B.E., M.E., Ph.D.
+                                </span>
+                            <span class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    2,000+ Students
+                                </span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#" class="action-link">View Programs</a>
+                            <a href="#" class="action-link">Faculty Directory</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Business -->
+                <article class="department-card" data-category="business">
+                    <div class="card-image">
+                        <img src="images/business.jpg" alt="Modern business conference room with professionals" class="department-img">
+                        <div class="card-overlay">
+                            <button class="card-btn" data-dept="business">Explore Department</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="department-name">Business Administration</h3>
+                        <p class="department-description">Focus on management, finance, marketing, and entrepreneurship in a global business environment.</p>
+                        <div class="department-meta">
+                                <span class="meta-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    B.B.A., M.B.A., Ph.D.
+                                </span>
+                            <span class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    1,500+ Students
+                                </span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#" class="action-link">View Programs</a>
+                            <a href="#" class="action-link">Faculty Directory</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Additional Departments -->
+                <article class="department-card" data-category="humanities">
+                    <div class="card-image">
+                        <img src="images/humanities.png" alt="Historic library with books and study areas" class="department-img">
+                        <div class="card-overlay">
+                            <button class="card-btn" data-dept="humanities">Explore Department</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="department-name">Humanities</h3>
+                        <p class="department-description">Study literature, philosophy, history, and cultural studies to understand the human experience.</p>
+                        <div class="department-meta">
+                                <span class="meta-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    B.A., M.A., Ph.D.
+                                </span>
+                            <span class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    600+ Students
+                                </span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#" class="action-link">View Programs</a>
+                            <a href="#" class="action-link">Faculty Directory</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="department-card" data-category="arts">
+                    <div class="card-image">
+                        <img src="images/arts.png" alt="Art studio with students creating paintings" class="department-img">
+                        <div class="card-overlay">
+                            <button class="card-btn" data-dept="arts">Explore Department</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="department-name">Fine Arts</h3>
+                        <p class="department-description">Develop your creative talents in visual arts, performing arts, and digital media.</p>
+                        <div class="department-meta">
+                                <span class="meta-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    B.F.A., M.F.A.
+                                </span>
+                            <span class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    400+ Students
+                                </span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#" class="action-link">View Programs</a>
+                            <a href="#" class="action-link">Faculty Directory</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Find Your Program?</h2>
+                <p>Contact our admissions team to learn more about our departments and find the perfect fit for your academic journey.</p>
+                <div class="cta-buttons">
+                    <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Admissions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="index.html" class="footer-logo">
+                    <img src="images/logo.png" alt="University Logo">
+                </a>
+                <p class="footer-description">Dedicated to excellence in education, research, and community engagement since 1965.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="departments.html">Departments</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <address>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 University Ave, City, State 12345</p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> info@university.edu</p>
+                </address>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> University Name. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="JS/departments.js"></script>
+</body>
+</html>

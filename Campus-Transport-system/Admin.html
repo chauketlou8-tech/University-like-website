@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | Campus Transport System</title>
+    <link rel="stylesheet" href="CSS/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" id="logo">
+            <div class="logo">
+                <img src="Assets/images/logo.png" alt="University Transit Logo">
+                <div class="logo-text">
+                    <h1>University Transit</h1>
+                    <p>Admin Panel</p>
+                </div>
+            </div>
+        </a>
+
+        <div class="nav-toggle" id="navToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Booking.html">Book Ride</a></li>
+            <li><a href="Schedule.html">Schedule</a></li>
+            <li><a href="Routes.html">Routes</a></li>
+            <li><a href="Fares.html">Fares</a></li>
+            <li><a href="Admin.html" class="active">Admin</a></li>
+            <li class="nav-user">
+                <i class="fas fa-user-shield"></i>
+                <span>Admin User</span>
+            </li>
+            <li><a href="#" class="btn-logout" id="logoutBtn">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="admin-main">
+    <div class="admin-header">
+        <h1>Transport System Administration</h1>
+        <p>Manage routes, schedules, bookings, and system operations</p>
+    </div>
+
+    <div class="admin-stats">
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-route"></i>
+            </div>
+            <div class="stat-info">
+                <h3 id="totalRoutes">0</h3>
+                <p>Active Routes</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="stat-info">
+                <h3 id="totalBookings">0</h3>
+                <p>Today's Bookings</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-bus"></i>
+            </div>
+            <div class="stat-info">
+                <h3 id="activeShuttles">0</h3>
+                <p>Active Shuttles</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-info">
+                <h3 id="totalUsers">0</h3>
+                <p>Registered Users</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="admin-container">
+        <div class="admin-tabs">
+            <button class="tab-btn active" data-tab="routes">Routes Management</button>
+            <button class="tab-btn" data-tab="bookings">Bookings Management</button>
+            <button class="tab-btn" data-tab="shuttles">Shuttle Fleet</button>
+            <button class="tab-btn" data-tab="analytics">Analytics</button>
+        </div>
+
+        <div class="tab-content active" id="routes-tab">
+            <div class="section-header">
+                <h2>Manage Routes & Schedules</h2>
+                <button class="btn-primary" id="addRouteBtn">
+                    <i class="fas fa-plus"></i> Add New Route
+                </button>
+            </div>
+
+            <div class="routes-table-container">
+                <table class="admin-table" id="routesTable">
+                    <thead>
+                    <tr>
+                        <th>Route Name</th>
+                        <th>Type</th>
+                        <th>Schedule</th>
+                        <th>Stops</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody id="routesTableBody">
+                    <!-- Routes will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="tab-content" id="bookings-tab">
+            <div class="section-header">
+                <h2>Manage Bookings</h2>
+                <div class="search-group">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="bookingSearch" placeholder="Search bookings...">
+                </div>
+            </div>
+
+            <div class="filters">
+                <select id="bookingStatusFilter">
+                    <option value="all">All Status</option>
+                    <option value="confirmed">Confirmed</option>
+                    <option value="pending">Pending</option>
+                    <option value="cancelled">Cancelled</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <select id="bookingDateFilter">
+                    <option value="today">Today</option>
+                    <option value="week">This Week</option>
+                    <option value="month">This Month</option>
+                    <option value="all">All Time</option>
+                </select>
+            </div>
+
+            <div class="bookings-table-container">
+                <table class="admin-table" id="bookingsTable">
+                    <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>User</th>
+                        <th>Route</th>
+                        <th>Date & Time</th>
+                        <th>Seats</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody id="bookingsTableBody">
+                    <!-- Bookings will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="tab-content" id="shuttles-tab">
+            <div class="section-header">
+                <h2>Shuttle Fleet Management</h2>
+                <button class="btn-primary" id="addShuttleBtn">
+                    <i class="fas fa-plus"></i> Add New Shuttle
+                </button>
+            </div>
+
+            <div class="shuttles-grid" id="shuttlesGrid">
+                <!-- Shuttles will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="tab-content" id="analytics-tab">
+            <div class="section-header">
+                <h2>System Analytics</h2>
+                <div class="date-range">
+                    <label>Date Range:</label>
+                    <input type="date" id="analyticsStartDate">
+                    <span>to</span>
+                    <input type="date" id="analyticsEndDate">
+                    <button class="btn-secondary" id="updateAnalytics">Update</button>
+                </div>
+            </div>
+
+            <div class="analytics-cards">
+                <div class="analytics-card">
+                    <h3>Booking Trends</h3>
+                    <div class="chart-placeholder">
+                        <i class="fas fa-chart-line"></i>
+                        <p>Booking trends chart will appear here</p>
+                    </div>
+                </div>
+                <div class="analytics-card">
+                    <h3>Route Popularity</h3>
+                    <div class="chart-placeholder">
+                        <i class="fas fa-chart-bar"></i>
+                        <p>Route popularity chart will appear here</p>
+                    </div>
+                </div>
+                <div class="analytics-card">
+                    <h3>Peak Hours</h3>
+                    <div class="chart-placeholder">
+                        <i class="fas fa-chart-pie"></i>
+                        <p>Peak hours analysis will appear here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Modals -->
+<div class="modal" id="routeModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="routeModalTitle">Add New Route</h3>
+            <button class="modal-close" id="closeRouteModal">&times;</button>
+        </div>
+        <form id="routeForm">
+            <div class="form-group">
+                <label for="routeName">Route Name</label>
+                <input type="text" id="routeName" name="routeName" required>
+            </div>
+            <div class="form-group">
+                <label for="routeDescription">Description</label>
+                <textarea id="routeDescription" name="routeDescription" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="routeType">Route Type</label>
+                <select id="routeType" name="routeType" required>
+                    <option value="campus">Campus Route</option>
+                    <option value="residence">Residence Route</option>
+                    <option value="express">Express Route</option>
+                    <option value="city">City Route</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="routeStatus">Status</label>
+                <select id="routeStatus" name="routeStatus" required>
+                    <option value="active">Active</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+            </div>
+            <div class="form-actions">
+                <button type="button" class="btn-secondary" id="cancelRouteBtn">Cancel</button>
+                <button type="submit" class="btn-primary">Save Route</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal" id="bookingModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Booking Details</h3>
+            <button class="modal-close" id="closeBookingModal">&times;</button>
+        </div>
+        <div class="booking-details" id="bookingDetails">
+            <!-- Booking details will be populated by JavaScript -->
+        </div>
+    </div>
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

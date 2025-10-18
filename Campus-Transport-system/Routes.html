@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routes & Maps | Campus Transport System</title>
+    <link rel="stylesheet" href="CSS/routes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" id="logo">
+            <div class="logo">
+                <img src="Assets/images/logo.png" alt="University Transit Logo">
+                <div class="logo-text">
+                    <h1>University Transit</h1>
+                    <p>Shuttle Services</p>
+                </div>
+            </div>
+        </a>
+
+        <div class="nav-toggle" id="navToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Booking.html">Book Ride</a></li>
+            <li><a href="Schedule.html">Schedule</a></li>
+            <li><a href="Routes.html" class="active">Routes</a></li>
+            <li><a href="Fares.html">Fares</a></li>
+            <li><a href="Admin.html">Admin</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="routes-section">
+    <div class="container">
+        <div class="routes-header">
+            <h1>University Campus Routes & Maps</h1>
+            <p>Explore all shuttle routes, stops, and real-time locations across University</p>
+        </div>
+
+        <div class="routes-controls">
+            <div class="search-group">
+                <i class="fas fa-search"></i>
+                <input type="text" id="routeSearch" placeholder="Search routes or stops...">
+            </div>
+            <div class="filter-group">
+                <label for="routeTypeFilter">Route Type:</label>
+                <select id="routeTypeFilter">
+                    <option value="all">All Routes</option>
+                    <option value="campus">Campus Routes</option>
+                    <option value="residence">Residence Routes</option>
+                    <option value="express">Express Routes</option>
+                    <option value="city">City Routes</option>
+                </select>
+            </div>
+            <button id="showAllRoutes" class="btn-secondary">
+                <i class="fas fa-layer-group"></i> Show All
+            </button>
+        </div>
+
+        <div class="routes-container">
+            <div class="routes-sidebar">
+                <div class="routes-list" id="routesList">
+                    <!-- Routes will be populated by JavaScript -->
+                    <div class="loading-message">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading routes...</p>
+                    </div>
+                </div>
+
+                <div class="route-details" id="routeDetails">
+                    <div class="details-placeholder">
+                        <i class="fas fa-route"></i>
+                        <p>Select a route to view details</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <div id="campusMap"></div>
+                <div class="map-controls">
+                    <button id="zoomIn" class="map-btn">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button id="zoomOut" class="map-btn">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button id="locateMe" class="map-btn">
+                        <i class="fas fa-location-arrow"></i>
+                    </button>
+                    <button id="resetView" class="map-btn">
+                        <i class="fas fa-globe-africa"></i>
+                    </button>
+                </div>
+                <div class="map-legend">
+                    <h4>Map Legend</h4>
+                    <div class="legend-item">
+                        <div class="legend-color route-active"></div>
+                        <span>Active Route</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color route-inactive"></div>
+                        <span>Inactive Route</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color stop-major"></div>
+                        <span>Major Stop</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color stop-regular"></div>
+                        <span>Regular Stop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="route-statistics">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-route"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="totalRoutes">0</h3>
+                    <p>Active Routes</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="totalStops">0</h3>
+                    <p>Bus Stops</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-bus"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="activeShuttles">0</h3>
+                    <p>Active Shuttles</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="avgFrequency">0 min</h3>
+                    <p>Avg. Frequency</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-links">
+            <h2>Popular Routes</h2>
+            <div class="quick-links-grid" id="quickLinks">
+                <!-- Quick links will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>University Transit</h3>
+                <p>Providing safe, reliable transportation for students, faculty, and staff across University campuses.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="Schedule.html">Schedule</a></li>
+                    <li><a href="Routes.html">Routes & Maps</a></li>
+                    <li><a href="Fares.html">Fares & Passes</a></li>
+                    <li><a href="Booking.html">Book a Ride</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-phone"></i> (021) 650-9111</li>
+                    <li><i class="fas fa-envelope"></i> transport@University.ac.za</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Transportation Office, Upper Campus</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> University Transit System. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/routes.js"></script>
+</body>
+</html>

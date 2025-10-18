@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fares & Passes | Campus Transport System</title>
+    <link rel="stylesheet" href="CSS/fares.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" id="logo">
+            <div class="logo">
+                <img src="Assets/images/logo.png" alt="University Transit Logo">
+                <div class="logo-text">
+                    <h1>University Transit</h1>
+                    <p>Shuttle Services</p>
+                </div>
+            </div>
+        </a>
+
+        <div class="nav-toggle" id="navToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Booking.html">Book Ride</a></li>
+            <li><a href="Schedule.html">Schedule</a></li>
+            <li><a href="Routes.html">Routes</a></li>
+            <li><a href="Fares.html" class="active">Fares</a></li>
+            <li><a href="Admin.html">Admin</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="fares-section">
+    <div class="container">
+        <div class="fares-header">
+            <h1>Fares & Transport Passes</h1>
+            <p>Affordable pricing options for students, faculty, and staff</p>
+        </div>
+
+        <div class="fares-overview">
+            <div class="overview-card">
+                <div class="overview-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="overview-content">
+                    <h3>Student Discounts</h3>
+                    <p>Special rates for registered University students with valid student cards</p>
+                    <div class="discount-badge">Save 50%</div>
+                </div>
+            </div>
+            <div class="overview-card">
+                <div class="overview-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="overview-content">
+                    <h3>Staff Benefits</h3>
+                    <p>Discounted rates for university faculty and staff members</p>
+                    <div class="discount-badge">Save 30%</div>
+                </div>
+            </div>
+            <div class="overview-card">
+                <div class="overview-icon">
+                    <i class="fas fa-id-card"></i>
+                </div>
+                <div class="overview-content">
+                    <h3>Easy Payment</h3>
+                    <p>Pay with student cards, mobile money, or cash</p>
+                    <div class="payment-methods">
+                        <i class="fas fa-credit-card"></i>
+                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fares-container">
+            <div class="single-fares">
+                <h2>Single Journey Fares</h2>
+                <div class="fares-table">
+                    <div class="table-header">
+                        <div class="route-col">Route Type</div>
+                        <div class="fare-col">Standard Fare</div>
+                        <div class="student-col">Student Fare</div>
+                        <div class="staff-col">Staff Fare</div>
+                    </div>
+                    <div class="table-body" id="singleFaresBody">
+                        <!-- Single fares will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="passes-section">
+                <h2>Transport Passes</h2>
+                <p class="passes-subtitle">Save more with our unlimited travel passes</p>
+
+                <div class="passes-grid" id="passesGrid">
+                    <!-- Passes will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="comparison-section">
+                <h2>Which Pass is Right For You?</h2>
+                <div class="comparison-cards">
+                    <div class="comparison-card">
+                        <h3>Occasional Rider</h3>
+                        <div class="usage">1-5 trips per week</div>
+                        <div class="recommendation">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Single Fares</span>
+                        </div>
+                        <ul>
+                            <li>Pay as you go</li>
+                            <li>No commitment</li>
+                            <li>Flexible spending</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card popular">
+                        <div class="popular-badge">Most Popular</div>
+                        <h3>Regular Commuter</h3>
+                        <div class="usage">6-15 trips per week</div>
+                        <div class="recommendation">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Weekly Pass</span>
+                        </div>
+                        <ul>
+                            <li>Unlimited travel</li>
+                            <li>Best value</li>
+                            <li>7-day validity</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card">
+                        <h3>Daily Traveler</h3>
+                        <div class="usage">16+ trips per week</div>
+                        <div class="recommendation">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Monthly Pass</span>
+                        </div>
+                        <ul>
+                            <li>Maximum savings</li>
+                            <li>Semester options</li>
+                            <li>Auto-renew available</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-methods-section">
+                <h2>Payment Methods</h2>
+                <div class="payment-methods-grid">
+                    <div class="payment-method">
+                        <div class="payment-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <h3>Student Card</h3>
+                        <p>Load credit onto your student card at campus kiosks</p>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Money</h3>
+                        <p>Pay with SnapScan, Zapper, or other mobile payment apps</p>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>Credit/Debit</h3>
+                        <p>Secure online payments for passes and top-ups</p>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3>Cash</h3>
+                        <p>Exact change required when paying cash on shuttle</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>How do I get student discounts?</h3>
+                        <p>Present your valid University student card when boarding. For online bookings, your student status is automatically verified through the university system.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I share my transport pass?</h3>
+                        <p>No, transport passes are non-transferable and are linked to your student/staff ID for security reasons.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What happens if I lose my card?</h3>
+                        <p>Immediately report lost cards at the Transportation Office. Replacement cards cost R50 and existing balance can be transferred.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Are passes refundable?</h3>
+                        <p>Passes are non-refundable but can be transferred to the next semester under special circumstances with approval.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do fares change during holidays?</h3>
+                        <p>Regular fares apply during term time. Reduced schedules may operate during holidays with the same fare strUniversityure.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How do I purchase a semester pass?</h3>
+                        <p>Semester passes can be purchased online through the student portal or at the Transportation Office during registration periods.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>University Transit</h3>
+                <p>Providing safe, reliable transportation for students, faculty, and staff across University campuses.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="Schedule.html">Schedule</a></li>
+                    <li><a href="Routes.html">Routes & Maps</a></li>
+                    <li><a href="Fares.html">Fares & Passes</a></li>
+                    <li><a href="Booking.html">Book a Ride</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-phone"></i> (021) 650-9111</li>
+                    <li><i class="fas fa-envelope"></i> transport@University.ac.za</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Transportation Office, Upper Campus</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 8:00-17:00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> University Transit System. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/fares.js"></script>
+</body>
+</html>

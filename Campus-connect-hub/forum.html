@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - Campus Connect Hub</title>
+    <link rel="stylesheet" href="css/forum.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-university"></i>
+                <h1>Campus <span>Connect</span> Hub</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="clubs&societies.html">Clubs & Societies</a>
+                <a href="resources.html">Student Resources</a>
+                <a href="forum.html" class="active">Forum</a>
+                <a href="profile.html" class="btn-login" style="padding: 0.75rem">Profile <i class="fas fa-user"></i></a>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Student Forum</h1>
+            <p>Connect, discuss, and share with fellow students</p>
+            <div class="forum-stats">
+                <div class="stat">
+                    <span class="number" id="total-threads">1,247</span>
+                    <span class="label">Threads</span>
+                </div>
+                <div class="stat">
+                    <span class="number" id="total-posts">12,893</span>
+                    <span class="label">Posts</span>
+                </div>
+                <div class="stat">
+                    <span class="number" id="online-users">243</span>
+                    <span class="label">Online Now</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Forum Content -->
+<section class="forum-section">
+    <div class="container">
+        <div class="forum-header">
+            <h2>Discussion Categories</h2>
+            <button class="btn-primary" id="new-thread-btn">
+                <i class="fas fa-plus"></i> New Thread
+            </button>
+        </div>
+
+        <!-- Forum Categories -->
+        <div class="categories-grid">
+            <!-- General Discussions -->
+            <div class="category-card general">
+                <div class="category-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="category-content">
+                    <h3>General Discussions</h3>
+                    <p>Talk about anything related to campus life and student experiences</p>
+                    <div class="category-stats">
+                            <span class="threads">
+                                <i class="fas fa-file-alt"></i>
+                                89 threads
+                            </span>
+                        <span class="posts">
+                                <i class="fas fa-comment"></i>
+                                1,247 posts
+                            </span>
+                    </div>
+                    <div class="latest-post">
+                        <strong>Latest:</strong> Welcome new students!
+                        <span class="post-time">2 hours ago</span>
+                    </div>
+                </div>
+                <div class="category-actions">
+                    <button class="btn-category" onclick="viewCategory('general')">View Category</button>
+                </div>
+            </div>
+
+            <!-- Academic Support -->
+            <div class="category-card academic">
+                <div class="category-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Academic Support</h3>
+                    <p>Study tips, course discussions, and academic advice</p>
+                    <div class="category-stats">
+                            <span class="threads">
+                                <i class="fas fa-file-alt"></i>
+                                156 threads
+                            </span>
+                        <span class="posts">
+                                <i class="fas fa-comment"></i>
+                                2,893 posts
+                            </span>
+                    </div>
+                    <div class="latest-post">
+                        <strong>Latest:</strong> Best study spots on campus
+                        <span class="post-time">1 hour ago</span>
+                    </div>
+                </div>
+                <div class="category-actions">
+                    <button class="btn-category" onclick="viewCategory('academic')">View Category</button>
+                </div>
+            </div>
+
+            <!-- Career & Internships -->
+            <div class="category-card career">
+                <div class="category-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Career & Internships</h3>
+                    <p>Job opportunities, internship experiences, and career advice</p>
+                    <div class="category-stats">
+                            <span class="threads">
+                                <i class="fas fa-file-alt"></i>
+                                78 threads
+                            </span>
+                        <span class="posts">
+                                <i class="fas fa-comment"></i>
+                                892 posts
+                            </span>
+                    </div>
+                    <div class="latest-post">
+                        <strong>Latest:</strong> Summer internship opportunities
+                        <span class="post-time">3 hours ago</span>
+                    </div>
+                </div>
+                <div class="category-actions">
+                    <button class="btn-category" onclick="viewCategory('career')">View Category</button>
+                </div>
+            </div>
+
+            <!-- Clubs & Activities -->
+            <div class="category-card clubs">
+                <div class="category-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Clubs & Activities</h3>
+                    <p>Discuss campus clubs, events, and extracurricular activities</p>
+                    <div class="category-stats">
+                            <span class="threads">
+                                <i class="fas fa-file-alt"></i>
+                                134 threads
+                            </span>
+                        <span class="posts">
+                                <i class="fas fa-comment"></i>
+                                1,567 posts
+                            </span>
+                    </div>
+                    <div class="latest-post">
+                        <strong>Latest:</strong> Photography club meeting this Friday
+                        <span class="post-time">5 hours ago</span>
+                    </div>
+                </div>
+                <div class="category-actions">
+                    <button class="btn-category" onclick="viewCategory('clubs')">View Category</button>
+                </div>
+            </div>
+
+            <!-- Housing & Accommodation -->
+            <div class="category-card housing">
+                <div class="category-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Housing & Accommodation</h3>
+                    <p>Roommate searches, housing tips, and accommodation advice</p>
+                    <div class="category-stats">
+                            <span class="threads">
+                                <i class="fas fa-file-alt"></i>
+                                67 threads
+                            </span>
+                        <span class="posts">
+                                <i class="fas fa-comment"></i>
+                                745 posts
+                            </span>
+                    </div>
+                    <div class="latest-post">
+                        <strong>Latest:</strong> Looking for roommate near campus
+                        <span class="post-time">1 day ago</span>
+                    </div>
+                </div>
+                <div class="category-actions">
+                    <button class="btn-category" onclick="viewCategory('housing')">View Category</button>
+                </div>
+            </div>
+
+            <!-- Technology & Gaming -->
+            <div class="category-card technology">
+                <div class="category-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Technology & Gaming</h3>
+                    <p>Tech discussions, gaming sessions, and software help</p>
+                    <div class="category-stats">
+                            <span class="threads">
+                                <i class="fas fa-file-alt"></i>
+                                92 threads
+                            </span>
+                        <span class="posts">
+                                <i class="fas fa-comment"></i>
+                                1,234 posts
+                            </span>
+                    </div>
+                    <div class="latest-post">
+                        <strong>Latest:</strong> Best laptops for computer science
+                        <span class="post-time">2 days ago</span>
+                    </div>
+                </div>
+                <div class="category-actions">
+                    <button class="btn-category" onclick="viewCategory('technology')">View Category</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popular Threads -->
+        <div class="popular-threads">
+            <h2>Popular Threads</h2>
+            <div class="threads-list">
+                <div class="thread-item">
+                    <div class="thread-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="thread-content">
+                        <h4>Welcome to Campus Connect Hub! 👋</h4>
+                        <p>Introduce yourself and meet fellow students</p>
+                        <div class="thread-meta">
+                            <span class="author">By Admin</span>
+                            <span class="replies">247 replies</span>
+                            <span class="views">1.2k views</span>
+                        </div>
+                    </div>
+                    <div class="thread-activity">
+                        <div class="last-post">
+                            <span class="time">2 hours ago</span>
+                            <span class="user">John D.</span>
+                        </div>
+                        <button class="btn-thread" onclick="viewThread(1)">View Thread</button>
+                    </div>
+                </div>
+
+                <div class="thread-item">
+                    <div class="thread-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="thread-content">
+                        <h4>Study Tips That Actually Work 📚</h4>
+                        <p>Share your best study strategies and techniques</p>
+                        <div class="thread-meta">
+                            <span class="author">By StudyPro</span>
+                            <span class="replies">189 replies</span>
+                            <span class="views">987 views</span>
+                        </div>
+                    </div>
+                    <div class="thread-activity">
+                        <div class="last-post">
+                            <span class="time">5 hours ago</span>
+                            <span class="user">Sarah M.</span>
+                        </div>
+                        <button class="btn-thread" onclick="viewThread(2)">View Thread</button>
+                    </div>
+                </div>
+
+                <div class="thread-item">
+                    <div class="thread-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="thread-content">
+                        <h4>Upcoming Campus Events Calendar 🗓️</h4>
+                        <p>Discuss and plan for upcoming campus events</p>
+                        <div class="thread-meta">
+                            <span class="author">By EventTeam</span>
+                            <span class="replies">134 replies</span>
+                            <span class="views">756 views</span>
+                        </div>
+                    </div>
+                    <div class="thread-activity">
+                        <div class="last-post">
+                            <span class="time">1 day ago</span>
+                            <span class="user">Mike R.</span>
+                        </div>
+                        <button class="btn-thread" onclick="viewThread(3)">View Thread</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Create Thread Modal -->
+<div id="create-thread-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Create New Thread</h2>
+        <form id="create-thread-form">
+            <div class="form-group">
+                <label for="thread-category">Category</label>
+                <select id="thread-category" required>
+                    <option value="">Select Category</option>
+                    <option value="general">General Discussions</option>
+                    <option value="academic">Academic Support</option>
+                    <option value="career">Career & Internships</option>
+                    <option value="clubs">Clubs & Activities</option>
+                    <option value="housing">Housing & Accommodation</option>
+                    <option value="technology">Technology & Gaming</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="thread-title">Thread Title</label>
+                <input type="text" id="thread-title" placeholder="Enter a descriptive title..." required>
+            </div>
+            <div class="form-group">
+                <label for="thread-content">Content</label>
+                <textarea id="thread-content" rows="6" placeholder="Write your post here..." required></textarea>
+            </div>
+            <div class="form-actions">
+                <button type="button" class="btn-secondary" id="cancel-thread">Cancel</button>
+                <button type="submit" class="btn-primary">Create Thread</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-university"></i>
+                    <h2>Campus <span>Connect</span> Hub</h2>
+                </div>
+                <p>Your platform for student discussions and community engagement</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Forum Categories</h3>
+                <ul>
+                    <li><a href="#">General Discussions</a></li>
+                    <li><a href="#">Academic Support</a></li>
+                    <li><a href="#">Career & Internships</a></li>
+                    <li><a href="#">Clubs & Activities</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Forum Rules</h3>
+                <ul>
+                    <li><a href="#">Community Guidelines</a></li>
+                    <li><a href="#">Posting Rules</a></li>
+                    <li><a href="#">Moderation Policy</a></li>
+                    <li><a href="#">Report Content</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Stay Updated</h3>
+                <p>Get notified about new discussions</p>
+                <form class="newsletter-form">
+                    <label><input type="email" placeholder="Your email address"></label>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Community Guidelines</a>
+                <a href="#">Contact Moderators</a>
+            </div>
+            <p>&copy; <span id="current-year"></span> Campus Connect Hub. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="JS/forum.js"></script>
+</body>
+</html>

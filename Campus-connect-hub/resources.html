@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Resources - Campus Connect Hub</title>
+    <link rel="stylesheet" href="css/resources.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-university"></i>
+                <h1>Campus <span>Connect</span> Hub</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="clubs&societies.html">Clubs & Societies</a>
+                <a href="resources.html" class="active">Student Resources</a>
+                <a href="forum.html">Forum</a>
+                <a href="profile.html" class="btn-login" style="padding: 0.75rem">Profile <i class="fas fa-user"></i></a>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Student Resources</h1>
+            <p>Access academic support, career services, health resources, and more to help you succeed</p>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <label><input type="text" id="search-input" placeholder="Search resources..."></label>
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Access -->
+<section class="quick-access">
+    <div class="container">
+        <h2>Quick Access</h2>
+        <div class="quick-links-grid">
+            <a href="#" class="quick-link">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Academic Calendar</span>
+            </a>
+            <a href="#" class="quick-link">
+                <i class="fas fa-book"></i>
+                <span>Library Resources</span>
+            </a>
+            <a href="#" class="quick-link">
+                <i class="fas fa-briefcase"></i>
+                <span>Career Center</span>
+            </a>
+            <a href="#" class="quick-link">
+                <i class="fas fa-heartbeat"></i>
+                <span>Health Services</span>
+            </a>
+            <a href="#" class="quick-link">
+                <i class="fas fa-home"></i>
+                <span>Housing Portal</span>
+            </a>
+            <a href="#" class="quick-link">
+                <i class="fas fa-dollar-sign"></i>
+                <span>Financial Aid</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Resources Grid -->
+<section class="resources-section">
+    <div class="container">
+        <div class="resources-grid" id="resources-container">
+            <!-- Academic Support -->
+            <div class="resource-card academic" data-category="academic">
+                <div class="resource-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Academic Support</h3>
+                <p>Tutoring services, academic advising, study resources, and learning assistance</p>
+                <div class="resource-links">
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-calendar"></i>
+                        Tutoring Schedule
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-book"></i>
+                        Study Materials
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-user-graduate"></i>
+                        Academic Advising
+                    </a>
+                </div>
+                <button class="btn-resource">Explore Resources</button>
+            </div>
+
+            <!-- Health & Wellbeing -->
+            <div class="resource-card health" data-category="health">
+                <div class="resource-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3>Health & Wellbeing</h3>
+                <p>Counseling services, mental health resources, wellness programs, and medical care</p>
+                <div class="resource-links">
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-stethoscope"></i>
+                        Health Center
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-head-side-virus"></i>
+                        Counseling
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-apple-alt"></i>
+                        Wellness Programs
+                    </a>
+                </div>
+                <button class="btn-resource">View Services</button>
+            </div>
+
+            <!-- Career Services -->
+            <div class="resource-card career" data-category="career">
+                <div class="resource-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Career Services</h3>
+                <p>Resume workshops, job search assistance, career counseling, and internship opportunities</p>
+                <div class="resource-links">
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-file-alt"></i>
+                        Resume Help
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-handshake"></i>
+                        Career Counseling
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-building"></i>
+                        Internships
+                    </a>
+                </div>
+                <button class="btn-resource">Career Center</button>
+            </div>
+
+            <!-- Housing & Accommodation -->
+            <div class="resource-card housing" data-category="housing">
+                <div class="resource-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Housing & Accommodation</h3>
+                <p>On-campus and off-campus housing options, rental advice, and accommodation services</p>
+                <div class="resource-links">
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-building"></i>
+                        Campus Housing
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Off-Campus Guide
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-key"></i>
+                        Rental Resources
+                    </a>
+                </div>
+                <button class="btn-resource">Housing Portal</button>
+            </div>
+
+            <!-- Financial Aid -->
+            <div class="resource-card financial" data-category="financial">
+                <div class="resource-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <h3>Financial Aid & Scholarships</h3>
+                <p>Financial assistance, scholarship opportunities, budgeting help, and student employment</p>
+                <div class="resource-links">
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        Scholarships
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        Financial Aid
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-money-bill-wave"></i>
+                        Student Jobs
+                    </a>
+                </div>
+                <button class="btn-resource">Financial Services</button>
+            </div>
+
+            <!-- Technology Support -->
+            <div class="resource-card technology" data-category="technology">
+                <div class="resource-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Technology Support</h3>
+                <p>IT services, software resources, technical support, and digital learning tools</p>
+                <div class="resource-links">
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-wifi"></i>
+                        Campus Wi-Fi
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-download"></i>
+                        Software Downloads
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-tools"></i>
+                        Tech Support
+                    </a>
+                </div>
+                <button class="btn-resource">IT Services</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Emergency Resources -->
+<section class="emergency-section">
+    <div class="container">
+        <h2>Emergency & Support Contacts</h2>
+        <div class="emergency-grid">
+            <div class="emergency-card urgent">
+                <i class="fas fa-ambulance"></i>
+                <h3>Emergency Services</h3>
+                <p class="contact-number">911</p>
+                <p>For immediate emergencies</p>
+            </div>
+            <div class="emergency-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Campus Security</h3>
+                <p class="contact-number">(555) 123-4567</p>
+                <p>24/7 campus safety</p>
+            </div>
+            <div class="emergency-card">
+                <i class="fas fa-first-aid"></i>
+                <h3>Health Emergency</h3>
+                <p class="contact-number">(555) 123-4568</p>
+                <p>Medical emergencies</p>
+            </div>
+            <div class="emergency-card">
+                <i class="fas fa-life-ring"></i>
+                <h3>Crisis Support</h3>
+                <p class="contact-number">(555) 123-4569</p>
+                <p>Mental health crisis line</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-university"></i>
+                    <h2>Campus <span>Connect</span> Hub</h2>
+                </div>
+                <p>Your comprehensive guide to campus resources and support services</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Resources</h3>
+                <ul>
+                    <li><a href="#">Academic Calendar</a></li>
+                    <li><a href="#">Library Database</a></li>
+                    <li><a href="#">Career Center</a></li>
+                    <li><a href="#">Student Portal</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support Services</h3>
+                <ul>
+                    <li><a href="#">Health Services</a></li>
+                    <li><a href="#">Counseling Center</a></li>
+                    <li><a href="#">Disability Services</a></li>
+                    <li><a href="#">IT Help Desk</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Stay Connected</h3>
+                <p>Get updates on resources and support services</p>
+                <form class="newsletter-form">
+                    <label><input type="email" placeholder="Your email address"></label>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <p>&copy; <span id="current-year"></span> Campus Connect Hub. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="JS/resources.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Campus Connect Hub</title>
+    <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-university"></i>
+                <h1>Campus <span>Connect</span> Hub</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html" class="active">Events</a>
+                <a href="clubs&societies.html">Clubs & Societies</a>
+                <a href="resources.html">Student Resources</a>
+                <a href="forum.html">Forum</a>
+                <a href="profile.html" class="btn-login" style="padding: 0.75rem">Profile <i class="fas fa-user"></i></a>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Discover Campus Events</h1>
+            <p>Find and register for exciting events happening around campus</p>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <label><input type="text" id="search-input" placeholder="Search events by name, category, or date..."></label>
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Events Section -->
+<section class="events-section">
+    <div class="container">
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">All Events</button>
+            <button class="filter-tab" data-filter="lecture">Lectures</button>
+            <button class="filter-tab" data-filter="workshop">Workshops</button>
+            <button class="filter-tab" data-filter="social">Social</button>
+            <button class="filter-tab" data-filter="career">Career</button>
+            <button class="filter-tab" data-filter="sports">Sports</button>
+        </div>
+
+        <!-- Events Grid -->
+        <div class="events-grid" id="events-container">
+            <!-- Events will be loaded by JavaScript -->
+        </div>
+
+        <!-- No Results Message -->
+        <div id="no-results" class="no-results">
+            <i class="fas fa-calendar-times"></i>
+            <h3>No events found</h3>
+            <p>Try adjusting your search or filters</p>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more-container">
+            <button id="load-more" class="load-more-btn">Load More Events</button>
+        </div>
+    </div>
+</section>
+
+<!-- Upcoming Highlights -->
+<section class="highlights-section">
+    <div class="container">
+        <h2>Featured Events</h2>
+        <div class="highlights-grid">
+            <div class="highlight-card featured">
+                <div class="highlight-badge">Featured</div>
+                <img src="images/tech-summit.png" alt="Tech Summit">
+                <div class="highlight-content">
+                    <h3>Annual Tech Summit</h3>
+                    <p>Join industry leaders for a day of innovation and networking</p>
+                    <div class="highlight-meta">
+                        <span><i class="fas fa-calendar"></i> May 15, 2024</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Main Auditorium</span>
+                    </div>
+                    <button class="btn-primary">Register Now</button>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <img src="images/career-fair.png" alt="Career Fair">
+                <div class="highlight-content">
+                    <h3>Spring Career Fair</h3>
+                    <p>Connect with top employers and explore job opportunities</p>
+                    <div class="highlight-meta">
+                        <span><i class="fas fa-calendar"></i> April 28, 2024</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Student Center</span>
+                    </div>
+                    <button class="btn-secondary">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-university"></i>
+                    <h2>Campus <span>Connect</span> Hub</h2>
+                </div>
+                <p>Connecting students with campus events and activities</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="clubs&societies.html">Clubs</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Event Categories</h3>
+                <ul>
+                    <li><a href="#">Academic Lectures</a></li>
+                    <li><a href="#">Workshops</a></li>
+                    <li><a href="#">Social Events</a></li>
+                    <li><a href="#">Career Fairs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to get event notifications</p>
+                <form class="newsletter-form">
+                    <label><input type="email" placeholder="Your email address"></label>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Campus Connect Hub. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="JS/events.js"></script>
+</body>
+</html>

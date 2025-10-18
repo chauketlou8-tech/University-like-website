@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Transport System | University Transit</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.html" id="logo">
+            <div class="logo">
+                <img src="Assets/images/logo.png" alt="University Transit Logo">
+                <div class="logo-text">
+                    <h1>University Transit</h1>
+                    <p>Campus Shuttle Services</p>
+                </div>
+            </div>
+        </a>
+
+        <div class="nav-toggle" id="navToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="Booking.html">Book Ride</a></li>
+            <li><a href="Schedule.html">Schedule</a></li>
+            <li><a href="Routes.html">Routes</a></li>
+            <li><a href="Fares.html">Fares</a></li>
+            <li><a href="Admin.html">Admin</a></li>
+            <li class="nav-cta"><a href="Booking.html" class="btn-primary" style="padding: 0.75rem">Book Now</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>University Campus Transport System</h1>
+            <p>Efficient, reliable shuttle services connecting campuses, residences, and key locations across the university.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="window.location.href='Booking.html'">Book Shuttle</button>
+                <button class="btn-secondary" onclick="window.location.href='Schedule.html'">View Schedule</button>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <img src="Assets/icons/Bus4.png" alt="University Shuttle Bus" class="bus-image">
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2>Why Choose Our Shuttle Service?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Punctual Service</h3>
+                <p>Our shuttles run on a strict schedule to ensure you reach your destination on time.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Safe & Secure</h3>
+                <p>All our drivers are certified and vehicles are regularly maintained for your safety.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Multiple Routes</h3>
+                <p>We cover all campuses, student residences, and key locations around the university.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <h3>Affordable Fares</h3>
+                <p>Student discounts and semester passes available for cost-effective transportation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="live-tracker">
+    <div class="container">
+        <h2>Live Shuttle Tracker</h2>
+        <div class="tracker-container">
+            <div class="map-placeholder">
+                <div class="map-overlay">
+                    <p>Interactive campus map with real-time shuttle locations</p>
+                    <button class="btn-secondary" id="viewMapBtn">View Full Map</button>
+                </div>
+            </div>
+            <div class="shuttle-list">
+                <h3>Active Shuttles</h3>
+                <div class="shuttle-item">
+                    <div class="shuttle-info">
+                        <span class="shuttle-id">Shuttle #A12</span>
+                        <span class="shuttle-route">North Campus Loop</span>
+                    </div>
+                    <div class="shuttle-status on-time">On Time</div>
+                </div>
+                <div class="shuttle-item">
+                    <div class="shuttle-info">
+                        <span class="shuttle-id">Shuttle #B07</span>
+                        <span class="shuttle-route">Residence Express</span>
+                    </div>
+                    <div class="shuttle-status delayed">Delayed 5 min</div>
+                </div>
+                <div class="shuttle-item">
+                    <div class="shuttle-info">
+                        <span class="shuttle-id">Shuttle #C23</span>
+                        <span class="shuttle-route">East-West Connector</span>
+                    </div>
+                    <div class="shuttle-status on-time">On Time</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="announcements">
+    <div class="container">
+        <h2>Service Announcements</h2>
+        <div class="announcement-list">
+            <div class="announcement-item">
+                <div class="announcement-date">Oct 15, 2023</div>
+                <h3>Holiday Schedule Update</h3>
+                <p>Shuttle services will operate on a reduced schedule during the fall break (Oct 20-22).</p>
+            </div>
+            <div class="announcement-item">
+                <div class="announcement-date">Oct 10, 2023</div>
+                <h3>New Route Added</h3>
+                <p>Starting November 1st, we're adding a new route connecting the Science Campus to the Arts Quad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>University Transit</h3>
+                <p>Providing safe, reliable transportation for students, faculty, and staff across all university campuses.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="Schedule.html">Schedule</a></li>
+                    <li><a href="Routes.html">Routes & Maps</a></li>
+                    <li><a href="Fares.html">Fares & Passes</a></li>
+                    <li><a href="Booking.html">Book a Ride</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                    <li><i class="fas fa-envelope"></i> transport@university.edu</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Transportation Office, Campus Center</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> University Transit System. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/index.js"></script>
+</body>
+</html>

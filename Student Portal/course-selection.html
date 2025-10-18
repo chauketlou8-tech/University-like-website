@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection - Student Portal</title>
+    <link rel="stylesheet" href="styles/course-selection.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <h1>Student Portal</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="course-selection.html" class="active">Course Selection</a></li>
+                <li><a href="grades.html">Grades</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="main-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Navigation</h3>
+                <button id="closeBtn" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="courses.html"><i class="fas fa-book"></i> Courses</a></li>
+                <li><a href="course-selection.html" class="active"><i class="fas fa-tasks"></i> Course Selection</a></li>
+                <li><a href="grades.html"><i class="fas fa-chart-bar"></i> Grades</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+            </ul>
+        </nav>
+
+        <!-- Course Selection Content -->
+        <div class="dashboard-content">
+            <div class="dashboard-header">
+                <button id="openBtn" class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Course Selection</h1>
+                <div class="user-welcome">
+                    Program: <span id="program-display">Loading...</span>
+                </div>
+            </div>
+
+            <div class="course-selection-container">
+                <div class="selection-info">
+                    <div class="info-card">
+                        <i class="fas fa-info-circle"></i>
+                        <h3>First-Year Course Selection</h3>
+                        <p>Based on your program choices, select your courses for the upcoming semester. You must select at least 4 courses and up to 6 courses.</p>
+                        <div class="selection-stats">
+                            <div class="stat">
+                                <span class="stat-value" id="selected-count">0</span>
+                                <span class="stat-label">Courses Selected</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value" id="required-count">4</span>
+                                <span class="stat-label">Minimum Required</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value" id="credit-count">0</span>
+                                <span class="stat-label">Total Credits</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="programs-container">
+                    <div class="program-section">
+                        <h2><i class="fas fa-star"></i> Primary Program Courses</h2>
+                        <div id="primary-courses" class="courses-grid">
+                            <!-- Primary program courses will be loaded here -->
+                        </div>
+                    </div>
+
+                    <div class="program-section">
+                        <h2><i class="fas fa-star-half-alt"></i> Secondary Program Courses</h2>
+                        <div id="secondary-courses" class="courses-grid">
+                            <!-- Secondary program courses will be loaded here -->
+                        </div>
+                    </div>
+
+                    <div class="program-section">
+                        <h2><i class="fas fa-globe"></i> General Education Courses</h2>
+                        <div id="general-courses" class="courses-grid">
+                            <!-- General education courses will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="selection-actions">
+                    <button id="submit-selection" class="btn-primary" disabled>
+                        <i class="fas fa-check-circle"></i> Submit Course Selection (0/4)
+                    </button>
+                    <button id="reset-selection" class="btn-outline">
+                        <i class="fas fa-redo"></i> Reset Selection
+                    </button>
+                </div>
+
+                <div class="selected-courses-summary">
+                    <h3>Your Selected Courses</h3>
+                    <div id="selected-courses-list" class="selected-list">
+                        <p class="empty-message">No courses selected yet. Please select at least 4 courses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="JS/course-selection.js"></script>
+</body>
+</html>

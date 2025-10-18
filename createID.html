@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Application ID - University Application</title>
+    <link rel="stylesheet" type="text/css" href="styles/createID.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/42f44dae01.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Header -->
+<header class="application-header">
+    <div class="header-container">
+        <div class="logo-section">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="University Logo" class="logo">
+            </a>
+            <div class="university-info">
+                <h1>Example University South Africa</h1>
+                <p class="tagline">Online Application Portal</p>
+            </div>
+        </div>
+        <div class="progress-section">
+            <div class="progress-steps">
+                <div class="step completed">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Login</div>
+                </div>
+                <div class="step active">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Personal Info</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Program Selection</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Review & Submit</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="application-main">
+    <div class="application-container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h2>Create Your Application ID</h2>
+            <p class="page-subtitle">Complete all sections below to create your temporary application account</p>
+        </div>
+
+        <!-- Progress Navigation -->
+        <div class="form-progress">
+            <div class="progress-tabs">
+                <button class="tab-btn active" data-tab="personal">Personal Information</button>
+                <button class="tab-btn" data-tab="academic">Academic Background</button>
+                <button class="tab-btn" data-tab="documents">Supporting Documents</button>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 33%"></div>
+            </div>
+        </div>
+
+        <form id="createIDForm" novalidate>
+            <!-- Personal Information Tab -->
+            <div class="form-tab active" id="personal-tab">
+                <div class="form-section">
+                    <div class="section-header">
+                        <i class="fas fa-user"></i>
+                        <h3>Personal Information</h3>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">
+                                First Name <span class="required">*</span>
+                            </label>
+                            <input type="text" id="firstName" name="firstName" class="form-input" required>
+                            <div class="form-hint">Your legal first name as it appears on official documents</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">
+                                Last Name <span class="required">*</span>
+                            </label>
+                            <input type="text" id="lastName" name="lastName" class="form-input" required>
+                            <div class="form-hint">Your legal surname/family name</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dateOfBirth" class="form-label">
+                                Date of Birth <span class="required">*</span>
+                            </label>
+                            <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-input" required>
+                            <div class="form-hint">DD/MM/YYYY format</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender" class="form-label">Gender</label>
+                            <select id="gender" name="gender" class="form-select">
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Non-binary">Non-binary</option>
+                                <option value="Other">Other</option>
+                                <option value="Prefer not to say">Prefer not to say</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <i class="fas fa-globe"></i>
+                        <h3>Nationality & Identification</h3>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nationality" class="form-label">
+                            Nationality <span class="required">*</span>
+                        </label>
+                        <select id="nationality" name="nationality" class="form-select" required>
+                            <option value="">Select Nationality</option>
+                            <!-- Countries populated by JavaScript -->
+                        </select>
+                    </div>
+
+                    <!-- South African ID Section -->
+                    <div id="saIdSection" class="conditional-section">
+                        <div class="form-group">
+                            <label for="idNumber" class="form-label">
+                                South African ID Number <span class="required">*</span>
+                            </label>
+                            <input type="text" id="idNumber" name="idNumber" class="form-input"
+                                   pattern="[0-9]{13}" placeholder="e.g., 9001015000089">
+                            <div class="form-hint">13-digit ID number (YYYYMMDDSSSSCAZ)</div>
+                        </div>
+                    </div>
+
+                    <!-- International Passport Section -->
+                    <div id="passportSection" class="conditional-section hidden">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="passportNumber" class="form-label">
+                                    Passport Number <span class="required">*</span>
+                                </label>
+                                <input type="text" id="passportNumber" name="passportNumber" class="form-input"
+                                       placeholder="e.g., A12345678">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="passportCountry" class="form-label">
+                                    Passport Issuing Country <span class="required">*</span>
+                                </label>
+                                <select id="passportCountry" name="passportCountry" class="form-select">
+                                    <option value="">Select Country</option>
+                                    <!-- Countries populated by JavaScript -->
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="passportExpiry" class="form-label">
+                                    Passport Expiry Date <span class="required">*</span>
+                                </label>
+                                <input type="date" id="passportExpiry" name="passportExpiry" class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="visaType" class="form-label">Current Visa Type</label>
+                                <select id="visaType" name="visaType" class="form-select">
+                                    <option value="">Select Visa Type</option>
+                                    <option value="Study Visa">Study Visa</option>
+                                    <option value="Tourist Visa">Tourist Visa</option>
+                                    <option value="Work Visa">Work Visa</option>
+                                    <option value="Permanent Residence">Permanent Residence</option>
+                                    <option value="Other">Other</option>
+                                    <option value="Not in South Africa">Not in South Africa</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <i class="fas fa-address-book"></i>
+                        <h3>Contact Information</h3>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                Email Address <span class="required">*</span>
+                            </label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                            <div class="form-hint">This will be your primary contact email</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">
+                                Phone Number <span class="required">*</span>
+                            </label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                            <div class="form-hint">Include country code if international</div>
+                        </div>
+                    </div>
+
+                    <!-- Local Address -->
+                    <div class="address-section">
+                        <h4>Local Address in South Africa</h4>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="address" class="form-label">
+                                    Street Address <span class="required">*</span>
+                                </label>
+                                <input type="text" id="address" name="address" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="city" class="form-label">
+                                    City <span class="required">*</span>
+                                </label>
+                                <input type="text" id="city" name="city" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="postalCode" class="form-label">
+                                    Postal Code <span class="required">*</span>
+                                </label>
+                                <input type="text" id="postalCode" name="postalCode" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="province" class="form-label">
+                                    Province <span class="required">*</span>
+                                </label>
+                                <select id="province" name="province" class="form-select" required>
+                                    <option value="">Select Province</option>
+                                    <option value="Eastern Cape">Eastern Cape</option>
+                                    <option value="Free State">Free State</option>
+                                    <option value="Gauteng">Gauteng</option>
+                                    <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+                                    <option value="Limpopo">Limpopo</option>
+                                    <option value="Mpumalanga">Mpumalanga</option>
+                                    <option value="Northern Cape">Northern Cape</option>
+                                    <option value="North West">North West</option>
+                                    <option value="Western Cape">Western Cape</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- International Address -->
+                    <div id="internationalAddressSection" class="conditional-section hidden">
+                        <h4>Permanent International Address</h4>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="internationalAddress" class="form-label">Street Address</label>
+                                <input type="text" id="internationalAddress" name="internationalAddress" class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="internationalCity" class="form-label">City</label>
+                                <input type="text" id="internationalCity" name="internationalCity" class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="internationalPostalCode" class="form-label">Postal Code</label>
+                                <input type="text" id="internationalPostalCode" name="internationalPostalCode" class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="internationalCountry" class="form-label">Country</label>
+                                <select id="internationalCountry" name="internationalCountry" class="form-select">
+                                    <option value="">Select Country</option>
+                                    <!-- Countries populated by JavaScript -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Demographic Information (Optional)</h3>
+                    </div>
+                    <p class="section-description">This information is collected for statistical reporting purposes only and does not affect your application.</p>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="populationGroup" class="form-label">Population Group</label>
+                            <select id="populationGroup" name="populationGroup" class="form-select">
+                                <option value="">Select Population Group</option>
+                                <option value="Black African">Black African</option>
+                                <option value="Coloured">Coloured</option>
+                                <option value="Indian/Asian">Indian/Asian</option>
+                                <option value="White">White</option>
+                                <option value="Other">Other</option>
+                                <option value="Prefer not to say">Prefer not to say</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="disability" class="form-label">Do you have any disability?</label>
+                            <select id="disability" name="disability" class="form-select">
+                                <option value="">Select Option</option>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                                <option value="Prefer not to say">Prefer not to say</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Background Tab -->
+            <div class="form-tab" id="academic-tab">
+                <div class="form-section">
+                    <div class="section-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>High School Education</h3>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="schoolName" class="form-label">
+                                High School Name <span class="required">*</span>
+                            </label>
+                            <input type="text" id="schoolName" name="schoolName" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="schoolCountry" class="form-label">
+                                School Country <span class="required">*</span>
+                            </label>
+                            <select id="schoolCountry" name="schoolCountry" class="form-select" required>
+                                <option value="">Select Country</option>
+                                <!-- Countries populated by JavaScript -->
+                            </select>
+                        </div>
+
+                        <div id="schoolProvinceSection" class="conditional-section">
+                            <div class="form-group">
+                                <label for="schoolProvince" class="form-label">
+                                    School Province <span class="required">*</span>
+                                </label>
+                                <select id="schoolProvince" name="schoolProvince" class="form-select">
+                                    <option value="">Select Province</option>
+                                    <option value="Eastern Cape">Eastern Cape</option>
+                                    <option value="Free State">Free State</option>
+                                    <option value="Gauteng">Gauteng</option>
+                                    <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+                                    <option value="Limpopo">Limpopo</option>
+                                    <option value="Mpumalanga">Mpumalanga</option>
+                                    <option value="Northern Cape">Northern Cape</option>
+                                    <option value="North West">North West</option>
+                                    <option value="Western Cape">Western Cape</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="schoolRegionSection" class="conditional-section hidden">
+                            <div class="form-group">
+                                <label for="schoolRegion" class="form-label">
+                                    School City/Region <span class="required">*</span>
+                                </label>
+                                <input type="text" id="schoolRegion" name="schoolRegion" class="form-input">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="completionYear" class="form-label">
+                                Year of Completion <span class="required">*</span>
+                            </label>
+                            <select id="completionYear" name="completionYear" class="form-select" required>
+                                <option value="">Select Year</option>
+                                <!-- Years populated by JavaScript -->
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="certificateType" class="form-label">
+                                Type of Certificate <span class="required">*</span>
+                            </label>
+                            <select id="certificateType" name="certificateType" class="form-select" required>
+                                <option value="">Select Certificate</option>
+                                <option value="National Senior Certificate">National Senior Certificate</option>
+                                <option value="IGCSE">IGCSE</option>
+                                <option value="International Baccalaureate">International Baccalaureate</option>
+                                <option value="A-Levels">A-Levels</option>
+                                <option value="American High School Diploma">American High School Diploma</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <i class="fas fa-book"></i>
+                        <h3>Subject Performance</h3>
+                    </div>
+
+                    <div class="subject-performance">
+                        <div class="performance-header">
+                            <h4>Add Your Subjects and Grades</h4>
+                            <p>Include all subjects from your final high school year</p>
+                        </div>
+
+                        <div class="subject-table-container">
+                            <table class="subject-table">
+                                <thead>
+                                <tr>
+                                    <th>Subject <span class="required">*</span></th>
+                                    <th>Level</th>
+                                    <th>Final Grade <span class="required">*</span></th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody id="subjectTableBody">
+                                <!-- Subject rows added dynamically -->
+                                </tbody>
+                            </table>
+                            <button type="button" id="addSubject" class="btn btn-outline">
+                                <i class="fas fa-plus"></i> Add Another Subject
+                            </button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="apsScore" class="form-label">
+                                Admission Point Score (APS) or Equivalent <span class="required">*</span>
+                            </label>
+                            <input type="number" id="apsScore" name="apsScore" class="form-input" min="0" max="42" required>
+                            <div class="form-hint">For international students, provide your country's equivalent score (0-42)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <i class="fas fa-award"></i>
+                        <h3>Additional Qualifications</h3>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="otherQualifications" class="form-label">Other Qualifications/Certificates</label>
+                        <textarea id="otherQualifications" name="otherQualifications" class="form-textarea"
+                                  placeholder="List any additional qualifications, certificates, or achievements you'd like us to consider"></textarea>
+                        <div class="form-hint">Separate each qualification with a comma or new line</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Supporting Documents Tab -->
+            <div class="form-tab" id="documents-tab">
+                <div class="form-section">
+                    <div class="section-header">
+                        <i class="fas fa-file-upload"></i>
+                        <h3>Required Documents</h3>
+                    </div>
+                    <p class="section-description">Please upload certified copies of the following documents. Maximum file size: 2MB per file. Accepted formats: PDF, JPG, PNG.</p>
+
+                    <div class="document-upload-grid">
+                        <!-- ID/Passport Document -->
+                        <div class="upload-card" id="idDocumentCard">
+                            <div class="upload-header">
+                                <i class="fas fa-id-card"></i>
+                                <h4>Certified ID Document</h4>
+                                <span class="required-badge">Required</span>
+                            </div>
+                            <div class="upload-body">
+                                <input type="file" id="idDocument" name="idDocument" class="file-input"
+                                       accept=".pdf,.jpg,.jpeg,.png" required>
+                                <label for="idDocument" class="file-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Choose ID Document</span>
+                                </label>
+                                <div class="upload-preview" id="idPreview"></div>
+                            </div>
+                        </div>
+
+                        <!-- Passport Document -->
+                        <div class="upload-card hidden" id="passportDocumentCard">
+                            <div class="upload-header">
+                                <i class="fas fa-passport"></i>
+                                <h4>Certified Passport</h4>
+                                <span class="required-badge">Required</span>
+                            </div>
+                            <div class="upload-body">
+                                <input type="file" id="passportDocument" name="passportDocument" class="file-input"
+                                       accept=".pdf,.jpg,.jpeg,.png">
+                                <label for="passportDocument" class="file-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Choose Passport</span>
+                                </label>
+                                <div class="upload-preview" id="passportPreview"></div>
+                            </div>
+                        </div>
+
+                        <!-- High School Certificate -->
+                        <div class="upload-card">
+                            <div class="upload-header">
+                                <i class="fas fa-certificate"></i>
+                                <h4>High School Certificate</h4>
+                                <span class="required-badge">Required</span>
+                            </div>
+                            <div class="upload-body">
+                                <input type="file" id="certificate" name="certificate" class="file-input"
+                                       accept=".pdf,.jpg,.jpeg,.png" required>
+                                <label for="certificate" class="file-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Choose Certificate</span>
+                                </label>
+                                <div class="upload-preview" id="certificatePreview"></div>
+                            </div>
+                        </div>
+
+                        <!-- Academic Transcript -->
+                        <div class="upload-card">
+                            <div class="upload-header">
+                                <i class="fas fa-file-alt"></i>
+                                <h4>Academic Transcript</h4>
+                                <span class="required-badge">Required</span>
+                            </div>
+                            <div class="upload-body">
+                                <input type="file" id="transcript" name="transcript" class="file-input"
+                                       accept=".pdf,.jpg,.jpeg,.png" required>
+                                <label for="transcript" class="file-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Choose Transcript</span>
+                                </label>
+                                <div class="upload-preview" id="transcriptPreview"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <i class="fas fa-file-medical"></i>
+                        <h3>Additional Documents</h3>
+                    </div>
+                    <p class="section-description">Upload any additional supporting documents if applicable.</p>
+
+                    <div class="document-upload-grid">
+                        <div class="upload-card">
+                            <div class="upload-header">
+                                <i class="fas fa-receipt"></i>
+                                <h4>Proof of Application Fee Payment</h4>
+                                <span class="optional-badge">Optional</span>
+                            </div>
+                            <div class="upload-body">
+                                <input type="file" id="proofPayment" name="proofPayment" class="file-input"
+                                       accept=".pdf,.jpg,.jpeg,.png">
+                                <label for="proofPayment" class="file-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Choose Payment Proof</span>
+                                </label>
+                                <div class="upload-preview" id="paymentPreview"></div>
+                            </div>
+                        </div>
+
+                        <div class="upload-card">
+                            <div class="upload-header">
+                                <i class="fas fa-folder-plus"></i>
+                                <h4>Other Supporting Documents</h4>
+                                <span class="optional-badge">Optional</span>
+                            </div>
+                            <div class="upload-body">
+                                <input type="file" id="otherDocuments" name="otherDocuments" class="file-input"
+                                       accept=".pdf,.jpg,.jpeg,.png" multiple>
+                                <label for="otherDocuments" class="file-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Choose Files</span>
+                                </label>
+                                <div class="upload-preview" id="otherPreview"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Navigation -->
+            <div class="form-navigation">
+                <button type="button" class="btn btn-outline" id="prevTab" style="display: none;">
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <div class="nav-spacer"></div>
+                <button type="button" class="btn btn-outline" id="cancelBtn">
+                    <i class="fas fa-times"></i> Cancel
+                </button>
+                <button type="button" class="btn btn-primary" id="nextTab">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+                <button type="submit" class="btn btn-success" id="submitBtn" style="display: none;">
+                    <i class="fas fa-check"></i> Create Application ID
+                </button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<!-- Success Modal -->
+<div class="modal" id="successModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Application ID Created Successfully!</h3>
+        </div>
+        <div class="modal-body">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="success-details">
+                <h4>Your Temporary Application ID: <span id="generatedId">APP20240001</span></h4>
+                <p>We've sent your login credentials to your email address. Please save this information for future reference.</p>
+                <div class="credentials-box">
+                    <div class="credential-item">
+                        <strong>Temporary ID:</strong> <span id="displayId">APP20240001</span>
+                    </div>
+                    <div class="credential-item">
+                        <strong>Password:</strong> <span id="displayPassword">••••••••</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" id="continueToProgram">
+                Continue to Program Selection
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="JS/createID.js"></script>
+</body>
+</html>

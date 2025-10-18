@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Schedule | Campus Transport System</title>
+    <link rel="stylesheet" href="CSS/schedule.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" id="logo">
+            <div class="logo">
+                <img src="Assets/images/logo.png" alt="University Transit Logo">
+                <div class="logo-text">
+                    <h1>University Transit</h1>
+                    <p>Campus Shuttle Services</p>
+                </div>
+            </div>
+        </a>
+
+        <div class="nav-toggle" id="navToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Booking.html">Book Ride</a></li>
+            <li><a href="Schedule.html" class="active">Schedule</a></li>
+            <li><a href="Routes.html">Routes</a></li>
+            <li><a href="Fares.html">Fares</a></li>
+            <li><a href="Admin.html">Admin</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="schedule-section">
+    <div class="container">
+        <div class="schedule-header">
+            <h1>Bus Schedule & Timetables</h1>
+            <p>Find real-time departure and arrival times for all campus shuttle routes</p>
+        </div>
+
+        <div class="schedule-controls">
+            <div class="filter-group">
+                <label for="routeFilter">Filter by Route:</label>
+                <select id="routeFilter">
+                    <option value="all">All Routes</option>
+                    <!-- Routes will be populated by JavaScript -->
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="dayFilter">Filter by Day:</label>
+                <select id="dayFilter">
+                    <option value="all">All Days</option>
+                    <option value="weekday">Weekdays</option>
+                    <option value="weekend">Weekends</option>
+                </select>
+            </div>
+            <button id="refreshSchedule" class="btn-primary">
+                <i class="fas fa-sync-alt"></i> Refresh
+            </button>
+        </div>
+
+        <div class="current-time">
+            <i class="fas fa-clock"></i>
+            <span id="currentTime">Loading current time...</span>
+        </div>
+
+        <div class="schedule-container">
+            <div class="schedule-visual">
+                <div class="bus-icon-large">
+                    <div class="bus-windows">
+                        <div class="window"></div>
+                        <div class="window"></div>
+                        <div class="window"></div>
+                        <div class="window"></div>
+                    </div>
+                    <div class="bus-body">
+                        <div class="bus-door"></div>
+                    </div>
+                    <div class="bus-wheels">
+                        <div class="wheel"></div>
+                        <div class="wheel"></div>
+                    </div>
+                </div>
+                <div class="visual-label">Live Schedule Updates</div>
+            </div>
+
+            <div class="timetables-container">
+                <div class="timetable-card" id="scheduleTable">
+                    <!-- Schedule will be populated by JavaScript -->
+                    <div class="loading-message">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading schedule data...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="schedule-notes">
+            <div class="note">
+                <i class="fas fa-info-circle"></i>
+                <p>All times are displayed in 24-hour format. Schedules may vary during holidays and breaks.</p>
+            </div>
+            <div class="note">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>Real-time tracking available for active shuttles. Delays may occur during peak hours.</p>
+            </div>
+        </div>
+
+        <div class="upcoming-departures">
+            <h2>Upcoming Departures (Next 2 Hours)</h2>
+            <div class="departures-list" id="upcomingDepartures">
+                <!-- Upcoming departures will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>University Transit</h3>
+                <p>Providing safe, reliable transportation for students, faculty, and staff across all university campuses.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="Schedule.html">Schedule</a></li>
+                    <li><a href="Routes.html">Routes & Maps</a></li>
+                    <li><a href="Fares.html">Fares & Passes</a></li>
+                    <li><a href="Booking.html">Book a Ride</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                    <li><i class="fas fa-envelope"></i> transport@university.edu</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Transportation Office, Campus Center</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> University Transit System. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/schedule.js"></script>
+</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Selection - University Application</title>
+    <link rel="stylesheet" type="text/css" href="styles/selectDegree.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/42f44dae01.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Header -->
+<header class="application-header">
+    <div class="header-container">
+        <div class="logo-section">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="University Logo" class="logo">
+            </a>
+            <div class="university-info">
+                <h1>Example University South Africa</h1>
+                <p class="tagline">Online Application Portal</p>
+            </div>
+        </div>
+        <div class="progress-section">
+            <div class="progress-steps">
+                <div class="step completed">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Login</div>
+                </div>
+                <div class="step completed">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Personal Info</div>
+                </div>
+                <div class="step active">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Program Selection</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Review & Submit</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="application-main">
+    <div class="application-container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h2>Select Your Program</h2>
+            <p class="page-subtitle">Choose your academic program and study preferences</p>
+        </div>
+
+        <!-- Progress Navigation -->
+        <div class="form-progress">
+            <div class="progress-tabs">
+                <button class="tab-btn active" data-tab="program-level">Program Level</button>
+                <button class="tab-btn" data-tab="faculty">Faculty & Program</button>
+                <button class="tab-btn" data-tab="study-details">Study Details</button>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 33%"></div>
+            </div>
+        </div>
+
+        <form id="programSelectionForm" novalidate>
+            <!-- Program Level Tab -->
+            <div class="form-tab active" id="program-level-tab">
+                <div class="form-section">
+                    <div class="section-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Program Level Selection</h3>
+                    </div>
+                    <p class="section-description">Choose the level of study you wish to pursue at our university.</p>
+
+                    <div class="program-level-cards">
+                        <div class="level-card" data-level="undergraduate">
+                            <div class="card-icon">🎓</div>
+                            <h4>Undergraduate Programs</h4>
+                            <p>Bachelor's degrees and diploma programs for students entering higher education</p>
+                            <ul class="card-features">
+                                <li>3-4 year duration</li>
+                                <li>Direct entry from high school</li>
+                                <li>Foundation programs available</li>
+                            </ul>
+                            <div class="card-actions">
+                                <button type="button" class="btn btn-outline select-level">Select Undergraduate</button>
+                            </div>
+                        </div>
+
+                        <div class="level-card" data-level="postgraduate">
+                            <div class="card-icon">📚</div>
+                            <h4>Postgraduate Programs</h4>
+                            <p>Advanced degrees for students with prior undergraduate qualifications</p>
+                            <ul class="card-features">
+                                <li>Honours, Masters, PhD</li>
+                                <li>Research and coursework options</li>
+                                <li>Professional development</li>
+                            </ul>
+                            <div class="card-actions">
+                                <button type="button" class="btn btn-outline select-level">Select Postgraduate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Faculty & Program Tab -->
+            <div class="form-tab" id="faculty-tab">
+                <div class="form-section">
+                    <div class="section-header">
+                        <i class="fas fa-university"></i>
+                        <h3>Faculty & Program Selection</h3>
+                    </div>
+
+                    <!-- Faculty Selection -->
+                    <div class="form-group">
+                        <label for="faculty" class="form-label">
+                            Select Faculty <span class="required">*</span>
+                        </label>
+                        <select id="faculty" name="faculty" class="form-select" required>
+                            <option value="">Choose a Faculty</option>
+                            <option value="Faculty of Science">Faculty of Science</option>
+                            <option value="Faculty of Engineering">Faculty of Engineering</option>
+                            <option value="Faculty of Commerce">Faculty of Commerce</option>
+                            <option value="Faculty of Health Science">Faculty of Health Sciences</option>
+                            <option value="Faculty of Law">Faculty of Law</option>
+                            <option value="Faculty of Humanities">Faculty of Humanities</option>
+                        </select>
+                        <div class="form-hint">Your choice will determine available programs</div>
+                    </div>
+
+                    <!-- Postgraduate Type Selection -->
+                    <div id="postgradTypeSection" class="conditional-section hidden">
+                        <div class="form-group">
+                            <label class="form-label">Postgraduate Program Type <span class="required">*</span></label>
+                            <div class="type-options">
+                                <label class="option-card">
+                                    <input type="radio" name="postgradType" value="honours" class="option-input">
+                                    <div class="option-content">
+                                        <h5>Honours</h5>
+                                        <p>1-year specialized program</p>
+                                        <span class="option-badge">Coursework</span>
+                                    </div>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="postgradType" value="masters" class="option-input">
+                                    <div class="option-content">
+                                        <h5>Masters</h5>
+                                        <p>Research or coursework</p>
+                                        <span class="option-badge">1-2 years</span>
+                                    </div>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="postgradType" value="phd" class="option-input">
+                                    <div class="option-content">
+                                        <h5>PhD</h5>
+                                        <p>Doctoral research program</p>
+                                        <span class="option-badge">3-4 years</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- First Choice Program Selection -->
+                    <div id="programSelectionSection" class="conditional-section hidden">
+                        <div class="form-group">
+                            <label for="programSearch" class="form-label">
+                                First Choice Program <span class="required">*</span>
+                            </label>
+                            <div class="search-container">
+                                <i class="fas fa-search"></i>
+                                <input type="text" id="programSearch" class="form-input" placeholder="Type to search programs...">
+                                <div class="program-suggestions" id="programSuggestions"></div>
+                            </div>
+                        </div>
+
+                        <div class="selected-program-card hidden" id="selectedProgramCard">
+                            <div class="program-header">
+                                <h4 id="selectedProgramName"></h4>
+                                <span class="program-badge" id="programLevelBadge"></span>
+                            </div>
+                            <div class="program-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span id="programDuration"></span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span id="programType"></span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-tag"></i>
+                                    <span id="programCode"></span>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-text change-program" id="changeProgram">
+                                <i class="fas fa-edit"></i> Change Program
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Second Choice Program Selection -->
+                    <div id="secondChoiceSection" class="conditional-section hidden">
+                        <div class="form-group">
+                            <label for="secondChoice" class="form-label">
+                                Second Choice Program <span class="required">*</span>
+                            </label>
+                            <div class="search-container">
+                                <i class="fas fa-search"></i>
+                                <input type="text" id="secondChoice" class="form-input" placeholder="Type to search second choice programs...">
+                                <div class="program-suggestions" id="secondChoiceSuggestions"></div>
+                            </div>
+                            <div class="form-hint">Select an alternative program in case your first choice is full</div>
+                        </div>
+
+                        <div class="selected-program-card hidden" id="secondChoiceCard">
+                            <div class="program-header">
+                                <h4 id="secondChoiceProgramName"></h4>
+                                <span class="program-badge" id="secondChoiceLevelBadge"></span>
+                            </div>
+                            <div class="program-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span id="secondChoiceDuration"></span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span id="secondChoiceType"></span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-tag"></i>
+                                    <span id="secondChoiceCode"></span>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-text change-program" id="changeSecondChoice">
+                                <i class="fas fa-edit"></i> Change Second Choice
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Research Fields (Postgraduate Masters/PhD) -->
+                    <div id="researchSection" class="conditional-section hidden">
+                        <div class="form-section">
+                            <div class="section-header">
+                                <i class="fas fa-flask"></i>
+                                <h4>Research Information</h4>
+                            </div>
+                            <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label for="researchArea" class="form-label">
+                                        Research Area/Interest <span class="required">*</span>
+                                    </label>
+                                    <input type="text" id="researchArea" name="researchArea" class="form-input"
+                                           placeholder="e.g., Artificial Intelligence, Renewable Energy, Public Health">
+                                    <div class="form-hint">Describe your proposed research area</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="supervisor" class="form-label">Proposed Supervisor</label>
+                                    <input type="text" id="supervisor" name="supervisor" class="form-input"
+                                           placeholder="If you have a specific supervisor in mind">
+                                </div>
+                                <div class="form-group">
+                                    <label for="researchType" class="form-label">Research Type</label>
+                                    <select id="researchType" name="researchType" class="form-select">
+                                        <option value="">Select Type</option>
+                                        <option value="Experimental">Experimental</option>
+                                        <option value="Theoretical">Theoretical</option>
+                                        <option value="Clinical">Clinical</option>
+                                        <option value="Field Research">Field Research</option>
+                                        <option value="Case Study">Case Study</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Study Details Tab -->
+            <div class="form-tab" id="study-details-tab">
+                <div class="form-section">
+                    <div class="section-header">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Study Preferences</h3>
+                    </div>
+
+                    <div class="form-grid">
+                        <!-- Mode of Study -->
+                        <div class="form-group">
+                            <label for="mode" class="form-label">
+                                Mode of Study <span class="required">*</span>
+                            </label>
+                            <select id="mode" name="mode" class="form-select" required>
+                                <option value="">Select Mode</option>
+                                <option value="Full-time">Full-time</option>
+                                <option value="Part-time">Part-time</option>
+                                <option value="Online">Online</option>
+                                <option value="Hybrid">Hybrid (Mixed)</option>
+                            </select>
+                        </div>
+
+                        <!-- Campus Selection -->
+                        <div class="form-group">
+                            <label for="campus" class="form-label">
+                                Preferred Campus <span class="required">*</span>
+                            </label>
+                            <select id="campus" name="campus" class="form-select" required>
+                                <option value="">Select Campus</option>
+                                <option value="Main Campus">Main Campus</option>
+                                <option value="City Campus">City Campus</option>
+                                <option value="West Campus">West Campus</option>
+                                <option value="Medical School">Medical School</option>
+                                <option value="Online">Online Campus</option>
+                            </select>
+                        </div>
+
+                        <!-- Start Year -->
+                        <div class="form-group">
+                            <label for="startYear" class="form-label">
+                                Start Year <span class="required">*</span>
+                            </label>
+                            <select id="startYear" name="startYear" class="form-select" required>
+                                <option value="">Select Year</option>
+                                <!-- Populated by JavaScript -->
+                            </select>
+                        </div>
+
+                        <!-- Intake Period -->
+                        <div class="form-group">
+                            <label for="intake" class="form-label">
+                                Intake Period <span class="required">*</span>
+                            </label>
+                            <select id="intake" name="intake" class="form-select" required>
+                                <option value="">Select Intake</option>
+                                <option value="January">January Intake</option>
+                                <option value="July">July Intake</option>
+                                <option value="Special">Special Intake</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Program Summary -->
+                    <div class="program-summary-card" id="programSummary">
+                        <div class="summary-header">
+                            <h4>Program Summary</h4>
+                            <button type="button" class="btn btn-text" id="editSummary">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                        </div>
+                        <div class="summary-content">
+                            <div class="summary-item">
+                                <strong>Program Level:</strong>
+                                <span id="summaryLevel">Not selected</span>
+                            </div>
+                            <div class="summary-item">
+                                <strong>Faculty:</strong>
+                                <span id="summaryFaculty">Not selected</span>
+                            </div>
+                            <div class="summary-item">
+                                <strong>First Choice:</strong>
+                                <span id="summaryProgram">Not selected</span>
+                            </div>
+                            <div class="summary-item">
+                                <strong>Second Choice:</strong>
+                                <span id="summarySecondChoice">Not selected</span>
+                            </div>
+                            <div class="summary-item">
+                                <strong>Mode:</strong>
+                                <span id="summaryMode">Not selected</span>
+                            </div>
+                            <div class="summary-item">
+                                <strong>Campus:</strong>
+                                <span id="summaryCampus">Not selected</span>
+                            </div>
+                            <div class="summary-item">
+                                <strong>Start Date:</strong>
+                                <span id="summaryStart">Not selected</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Navigation -->
+            <div class="form-navigation">
+                <button type="button" class="btn btn-outline" id="prevTab">
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <div class="nav-spacer"></div>
+                <button type="button" class="btn btn-outline" id="cancelBtn">
+                    <i class="fas fa-times"></i> Cancel
+                </button>
+                <button type="button" class="btn btn-primary" id="nextTab">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+                <button type="submit" class="btn btn-success" id="submitBtn">
+                    <i class="fas fa-check"></i> Save & Continue
+                </button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<!-- Program Details Modal -->
+<div class="modal" id="programModal">
+    <div class="modal-content large">
+        <div class="modal-header">
+            <h3 id="modalProgramName">Program Details</h3>
+            <button class="modal-close" id="modalClose">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="program-detail-grid">
+                <div class="detail-column">
+                    <h4>Program Information</h4>
+                    <div class="detail-list">
+                        <div class="detail-item">
+                            <strong>Program Code:</strong>
+                            <span id="modalCode">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Duration:</strong>
+                            <span id="modalDuration">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Credits:</strong>
+                            <span id="modalCredits">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>NQF Level:</strong>
+                            <span id="modalNqf">-</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-column">
+                    <h4>Admission Requirements</h4>
+                    <div class="requirement-list" id="modalRequirements">
+                        <!-- Requirements populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="detail-column full-width">
+                    <h4>Program Description</h4>
+                    <p id="modalDescription" class="program-description">
+                        Program description will appear here...
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-outline" id="modalCancel">Cancel</button>
+            <button class="btn btn-primary" id="modalSelect">Select This Program</button>
+        </div>
+    </div>
+</div>
+
+<script src="JS/SelectDegree.js"></script>
+</body>
+</html>

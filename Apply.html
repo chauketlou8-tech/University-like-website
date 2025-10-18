@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Portal - University Website</title>
+    <link rel="stylesheet" type="text/css" href="styles/Apply.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/42f44dae01.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Header -->
+<header class="application-header">
+    <div class="header-container">
+        <div class="logo-section">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="University Logo" class="logo">
+            </a>
+            <div class="university-info">
+                <h1>Example University South Africa</h1>
+                <p class="tagline">Online Application Portal</p>
+            </div>
+        </div>
+        <div class="header-actions">
+            <a href="index.html" class="btn btn-outline">Return to Home</a>
+            <a href="contact.html" class="btn btn-text">Need Help?</a>
+        </div>
+    </div>
+</header>
+
+<main class="application-main">
+    <div class="application-container">
+        <!-- Progress Indicator -->
+        <div class="progress-indicator">
+            <div class="progress-steps">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Login</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Application</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Review</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Submit</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Application Header -->
+        <div class="application-header-section">
+            <h2>University Online Application</h2>
+            <p class="welcome-message">Welcome to our application portal. Please select the option that best describes you to get started.</p>
+        </div>
+
+        <!-- Applicant Type Cards -->
+        <div class="applicant-types">
+            <div class="applicant-card">
+                <div class="card-icon">🎓</div>
+                <h3>First-time Applicants</h3>
+                <p>If you don't have a Student number yet, start your online application and create a temporary ID.</p>
+                <div class="card-actions">
+                    <button class="btn btn-primary" id="newApplicantBtn">Start New Application</button>
+                </div>
+            </div>
+
+            <div class="applicant-card">
+                <div class="card-icon">🔐</div>
+                <h3>Returning Applicants</h3>
+                <p>If you have previously started an application or are a former student/alumni.</p>
+                <div class="card-actions">
+                    <a href="Student Portal/Authentication.html" class="btn btn-secondary">Student Portal Login</a>
+                </div>
+            </div>
+
+            <div class="applicant-card">
+                <div class="card-icon">📚</div>
+                <h3>Current Students</h3>
+                <p>Currently enrolled university students applying for additional programs.</p>
+                <div class="card-actions">
+                    <a href="Student Portal/Authentication.html" class="btn btn-secondary">Student Portal Login</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Section -->
+        <section class="login-section" id="loginSection">
+            <div class="login-card">
+                <h3>Sign Into Your Account</h3>
+                <div class="login-form">
+                    <div class="form-group">
+                        <label for="id" class="form-label">Temporary ID or Student Number</label>
+                        <input type="text" id="id" class="form-input" placeholder="Enter your ID" required>
+                        <div class="input-hint">Case sensitive</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" class="form-input" placeholder="Enter your password" required>
+                        <div class="password-toggle">
+                            <i class="fas fa-eye" id="togglePassword"></i>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-full" id="login">
+                        <span class="btn-text">Login to Application</span>
+                        <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Logging in...
+                            </span>
+                    </button>
+
+                    <div class="login-links">
+                        <a href="#" class="link" id="forgotId">Forgot Temporary ID?</a>
+                        <a href="#" class="link" id="forgotPassword">Forgot Password?</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="security-notice">
+                <div class="notice-icon">🔒</div>
+                <div class="notice-content">
+                    <h4>Security Notice</h4>
+                    <p>Your browser must have cookies, JavaScript, and pop-ups enabled. Please ensure your spam filter does not block emails from our institution.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Applicant Section -->
+        <section class="new-applicant-section" id="newApplicantSection" style="display: none;">
+            <div class="applicant-steps">
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">1</div>
+                        <h4>Create Temporary Account</h4>
+                    </div>
+                    <div class="step-content">
+                        <p>Start by creating a temporary ID and password to begin your application process.</p>
+                        <ul class="step-benefits">
+                            <li>Save and return anytime</li>
+                            <li>Track your application status</li>
+                            <li>Receive important updates</li>
+                        </ul>
+                        <button class="btn btn-primary" id="createBtn">
+                            Create Temporary ID
+                        </button>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">2</div>
+                        <h4>Confirm Temporary Password</h4>
+                    </div>
+                    <div class="step-content">
+                        <p>If you've already received a temporary password, confirm it here to continue your application.</p>
+                        <div class="step-requirements">
+                            <strong>You'll need:</strong>
+                            <ul>
+                                <li>Temporary ID</li>
+                                <li>Temporary password sent to your email</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-secondary" id="confirmBtn">
+                            Confirm Temporary Password
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="application-footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Application Support</h4>
+                <div class="support-info">
+                    <p><i class="fas fa-phone"></i> (555) 123-APPLY</p>
+                    <p><i class="fas fa-envelope"></i> applications@university.ac.za</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="admissions.html">Admissions Information</a>
+                    <a href="requirements.html">Application Requirements</a>
+                    <a href="deadlines.html">Application Deadlines</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Technical Support</h4>
+                <p>Experiencing technical issues? Contact our IT support team for assistance with the application portal.</p>
+                <a href="tech-support.html" class="btn btn-text">Get Technical Help</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Example University South Africa. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="accessibility.html">Accessibility</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Loading Overlay -->
+<div class="loading-overlay" id="loadingOverlay" style="display: none;">
+    <div class="loading-content">
+        <div class="spinner"></div>
+        <p>Processing your request...</p>
+    </div>
+</div>
+
+<script src="JS/Apply.js"></script>
+</body>
+</html>

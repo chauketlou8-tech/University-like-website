@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review & Payment - University Application</title>
+    <link rel="stylesheet" type="text/css" href="styles/reviewPayment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/42f44dae01.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Header -->
+<header class="application-header">
+    <div class="header-container">
+        <div class="logo-section">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="University Logo" class="logo">
+            </a>
+            <div class="university-info">
+                <h1>Example University South Africa</h1>
+                <p class="tagline">Online Application Portal</p>
+            </div>
+        </div>
+        <div class="progress-section">
+            <div class="progress-steps">
+                <div class="step completed">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Login</div>
+                </div>
+                <div class="step completed">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Personal Info</div>
+                </div>
+                <div class="step completed">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Program Selection</div>
+                </div>
+                <div class="step active">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Review & Payment</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="application-main">
+    <div class="application-container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h2>Review Your Application</h2>
+            <p class="page-subtitle">Please review your application details and complete the payment to submit</p>
+        </div>
+
+        <!-- Progress Navigation -->
+        <div class="form-progress">
+            <div class="progress-tabs">
+                <button class="tab-btn active" data-tab="review">Application Review</button>
+                <button class="tab-btn" data-tab="payment">Payment</button>
+                <button class="tab-btn" data-tab="confirmation">Confirmation</button>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 33%"></div>
+            </div>
+        </div>
+
+        <form id="reviewPaymentForm" novalidate>
+            <!-- Review Tab -->
+            <div class="form-tab active" id="review-tab">
+                <div class="form-section">
+                    <div class="section-header">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Application Summary</h3>
+                    </div>
+                    <p class="section-description">Please review all your application details carefully before proceeding to payment.</p>
+
+                    <div class="summary-grid">
+                        <!-- Personal Information -->
+                        <div class="summary-card">
+                            <div class="card-header">
+                                <i class="fas fa-user"></i>
+                                <h4>Personal Information</h4>
+                                <button type="button" class="btn btn-text edit-btn" data-section="personal">
+                                    <i class="fas fa-edit"></i> Edit
+                                </button>
+                            </div>
+                            <div class="card-content" id="personalSummary">
+                                <!-- Populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Academic Background -->
+                        <div class="summary-card">
+                            <div class="card-header">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h4>Academic Background</h4>
+                                <button type="button" class="btn btn-text edit-btn" data-section="academic">
+                                    <i class="fas fa-edit"></i> Edit
+                                </button>
+                            </div>
+                            <div class="card-content" id="academicSummary">
+                                <!-- Populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Program Details -->
+                        <div class="summary-card">
+                            <div class="card-header">
+                                <i class="fas fa-university"></i>
+                                <h4>Program Details</h4>
+                                <button type="button" class="btn btn-text edit-btn" data-section="program">
+                                    <i class="fas fa-edit"></i> Edit
+                                </button>
+                            </div>
+                            <div class="card-content" id="programSummary">
+                                <!-- Populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Supporting Documents -->
+                        <div class="summary-card">
+                            <div class="card-header">
+                                <i class="fas fa-file-upload"></i>
+                                <h4>Supporting Documents</h4>
+                                <button type="button" class="btn btn-text edit-btn" data-section="documents">
+                                    <i class="fas fa-edit"></i> Edit
+                                </button>
+                            </div>
+                            <div class="card-content" id="documentsSummary">
+                                <!-- Populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Application Checklist -->
+                    <div class="checklist-section">
+                        <h4>Application Checklist</h4>
+                        <div class="checklist">
+                            <div class="checklist-item completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Personal Information Completed</span>
+                            </div>
+                            <div class="checklist-item completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Academic Background Provided</span>
+                            </div>
+                            <div class="checklist-item completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Program Selection Made</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-circle"></i>
+                                <span>Payment Processing</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-circle"></i>
+                                <span>Application Submission</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Tab -->
+            <div class="form-tab" id="payment-tab">
+                <div class="form-section">
+                    <div class="section-header">
+                        <i class="fas fa-credit-card"></i>
+                        <h3>Payment Information</h3>
+                    </div>
+
+                    <div class="payment-content">
+                        <!-- Fee Breakdown -->
+                        <div class="fee-breakdown-card">
+                            <h4>Application Fee Breakdown</h4>
+                            <div class="fee-items">
+                                <div class="fee-item">
+                                    <span>Application Processing Fee</span>
+                                    <span>R 200.00</span>
+                                </div>
+                                <div class="fee-item">
+                                    <span>Administrative Fee</span>
+                                    <span>R 50.00</span>
+                                </div>
+                                <div class="fee-item discount">
+                                    <span>Early Application Discount</span>
+                                    <span>- R 25.00</span>
+                                </div>
+                                <div class="fee-total">
+                                    <span><strong>Total Amount Due</strong></span>
+                                    <span><strong>R 225.00</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Method Selection -->
+                        <div class="payment-method-section">
+                            <h4>Select Payment Method</h4>
+                            <div class="payment-methods">
+                                <label class="payment-method-card">
+                                    <input type="radio" name="paymentMethod" value="card" checked class="method-input">
+                                    <div class="method-content">
+                                        <div class="method-icon">
+                                            <i class="fas fa-credit-card"></i>
+                                        </div>
+                                        <div class="method-info">
+                                            <h5>Credit/Debit Card</h5>
+                                            <p>Secure online payment</p>
+                                            <div class="method-badges">
+                                                <span class="badge">Visa</span>
+                                                <span class="badge">MasterCard</span>
+                                                <span class="badge">Instant</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+
+                                <label class="payment-method-card">
+                                    <input type="radio" name="paymentMethod" value="bank" class="method-input">
+                                    <div class="method-content">
+                                        <div class="method-icon">
+                                            <i class="fas fa-building-columns"></i>
+                                        </div>
+                                        <div class="method-info">
+                                            <h5>Bank Transfer</h5>
+                                            <p>Direct bank payment</p>
+                                            <div class="method-badges">
+                                                <span class="badge">2-3 Days</span>
+                                                <span class="badge">Secure</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+
+                                <label class="payment-method-card">
+                                    <input type="radio" name="paymentMethod" value="eft" class="method-input">
+                                    <div class="method-content">
+                                        <div class="method-icon">
+                                            <i class="fas fa-exchange-alt"></i>
+                                        </div>
+                                        <div class="method-info">
+                                            <h5>Electronic Funds Transfer</h5>
+                                            <p>Online banking payment</p>
+                                            <div class="method-badges">
+                                                <span class="badge">Instant</span>
+                                                <span class="badge">Secure</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Card Payment Form -->
+                        <div class="payment-form" id="cardForm">
+                            <h4>Card Details</h4>
+                            <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label for="cardNumber" class="form-label">
+                                        Card Number <span class="required">*</span>
+                                    </label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-credit-card"></i>
+                                        <input type="text" id="cardNumber" name="cardNumber" class="form-input"
+                                               placeholder="1234 5678 9012 3456" required maxlength="19">
+                                    </div>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="cardholderName" class="form-label">
+                                        Cardholder Name <span class="required">*</span>
+                                    </label>
+                                    <input type="text" id="cardholderName" name="cardholderName" class="form-input"
+                                           placeholder="As shown on card" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="expiryDate" class="form-label">
+                                        Expiry Date <span class="required">*</span>
+                                    </label>
+                                    <input type="text" id="expiryDate" name="expiryDate" class="form-input"
+                                           placeholder="MM/YY" required maxlength="5">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cvv" class="form-label">
+                                        CVV <span class="required">*</span>
+                                    </label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="text" id="cvv" name="cvv" class="form-input"
+                                               placeholder="123" required maxlength="4">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="security-notice">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Your payment is secured with SSL encryption</span>
+                            </div>
+                        </div>
+
+                        <!-- Bank Transfer Instructions -->
+                        <div class="payment-form hidden" id="bankTransfer">
+                            <h4>Bank Transfer Instructions</h4>
+                            <div class="bank-details-card">
+                                <div class="bank-info">
+                                    <div class="info-row">
+                                        <span class="info-label">Bank Name:</span>
+                                        <span class="info-value">Standard Bank</span>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="info-label">Account Name:</span>
+                                        <span class="info-value">University of Excellence</span>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="info-label">Account Number:</span>
+                                        <span class="info-value">012 345 6789</span>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="info-label">Branch Code:</span>
+                                        <span class="info-value">051 001</span>
+                                    </div>
+                                    <div class="info-row highlight">
+                                        <span class="info-label">Reference Number:</span>
+                                        <span class="info-value" id="bankReference">APP202400001</span>
+                                        <button type="button" class="btn btn-text copy-btn" data-text="APP202400001">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="transfer-note">
+                                    <i class="fas fa-info-circle"></i>
+                                    <p>Please use the reference number above when making the transfer. Your application will be processed once payment is confirmed (2-3 business days).</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- EFT Instructions -->
+                        <div class="payment-form hidden" id="eftForm">
+                            <h4>Electronic Funds Transfer</h4>
+                            <div class="eft-instructions">
+                                <p>You will be redirected to your bank's secure payment portal to complete the transaction.</p>
+                                <div class="bank-logos">
+                                    <div class="bank-logo">ABSA</div>
+                                    <div class="bank-logo">FNB</div>
+                                    <div class="bank-logo">Nedbank</div>
+                                    <div class="bank-logo">Standard Bank</div>
+                                    <div class="bank-logo">Capitec</div>
+                                </div>
+                                <div class="security-notice">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Secure connection to your bank</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Confirmation Tab -->
+            <div class="form-tab" id="confirmation-tab">
+                <div class="form-section">
+                    <div class="section-header">
+                        <i class="fas fa-scale-balanced"></i>
+                        <h3>Declaration & Confirmation</h3>
+                    </div>
+
+                    <div class="confirmation-content">
+                        <!-- Declaration -->
+                        <div class="declaration-card">
+                            <h4>Application Declaration</h4>
+                            <div class="declaration-items">
+                                <label class="declaration-item">
+                                    <input type="checkbox" id="declaration1" name="declaration1" required class="declaration-checkbox">
+                                    <div class="declaration-content">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>I declare that all information provided in this application is true, complete, and accurate to the best of my knowledge.</span>
+                                    </div>
+                                </label>
+
+                                <label class="declaration-item">
+                                    <input type="checkbox" id="declaration2" name="declaration2" required class="declaration-checkbox">
+                                    <div class="declaration-content">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>I understand that providing false information may lead to disqualification or cancellation of admission at any time.</span>
+                                    </div>
+                                </label>
+
+                                <label class="declaration-item">
+                                    <input type="checkbox" id="declaration3" name="declaration3" required class="declaration-checkbox">
+                                    <div class="declaration-content">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>I agree to abide by the rules and regulations of the university if admitted.</span>
+                                    </div>
+                                </label>
+
+                                <label class="declaration-item">
+                                    <input type="checkbox" id="terms" name="terms" required class="declaration-checkbox">
+                                    <div class="declaration-content">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>I have read and agree to the <a href="#" target="_blank">Terms and Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>.</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Final Review -->
+                        <div class="final-review-card">
+                            <h4>Final Application Review</h4>
+                            <div class="review-summary">
+                                <div class="review-item">
+                                    <strong>Application Fee:</strong>
+                                    <span>R 225.00</span>
+                                </div>
+                                <div class="review-item">
+                                    <strong>Payment Method:</strong>
+                                    <span id="reviewPaymentMethod">Credit Card</span>
+                                </div>
+                                <div class="review-item">
+                                    <strong>Application ID:</strong>
+                                    <span id="reviewApplicationId">APP202400001</span>
+                                </div>
+                                <div class="review-item highlight">
+                                    <strong>Total to Pay:</strong>
+                                    <span class="total-amount">R 225.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Success Message (Initially Hidden) -->
+                        <div class="success-message hidden" id="successMessage">
+                            <div class="success-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="success-content">
+                                <h3>Application Submitted Successfully!</h3>
+                                <p>Your application has been received and is being processed. You will receive a confirmation email shortly.</p>
+
+                                <div class="credentials-box">
+                                    <h4>Your Login Credentials</h4>
+                                    <div class="credential-item">
+                                        <strong>Application ID:</strong>
+                                        <span id="successApplicationId">APP202400001</span>
+                                        <button type="button" class="btn btn-text copy-btn" data-target="successApplicationId">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                    </div>
+                                    <div class="credential-item">
+                                        <strong>Password:</strong>
+                                        <span id="successPassword">••••••••</span>
+                                        <button type="button" class="btn btn-text copy-btn" data-target="successPassword">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                    </div>
+                                    <div class="credentials-note">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                        <span>Please save these credentials securely. You will need them to check your application status.</span>
+                                    </div>
+                                </div>
+
+                                <div class="success-actions">
+                                    <button type="button" class="btn btn-outline" id="printCredentials">
+                                        <i class="fas fa-print"></i> Print Credentials
+                                    </button>
+                                    <button type="button" class="btn btn-primary" id="goToDashboard">
+                                        <i class="fas fa-gauge"></i> Go to Application Status
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Navigation -->
+            <div class="form-navigation">
+                <button type="button" class="btn btn-outline" id="prevTab">
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <div class="nav-spacer"></div>
+                <button type="button" class="btn btn-outline" id="saveDraft">
+                    <i class="fas fa-save"></i> Save Draft
+                </button>
+                <button type="button" class="btn btn-primary" id="nextTab">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+                <button type="submit" class="btn btn-success" id="submitBtn">
+                    <i class="fas fa-paper-plane"></i> Submit Application
+                </button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<!-- Loading Overlay -->
+<div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-content">
+        <div class="spinner"></div>
+        <p>Processing your payment...</p>
+    </div>
+</div>
+
+<script src="JS/reviewPayment.js"></script>
+</body>
+</html>

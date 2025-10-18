@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Aid - Example University</title>
+    <link rel="stylesheet" href="styles/financial-aid.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/42f44dae01.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Header Section -->
+<header class="header">
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="University Logo" class="logo">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="departments.html">Departments</a></li>
+                    <li><a href="admissions.html">Admission</a></li>
+                    <li><a href="financial-aid.html" class="active">Financial Aid</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1 class="hero-title">Financial Aid & Scholarships</h1>
+        <p class="hero-subtitle">Making quality education accessible through comprehensive financial support</p>
+        <div class="hero-actions">
+            <button class="btn-primary" id="applyNowBtn">Apply for Financial Aid</button>
+            <button class="btn-outline" id="exploreScholarshipsBtn">Explore Scholarships</button>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="main-content">
+    <!-- Quick Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="85">0</h3>
+                        <p class="stat-label">Students Receive Aid</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="50">0</h3>
+                        <p class="stat-label">Million in Aid Awarded</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="120">0</h3>
+                        <p class="stat-label">Scholarship Programs</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="15">0</h3>
+                        <p class="stat-label">Days Average Processing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aid Types Section -->
+    <section class="aid-types-section">
+        <div class="container">
+            <h2 class="section-title">Types of Financial Aid</h2>
+            <p class="section-subtitle">We offer various financial assistance programs to support your educational journey</p>
+
+            <div class="aid-types-grid">
+                <div class="aid-type-card">
+                    <div class="card-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Scholarships</h3>
+                    <p>Merit-based awards that don't require repayment. Available for academic excellence, sports, and special talents.</p>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check"></i> Academic Excellence Awards</li>
+                        <li><i class="fas fa-check"></i> Sports Scholarships</li>
+                        <li><i class="fas fa-check"></i> Leadership Awards</li>
+                        <li><i class="fas fa-check"></i> Special Talent Grants</li>
+                    </ul>
+                    <button class="card-btn" data-type="scholarships">Learn More</button>
+                </div>
+
+                <div class="aid-type-card">
+                    <div class="card-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Bursaries</h3>
+                    <p>Financial assistance based on financial need. These awards help cover tuition and living expenses.</p>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check"></i> Need-Based Awards</li>
+                        <li><i class="fas fa-check"></i> Full & Partial Bursaries</li>
+                        <li><i class="fas fa-check"></i> Renewable Annually</li>
+                        <li><i class="fas fa-check"></i> Living Expense Support</li>
+                    </ul>
+                    <button class="card-btn" data-type="bursaries">Learn More</button>
+                </div>
+
+                <div class="aid-type-card">
+                    <div class="card-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Student Loans</h3>
+                    <p>Low-interest loan programs with flexible repayment options and grace periods after graduation.</p>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check"></i> Low Interest Rates</li>
+                        <li><i class="fas fa-check"></i> Flexible Repayment</li>
+                        <li><i class="fas fa-check"></i> Grace Periods</li>
+                        <li><i class="fas fa-check"></i> Co-signer Options</li>
+                    </ul>
+                    <button class="card-btn" data-type="loans">Learn More</button>
+                </div>
+
+                <div class="aid-type-card">
+                    <div class="card-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Work-Study Programs</h3>
+                    <p>On-campus employment opportunities that allow you to earn while you learn valuable skills.</p>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check"></i> On-Campus Jobs</li>
+                        <li><i class="fas fa-check"></i> Flexible Hours</li>
+                        <li><i class="fas fa-check"></i> Career Experience</li>
+                        <li><i class="fas fa-check"></i> Skill Development</li>
+                    </ul>
+                    <button class="card-btn" data-type="workstudy">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">Application Process</h2>
+            <p class="section-subtitle">Follow these simple steps to apply for financial aid</p>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Check Eligibility</h3>
+                        <p>Review the requirements for different aid programs and ensure you meet the criteria.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Gather Documents</h3>
+                        <p>Prepare necessary documents including financial statements, academic records, and identification.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Complete Application</h3>
+                        <p>Fill out the financial aid application form with accurate information and required details.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Submit & Track</h3>
+                        <p>Submit your application and track its progress through our online portal.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Receive Decision</h3>
+                        <p>Get notified of your award decision within 2-3 weeks of application submission.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eligibility Calculator Section -->
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-grid">
+                <div class="calculator-info">
+                    <h2>Financial Aid Eligibility Calculator</h2>
+                    <p>Get an estimate of your potential financial aid package based on your family's financial situation and academic achievements.</p>
+                    <div class="calculator-features">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>100% Secure & Confidential</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <span>Takes Only 5 Minutes</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Personalized Estimate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-form">
+                    <form id="eligibilityCalculator">
+                        <div class="form-group">
+                            <label for="householdIncome" class="form-label">Annual Household Income (ZAR)</label>
+                            <input type="number" id="householdIncome" class="form-input" placeholder="Enter annual income" min="0">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="familySize" class="form-label">Family Size</label>
+                            <select id="familySize" class="form-input">
+                                <option value="1">1 person</option>
+                                <option value="2">2 people</option>
+                                <option value="3">3 people</option>
+                                <option value="4" selected>4 people</option>
+                                <option value="5">5 people</option>
+                                <option value="6">6+ people</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="academicPerformance" class="form-label">Academic Performance</label>
+                            <select id="academicPerformance" class="form-input">
+                                <option value="excellent">90%+ Average</option>
+                                <option value="very-good">80-89% Average</option>
+                                <option value="good" selected>70-79% Average</option>
+                                <option value="average">60-69% Average</option>
+                                <option value="below-average">Below 60%</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="programType" class="form-label">Program Type</label>
+                            <select id="programType" class="form-input">
+                                <option value="undergraduate">Undergraduate</option>
+                                <option value="postgraduate">Postgraduate</option>
+                                <option value="doctoral">Doctoral</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-primary calculator-btn">
+                            Calculate Eligibility
+                        </button>
+                    </form>
+
+                    <div class="calculator-result hidden" id="calculatorResult">
+                        <h3>Your Estimated Aid Package</h3>
+                        <div class="result-breakdown">
+                            <div class="result-item">
+                                <span>Scholarship Potential:</span>
+                                <strong id="scholarshipAmount">R 0</strong>
+                            </div>
+                            <div class="result-item">
+                                <span>Bursary Potential:</span>
+                                <strong id="bursaryAmount">R 0</strong>
+                            </div>
+                            <div class="result-item">
+                                <span>Loan Eligibility:</span>
+                                <strong id="loanAmount">R 0</strong>
+                            </div>
+                            <div class="result-item total">
+                                <span>Total Estimated Aid:</span>
+                                <strong id="totalAmount">R 0</strong>
+                            </div>
+                        </div>
+                        <button class="btn-outline" id="applyAidBtn">Apply for Financial Aid</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Find answers to common questions about financial aid</p>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>When is the financial aid application deadline?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Application deadlines vary by program. For the upcoming academic year, the priority deadline is March 1st, with a final deadline of June 30th. Early application is encouraged as some funds are limited.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What documents do I need to apply?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Typically, you'll need: proof of income (recent payslips or tax returns), bank statements, ID documents, academic transcripts, and a personal statement. Specific requirements may vary by aid type.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can international students apply for financial aid?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, international students are eligible for merit-based scholarships and some specific international student bursaries. However, need-based aid is primarily available to South African citizens and permanent residents.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How is financial need determined?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Financial need is calculated based on your family's income, assets, household size, and number of family members in college. We use a standardized methodology to ensure fair assessment.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I receive multiple types of aid?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, students often receive a combination of scholarships, bursaries, and loans. The total aid package cannot exceed the cost of attendance, and some awards may affect eligibility for others.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Apply for Financial Aid?</h2>
+                <p>Start your application today and take the first step toward making your education affordable.</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary" id="startApplicationBtn">Start Application</button>
+                    <button class="btn-outline" id="contactAidOfficeBtn">Contact Aid Office</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="images/logo.png" alt="University Logo" class="footer-logo">
+                <p class="footer-description">
+                    Example University South Africa - Committed to excellence in education,
+                    research, and community engagement.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="departments.html">Departments</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="financial-aid.html">Financial Aid</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-info-footer">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 University Ave, Anytown</p>
+                    <p><i class="fas fa-phone"></i> +27 11 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> financialaid@exampleuniversity.ac.za</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Example University South Africa. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Application Modal -->
+<div class="modal" id="applicationModal">
+    <div class="modal-content large">
+        <button class="modal-close" id="modalCloseBtn">&times;</button>
+        <h2>Financial Aid Application</h2>
+        <p class="modal-subtitle">Please select the type of financial aid you wish to apply for:</p>
+
+        <div class="application-options">
+            <div class="application-option" data-type="scholarship">
+                <i class="fas fa-university"></i>
+                <h3>Scholarships</h3>
+                <p>Merit-based awards for academic excellence and special talents</p>
+            </div>
+            <div class="application-option" data-type="bursary">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>Bursaries</h3>
+                <p>Need-based financial assistance for eligible students</p>
+            </div>
+            <div class="application-option" data-type="loan">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h3>Student Loans</h3>
+                <p>Low-interest loan programs with flexible repayment</p>
+            </div>
+            <div class="application-option" data-type="workstudy">
+                <i class="fas fa-briefcase"></i>
+                <h3>Work-Study</h3>
+                <p>On-campus employment opportunities</p>
+            </div>
+        </div>
+
+        <div class="modal-actions">
+            <button class="btn-outline" id="cancelApplicationBtn">Cancel</button>
+            <button class="btn-primary" id="continueApplicationBtn" disabled>Continue</button>
+        </div>
+    </div>
+</div>
+
+<script src="JS/financial-aid.js"></script>
+</body>
+</html>

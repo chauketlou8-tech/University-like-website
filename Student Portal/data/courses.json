@@ -1,0 +1,302 @@
+{
+  "programs": {
+    "computer-science": [
+      {
+        "name": "Introduction to Programming",
+        "code": "CS101",
+        "instructor": "Dr. Sarah Chen",
+        "credits": 4,
+        "icon": "fas fa-code",
+        "description": "Fundamentals of programming and algorithms. Learn basic programming concepts, problem-solving techniques, and introductory data structures.",
+        "schedule": "Mon/Wed 10:00-11:30",
+        "prerequisites": "None",
+        "level": "first-year"
+      },
+      {
+        "name": "Computer Systems Fundamentals",
+        "code": "CS102",
+        "instructor": "Prof. Michael Rodriguez",
+        "credits": 3,
+        "icon": "fas fa-microchip",
+        "description": "Introduction to computer organization and architecture. Learn about digital logic, computer components, and low-level programming.",
+        "schedule": "Tue/Thu 13:00-14:30",
+        "prerequisites": "None",
+        "level": "first-year"
+      },
+      {
+        "name": "Discrete Mathematics for CS",
+        "code": "CS103",
+        "instructor": "Dr. Emily Watson",
+        "credits": 3,
+        "icon": "fas fa-project-diagram",
+        "description": "Mathematical foundations for computer science. Cover logic, sets, relations, functions, and basic combinatorics.",
+        "schedule": "Mon/Wed/Fri 09:00-10:00",
+        "prerequisites": "None",
+        "level": "first-year"
+      },
+      {
+        "name": "Web Development Fundamentals",
+        "code": "CS104",
+        "instructor": "Prof. James Wilson",
+        "credits": 3,
+        "icon": "fas fa-laptop-code",
+        "description": "Introduction to web technologies. Learn HTML, CSS, and JavaScript to build interactive web applications.",
+        "schedule": "Tue/Thu 15:00-16:30",
+        "prerequisites": "None",
+        "level": "first-year"
+      }
+    ],
+    "mathematics": [
+      {
+        "name": "Calculus I",
+        "code": "MATH101",
+        "instructor": "Dr. Robert Kim",
+        "credits": 4,
+        "icon": "fas fa-calculator",
+        "description": "Differential and integral calculus. Study limits, derivatives, integrals, and their applications.",
+        "schedule": "Mon/Wed/Fri 10:00-11:00",
+        "prerequisites": "None",
+        "level": "first-year"
+      },
+      {
+        "name": "Linear Algebra",
+        "code": "MATH102",
+        "instructor": "Prof. Lisa Thompson",
+        "credits": 3,
+        "icon": "fas fa-vector-square",
+        "description": "Vector spaces and linear transformations. Explore matrices, determinants, eigenvalues, and vector spaces.",
+        "schedule": "Tue/Thu 11:00-12:30",
+        "prerequisites": "None",
+        "level": "first-year"
+      },
+      {
+        "name": "Mathematical Reasoning",
+        "code": "MATH103",
+        "instructor": "Dr. Amanda Park",
+        "credits": 3,
+        "icon": "fas fa-brain",
+        "description": "Introduction to mathematical proof and reasoning. Learn logic, set theory, and proof techniques.",
+        "schedule": "Mon/Wed 13:00-14:30",
+        "prerequisites": "None",
+        "level": "first-year"
+      },
+      {
+        "name": "Statistics I",
+        "code": "MATH104",
+        "instructor": "Prof. David Lee",
+        "credits": 3,
+        "icon": "fas fa-chart-bar",
+        "description": "Introduction to statistical methods. Study probability, descriptive statistics, and basic inferential statistics.",
+        "schedule": "Tue/Thu 09:00-10:30",
+        "prerequisites": "None",
+        "level": "first-year"
+      }
+    ],
+    "computer-science-mathematics": [
+      {
+        "name": "Computational Mathematics",
+        "code": "CSMATH101",
+        "instructor": "Dr. Maria Gonzalez",
+        "credits": 4,
+        "icon": "fas fa-calculator",
+        "description": "Mathematical computing and numerical methods. Learn numerical analysis, computational methods, and mathematical software.",
+        "schedule": "Mon/Wed 10:00-11:30",
+        "prerequisites": "None",
+        "level": "first-year"
+      },
+      {
+        "name": "Programming for Mathematics",
+        "code": "CSMATH102",
+        "instructor": "Prof. Michael Rodriguez",
+        "credits": 3,
+        "icon": "fas fa-code",
+        "description": "Programming concepts with mathematical applications. Focus on algorithms for mathematical problem solving.",
+        "schedule": "Tue/Thu 13:00-14:30",
+        "prerequisites": "None",
+        "level": "first-year"
+      },
+      {
+        "name": "Calculus I",
+        "code": "MATH101",
+        "instructor": "Dr. Robert Kim",
+        "credits": 4,
+        "icon": "fas fa-calculator",
+        "description": "Differential and integral calculus. Study limits, derivatives, integrals, and their applications.",
+        "schedule": "Mon/Wed/Fri 10:00-11:00",
+        "prerequisites": "None",
+        "level": "first-year"
+      },
+      {
+        "name": "Discrete Structures",
+        "code": "CSMATH103",
+        "instructor": "Dr. Amanda Park",
+        "credits": 3,
+        "icon": "fas fa-project-diagram",
+        "description": "Mathematical structures for computer science. Cover logic, sets, relations, functions, and combinatorics.",
+        "schedule": "Mon/Wed 13:00-14:30",
+        "prerequisites": "None",
+        "level": "first-year"
+      }
+    ],
+    "business-administration": [
+      {
+        "name": "Principles of Management",
+        "code": "BUS101",
+        "instructor": "Dr. Jennifer Adams",
+        "credits": 3,
+        "icon": "fas fa-users",
+        "description": "Introduction to management principles and practices. Learn about organizational behavior, leadership, and strategic planning.",
+        "schedule": "Mon/Wed 09:00-10:30",
+        "prerequisites": "None",
+        "level": "first-year"
+      },
+      {
+        "name": "Financial Accounting",
+        "code": "BUS102",
+        "instructor": "Prof. Richard Brown",
+        "credits": 4,
+        "icon": "fas fa-file-invoice-dollar",
+        "description": "Fundamentals of financial accounting. Study accounting principles, financial statements, and analysis.",
+        "schedule": "Tue/Thu 10:00-11:30",
+        "prerequisites": "None",
+        "level": "first-year"
+      },
+      {
+        "name": "Marketing Principles",
+        "code": "BUS103",
+        "instructor": "Dr. Susan Miller",
+        "credits": 3,
+        "icon": "fas fa-bullhorn",
+        "description": "Introduction to marketing concepts and strategies. Learn about market research, consumer behavior, and marketing mix.",
+        "schedule": "Mon/Wed 14:00-15:30",
+        "prerequisites": "None",
+        "level": "first-year"
+      },
+      {
+        "name": "Business Statistics",
+        "code": "BUS104",
+        "instructor": "Prof. Thomas Wilson",
+        "credits": 3,
+        "icon": "fas fa-chart-line",
+        "description": "Statistical methods for business decision making. Study probability, descriptive statistics, and business applications.",
+        "schedule": "Tue/Thu 13:00-14:30",
+        "prerequisites": "None",
+        "level": "first-year"
+      }
+    ],
+    "psychology": [
+      {
+        "name": "Introduction to Psychology",
+        "code": "PSY101",
+        "instructor": "Dr. Patricia Johnson",
+        "credits": 3,
+        "icon": "fas fa-brain",
+        "description": "Overview of psychological principles and research. Study cognition, emotion, development, and social behavior.",
+        "schedule": "Mon/Wed/Fri 11:00-12:00",
+        "prerequisites": "None",
+        "level": "first-year"
+      },
+      {
+        "name": "Research Methods in Psychology",
+        "code": "PSY102",
+        "instructor": "Prof. Kevin Davis",
+        "credits": 4,
+        "icon": "fas fa-clipboard-list",
+        "description": "Introduction to psychological research methods. Learn experimental design, data collection, and analysis.",
+        "schedule": "Tue/Thu 10:00-11:30",
+        "prerequisites": "None",
+        "level": "first-year"
+      },
+      {
+        "name": "Developmental Psychology",
+        "code": "PSY103",
+        "instructor": "Dr. Lisa Martinez",
+        "credits": 3,
+        "icon": "fas fa-baby",
+        "description": "Study of human development across the lifespan. Explore physical, cognitive, and social development.",
+        "schedule": "Mon/Wed 13:00-14:30",
+        "prerequisites": "None",
+        "level": "first-year"
+      },
+      {
+        "name": "Biological Psychology",
+        "code": "PSY104",
+        "instructor": "Prof. Mark Thompson",
+        "credits": 3,
+        "icon": "fas fa-dna",
+        "description": "Introduction to the biological bases of behavior. Study brain structure, neurotransmitters, and physiological psychology.",
+        "schedule": "Tue/Thu 15:00-16:30",
+        "prerequisites": "None",
+        "level": "first-year"
+      }
+    ]
+  },
+  "general-education": [
+    {
+      "name": "Academic Writing",
+      "code": "GEN101",
+      "instructor": "Dr. Elizabeth Carter",
+      "credits": 3,
+      "icon": "fas fa-pen-fancy",
+      "description": "Development of academic writing skills. Focus on argumentation, research, and effective communication.",
+      "schedule": "Mon/Wed 09:00-10:30",
+      "prerequisites": "None",
+      "level": "first-year"
+    },
+    {
+      "name": "Public Speaking",
+      "code": "GEN102",
+      "instructor": "Prof. Robert Johnson",
+      "credits": 3,
+      "icon": "fas fa-microphone",
+      "description": "Development of effective oral communication skills. Practice speech preparation, delivery, and audience analysis.",
+      "schedule": "Tue/Thu 11:00-12:30",
+      "prerequisites": "None",
+      "level": "first-year"
+    },
+    {
+      "name": "Introduction to Sociology",
+      "code": "GEN103",
+      "instructor": "Dr. Maria Garcia",
+      "credits": 3,
+      "icon": "fas fa-users",
+      "description": "Study of human society and social behavior. Explore culture, socialization, and social institutions.",
+      "schedule": "Mon/Wed/Fri 13:00-14:00",
+      "prerequisites": "None",
+      "level": "first-year"
+    },
+    {
+      "name": "Environmental Science",
+      "code": "GEN104",
+      "instructor": "Prof. James Wilson",
+      "credits": 3,
+      "icon": "fas fa-leaf",
+      "description": "Introduction to environmental systems and issues. Study ecosystems, resources, and sustainability.",
+      "schedule": "Tue/Thu 14:00-15:30",
+      "prerequisites": "None",
+      "level": "first-year"
+    },
+    {
+      "name": "Art Appreciation",
+      "code": "GEN105",
+      "instructor": "Dr. Sarah Thompson",
+      "credits": 3,
+      "icon": "fas fa-palette",
+      "description": "Exploration of visual arts across cultures and historical periods. Develop critical analysis skills.",
+      "schedule": "Mon/Wed 15:00-16:30",
+      "prerequisites": "None",
+      "level": "first-year"
+    },
+    {
+      "name": "World History",
+      "code": "GEN106",
+      "instructor": "Prof. David Miller",
+      "credits": 3,
+      "icon": "fas fa-globe-americas",
+      "description": "Survey of world civilizations from ancient times to present. Examine cultural, political, and economic developments.",
+      "schedule": "Tue/Thu 09:00-10:30",
+      "prerequisites": "None",
+      "level": "first-year"
+    }
+  ]
+}

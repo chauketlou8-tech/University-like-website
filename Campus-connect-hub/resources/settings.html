@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Campus Connect Hub</title>
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-university"></i>
+                <h1>Campus <span>Connect</span> Hub</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../events.html">Events</a>
+                <a href="../clubs&societies.html">Clubs & Societies</a>
+                <a href="../resources.html">Student Resources</a>
+                <a href="../forum.html">Forum</a>
+                <a href="../profile.html">Profile</a>
+                <a href="settings.html" class="active" style="padding: 0.75rem">Settings</a>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Settings Hero -->
+<section class="settings-hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Account Settings</h1>
+            <p>Manage your preferences, privacy, and account information</p>
+        </div>
+    </div>
+</section>
+
+<!-- Settings Content -->
+<section class="settings-content">
+    <div class="container">
+        <div class="settings-grid">
+            <!-- Left Navigation -->
+            <div class="settings-nav">
+                <div class="nav-section">
+                    <h3>Account</h3>
+                    <ul>
+                        <li><a href="#profile" class="nav-link active" data-section="profile">Profile Settings</a></li>
+                        <li><a href="#privacy" class="nav-link" data-section="privacy">Privacy & Security</a></li>
+                        <li><a href="#notifications" class="nav-link" data-section="notifications">Notifications</a></li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <h3>Preferences</h3>
+                    <ul>
+                        <li><a href="#appearance" class="nav-link" data-section="appearance">Appearance</a></li>
+                        <li><a href="#accessibility" class="nav-link" data-section="accessibility">Accessibility</a></li>
+                        <li><a href="#language" class="nav-link" data-section="language">Language & Region</a></li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <h3>Data</h3>
+                    <ul>
+                        <li><a href="#data-management" class="nav-link" data-section="data-management">Data Management</a></li>
+                        <li><a href="#export" class="nav-link" data-section="export">Export Data</a></li>
+                        <li><a href="#delete" class="nav-link" data-section="delete">Delete Account</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="settings-main">
+                <!-- Profile Settings -->
+                <div id="profile" class="settings-section active">
+                    <div class="section-header">
+                        <h2>Profile Settings</h2>
+                        <p>Manage your public profile information and account security</p>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Public Profile</h3>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Profile Visibility</h4>
+                                <p>Control who can see your profile information</p>
+                            </div>
+                            <select class="setting-control" id="profile-visibility">
+                                <option value="public">Everyone</option>
+                                <option value="students">Students Only</option>
+                                <option value="private">Only Me</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Email Visibility</h4>
+                                <p>Choose who can see your email address</p>
+                            </div>
+                            <select class="setting-control" id="email-visibility">
+                                <option value="private">Only Me</option>
+                                <option value="club-admins">Club Admins</option>
+                                <option value="students">All Students</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Account Security</h3>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Change Password</h4>
+                                <p>Update your account password for enhanced security</p>
+                            </div>
+                            <button class="btn-secondary btn-change-password">Change Password</button>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Two-Factor Authentication</h4>
+                                <p>Add an extra layer of security to your account</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="two-factor-auth">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Privacy & Security -->
+                <div id="privacy" class="settings-section">
+                    <div class="section-header">
+                        <h2>Privacy & Security</h2>
+                        <p>Control your privacy and security settings</p>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Data Privacy</h3>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Data Collection</h4>
+                                <p>Allow us to collect anonymous usage data to improve the platform</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="data-collection" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Personalized Content</h4>
+                                <p>Show personalized content and recommendations based on your interests</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="personalized-content" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Security</h3>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Login Notifications</h4>
+                                <p>Get notified when someone logs into your account from a new device</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="login-notifications" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Session Timeout</h4>
+                                <p>Automatically log out after 30 minutes of inactivity</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="session-timeout">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications -->
+                <div id="notifications" class="settings-section">
+                    <div class="section-header">
+                        <h2>Notification Settings</h2>
+                        <p>Manage how and when you receive notifications</p>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Email Notifications</h3>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Event Reminders</h4>
+                                <p>Get reminders for upcoming events you've registered for</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="event-reminders" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Club Updates</h4>
+                                <p>Receive updates from your joined clubs</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="club-updates" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Weekly Digest</h4>
+                                <p>Get a weekly summary of campus activities</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="weekly-digest">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Push Notifications</h3>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>New Messages</h4>
+                                <p>Notify when you receive new messages</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="new-messages" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Forum Replies</h4>
+                                <p>Notify when someone replies to your posts</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="forum-replies">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Club Announcements</h4>
+                                <p>Get instant notifications for club announcements</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="club-announcements" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Appearance -->
+                <div id="appearance" class="settings-section">
+                    <div class="section-header">
+                        <h2>Appearance</h2>
+                        <p>Customize how Campus Connect Hub looks and feels</p>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Theme</h3>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Theme Mode</h4>
+                                <p>Choose between light and dark themes</p>
+                            </div>
+                            <select class="setting-control" id="theme-mode">
+                                <option value="light">Light Mode</option>
+                                <option value="dark">Dark Mode</option>
+                                <option value="auto">Auto (System)</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Accent Color</h4>
+                                <p>Choose your preferred accent color</p>
+                            </div>
+                            <select class="setting-control" id="accent-color">
+                                <option value="blue">Blue</option>
+                                <option value="green">Green</option>
+                                <option value="purple">Purple</option>
+                                <option value="orange">Orange</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Layout</h3>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Compact Mode</h4>
+                                <p>Use a more compact layout with less spacing</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="compact-mode">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Font Size</h4>
+                                <p>Adjust the base font size for better readability</p>
+                            </div>
+                            <select class="setting-control" id="font-size">
+                                <option value="small">Small</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="large">Large</option>
+                                <option value="x-large">Extra Large</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accessibility -->
+                <div id="accessibility" class="settings-section">
+                    <div class="section-header">
+                        <h2>Accessibility</h2>
+                        <p>Make Campus Connect Hub more accessible for your needs</p>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Visual Assistance</h3>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>High Contrast Mode</h4>
+                                <p>Increase color contrast for better visibility</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="high-contrast">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Reduced Motion</h4>
+                                <p>Minimize animations and transitions</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="reduced-motion">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Larger Text</h4>
+                                <p>Use larger text throughout the application</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="larger-text">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Navigation</h3>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Keyboard Navigation</h4>
+                                <p>Enable enhanced keyboard navigation support</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="keyboard-nav" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Focus Indicators</h4>
+                                <p>Show clear focus indicators for keyboard navigation</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="focus-indicators" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Language & Region -->
+                <div id="language" class="settings-section">
+                    <div class="section-header">
+                        <h2>Language & Region</h2>
+                        <p>Customize language and regional settings</p>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Language</h3>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Interface Language</h4>
+                                <p>Choose your preferred language for the interface</p>
+                            </div>
+                            <select class="setting-control" id="interface-language">
+                                <option value="en" selected>English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                                <option value="de">Deutsch</option>
+                                <option value="zh">中文</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Regional Settings</h3>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Time Zone</h4>
+                                <p>Set your local time zone for event times</p>
+                            </div>
+                            <select class="setting-control" id="time-zone">
+                                <option value="est">Eastern Time (ET)</option>
+                                <option value="cst">Central Time (CT)</option>
+                                <option value="mst">Mountain Time (MT)</option>
+                                <option value="pst" selected>Pacific Time (PT)</option>
+                                <option value="gmt">Greenwich Mean Time (GMT)</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Date Format</h4>
+                                <p>Choose how dates are displayed</p>
+                            </div>
+                            <select class="setting-control" id="date-format">
+                                <option value="mm/dd/yyyy">MM/DD/YYYY</option>
+                                <option value="dd/mm/yyyy">DD/MM/YYYY</option>
+                                <option value="yyyy-mm-dd">YYYY-MM-DD</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Management -->
+                <div id="data-management" class="settings-section">
+                    <div class="section-header">
+                        <h2>Data Management</h2>
+                        <p>Control how your data is stored and managed</p>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Storage Settings</h3>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Auto-save Drafts</h4>
+                                <p>Automatically save post and message drafts</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="auto-save-drafts" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Cache Duration</h4>
+                                <p>How long to keep cached data</p>
+                            </div>
+                            <select class="setting-control" id="cache-duration">
+                                <option value="1">1 Day</option>
+                                <option value="7" selected>1 Week</option>
+                                <option value="30">1 Month</option>
+                                <option value="90">3 Months</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Data Controls</h3>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Clear Cache</h4>
+                                <p>Remove all locally stored cache data</p>
+                            </div>
+                            <button class="btn-secondary btn-clear-cache">Clear Cache</button>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Reset Preferences</h4>
+                                <p>Reset all settings to their default values</p>
+                            </div>
+                            <button class="btn-secondary btn-reset-preferences">Reset Preferences</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Export Data -->
+                <div id="export" class="settings-section">
+                    <div class="section-header">
+                        <h2>Export Data</h2>
+                        <p>Download your personal data from Campus Connect Hub</p>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Data Export</h3>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Export Format</h4>
+                                <p>Choose the format for your exported data</p>
+                            </div>
+                            <select class="setting-control" id="export-format">
+                                <option value="json">JSON</option>
+                                <option value="csv">CSV</option>
+                                <option value="pdf">PDF</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Data Included</h4>
+                                <p>Select which data to include in the export</p>
+                            </div>
+                            <div class="checkbox-group">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" id="export-profile" checked>
+                                    <span class="checkmark"></span>
+                                    Profile Information
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" id="export-events" checked>
+                                    <span class="checkmark"></span>
+                                    Event Registrations
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" id="export-clubs" checked>
+                                    <span class="checkmark"></span>
+                                    Club Memberships
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" id="export-posts">
+                                    <span class="checkmark"></span>
+                                    Forum Posts
+                                </label>
+                            </div>
+                        </div>
+                        <div class="export-actions">
+                            <button class="btn-primary btn-export-data">
+                                <i class="fas fa-download"></i> Export Data
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Delete Account -->
+                <div id="delete" class="settings-section">
+                    <div class="section-header">
+                        <h2>Delete Account</h2>
+                        <p>Permanently delete your Campus Connect Hub account</p>
+                    </div>
+
+                    <div class="settings-card danger-zone">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Danger Zone</h3>
+                        <div class="danger-warning">
+                            <p><strong>Warning:</strong> This action cannot be undone. This will permanently delete your account and remove all your data from our servers.</p>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Delete Account</h4>
+                                <p>Permanently delete your account and all associated data</p>
+                            </div>
+                            <button class="btn-danger btn-delete-account">
+                                <i class="fas fa-trash"></i> Delete Account
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-university"></i>
+                    <h2>Campus <span>Connect</span> Hub</h2>
+                </div>
+                <p>Your account settings and preferences center</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../events.html">Events</a></li>
+                    <li><a href="../clubs&societies.html">Clubs</a></li>
+                    <li><a href="../resources.html">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Need Help?</h3>
+                <p>Contact our support team for assistance</p>
+                <a href="mailto:support@campusconnect.edu" class="btn-primary">Contact Support</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Campus Connect Hub. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../JS/settings.js"></script>
+</body>
+</html>

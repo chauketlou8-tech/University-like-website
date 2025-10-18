@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <!--Inline script runs immediately before the page renders-->
+    <script>
+        // Redirect before the page loads - use sessionStorage
+        if (sessionStorage.getItem("isLoggedIn") !== "true") {
+            window.location.replace("Authentication.html");
+        }
+    </script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <h1>Student Portal</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="grades.html">Grades</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="main-container">
+        <div class="hero-section">
+            <div class="welcome-content">
+                <h2>Welcome to the Student Portal <span id="username-span"></span></h2>
+                <p>Access your dashboard, manage your courses and view your grades all in one place. Stay connected with your academic journey.</p>
+                <button class="cta-button">Get Started</button>
+            </div>
+            <div class="image-section">
+                <div class="image-container">
+                    <img src="images/Girl.jpeg" alt="Student studying">
+                    <div class="floating-icons">
+                        <i class="fas fa-graduation-cap"></i>
+                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-calendar-days"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-section">
+            <div class="feature-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Progress Tracking</h3>
+                <p>Monitor your academic progress with detailed analytics and insights.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-book"></i>
+                <h3>Course Materials</h3>
+                <p>Access all your course materials, assignments, and resources in one place.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Schedule</h3>
+                <p>View your class schedule, deadlines, and important academic dates.</p>
+            </div>
+        </div>
+
+        <div class="quick-links">
+            <h3>Quick Access</h3>
+            <div class="links-grid">
+                <a href="courses.html" class="quick-link">
+                    <i class="fas fa-book-open"></i>
+                    <span>My Courses</span>
+                </a>
+                <a href="grades.html" class="quick-link">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Grades</span>
+                </a>
+                <a href="dashboard.html" class="quick-link">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="profile.html" class="quick-link">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Student Portal</h4>
+            <p>Your academic companion for success.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="courses.html">Courses</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Student Portal. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="JS/index.js"></script>
+</body>
+</html>

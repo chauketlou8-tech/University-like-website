@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect Hub - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-university"></i>
+                <h1>Campus <span>Connect</span> Hub</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="events.html">Events</a>
+                <a href="clubs&societies.html">Clubs & Societies</a>
+                <a href="resources.html">Student Resources</a>
+                <a href="forum.html">Forum</a>
+                <a href="profile.html" class="btn-login" style="padding: 0.75rem">Profile <i class="fas fa-user"></i></a>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Welcome to Campus Connect Hub</h1>
+                <p>Your one-stop platform for campus events, clubs, resources, and student community</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="setTimeout(()=>{
+                        window.location.href='resources.html'
+                    }, 1000)">Explore Events</button>
+                    <button class="btn-secondary">Join Community</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/home.jpg" alt="Campus Life">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Upcoming Events -->
+<section class="events-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Upcoming Events</h2>
+            <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="events-grid" id="events-container">
+            <!-- Events will be loaded by JavaScript -->
+        </div>
+    </div>
+</section>
+
+<!-- Clubs & Societies -->
+<section class="clubs-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Explore Clubs & Societies</h2>
+            <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="clubs-grid" id="clubs-container">
+            <!-- Clubs will be loaded by JavaScript -->
+        </div>
+    </div>
+</section>
+
+<!-- Quick Resources -->
+<section class="resources-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Student Resources</h2>
+            <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="resources-grid">
+            <div class="resource-card">
+                <i class="fas fa-book"></i>
+                <h3>Study Materials</h3>
+                <p>Access notes, past papers, and study guides</p>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Academic Calendar</h3>
+                <p>Important dates and deadlines</p>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-hands-helping"></i>
+                <h3>Support Services</h3>
+                <p>Counseling, tutoring, and career guidance</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-university"></i>
+                    <h2>Campus <span>Connect</span> Hub</h2>
+                </div>
+                <p>Connecting students, clubs, and resources for a better campus experience.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Clubs</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get updates on events and activities</p>
+                <form class="newsletter-form">
+                    <label><input type="email" placeholder="Your email address"></label>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Campus Connect Hub. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="JS/index.js"></script>
+</body>
+</html>

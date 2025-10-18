@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - University Website</title>
+    <link rel="stylesheet" type="text/css" href="styles/admissions.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/42f44dae01.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Header Section -->
+<header class="admissionsHeader" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="University Logo - Return to homepage" class="logo">
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+
+            <div class="nav-links" id="navLinks" role="navigation" aria-label="Main menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="departments.html" class="nav-link">Departments</a></li>
+                    <li><a href="admissions.html" class="nav-link active" aria-current="page">Admission</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-content">
+        <h1>Begin Your Journey</h1>
+        <p class="header-subtitle">Join our vibrant academic community and discover your potential</p>
+        <div class="header-actions">
+            <a href="#application-process" class="btn btn-outline">Learn More</a>
+            <a href="Apply.html" class="btn btn-primary">Start Application</a>
+        </div>
+    </div>
+</header>
+
+<main class="main-content">
+    <!-- Quick Stats Section -->
+    <section class="stats-section" aria-labelledby="stats-heading">
+        <div class="container">
+            <h2 id="stats-heading" class="sr-only">Admissions Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🎓</div>
+                    <div class="stat-number" data-target="92">0</div>
+                    <div class="stat-label">Acceptance Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-number" data-target="85">0</div>
+                    <div class="stat-label">Receive Financial Aid</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🌍</div>
+                    <div class="stat-number" data-target="60">0</div>
+                    <div class="stat-label">Countries Represented</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-label">Degree Programs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Process Section -->
+    <section class="process-section" id="application-process" aria-labelledby="process-heading">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="process-heading">Application Process</h2>
+                <p class="section-subtitle">Follow these steps to join our academic community</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Complete Application Form</h3>
+                        <p>Fill out our online application with your personal information, academic history, and program preferences.</p>
+                        <ul class="step-details">
+                            <li>Online application portal</li>
+                            <li>No application fee</li>
+                            <li>Save and return anytime</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Submit Academic Records</h3>
+                        <p>Provide official transcripts from all previously attended institutions.</p>
+                        <ul class="step-details">
+                            <li>High school transcripts</li>
+                            <li>College transcripts (if applicable)</li>
+                            <li>Official English translations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Letters of Recommendation</h3>
+                        <p>Submit 2-3 letters from teachers, professors, or professionals who know you well.</p>
+                        <ul class="step-details">
+                            <li>Academic references preferred</li>
+                            <li>Professional references accepted</li>
+                            <li>Digital submission available</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Personal Statement</h3>
+                        <p>Share your story, goals, and why you're interested in our university.</p>
+                        <ul class="step-details">
+                            <li>500-800 words</li>
+                            <li>Discuss your aspirations</li>
+                            <li>Highlight your achievements</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Additional Requirements</h3>
+                        <p>Some programs may require additional materials like portfolios, auditions, or test scores.</p>
+                        <ul class="step-details">
+                            <li>Portfolio (Art/Design programs)</li>
+                            <li>Audition (Performing Arts)</li>
+                            <li>Standardized test scores (optional)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Submit & Track Application</h3>
+                        <p>Review your application and submit. Track your status through our applicant portal.</p>
+                        <ul class="step-details">
+                            <li>Application status updates</li>
+                            <li>Admissions decision timeline</li>
+                            <li>Financial aid information</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deadlines Section -->
+    <section class="deadlines-section" aria-labelledby="deadlines-heading">
+        <div class="container">
+            <h2 id="deadlines-heading">Application Deadlines</h2>
+            <div class="deadlines-grid">
+                <div class="deadline-card">
+                    <h3>Fall Semester</h3>
+                    <div class="deadline-date">August 15</div>
+                    <p>Priority deadline for maximum scholarship consideration</p>
+                    <ul>
+                        <li>Early Decision: November 1</li>
+                        <li>Regular Decision: January 15</li>
+                        <li>Final Deadline: March 1</li>
+                    </ul>
+                </div>
+
+                <div class="deadline-card">
+                    <h3>Spring Semester</h3>
+                    <div class="deadline-date">December 1</div>
+                    <p>Applications for January intake</p>
+                    <ul>
+                        <li>Priority Deadline: October 15</li>
+                        <li>Final Deadline: December 1</li>
+                    </ul>
+                </div>
+
+                <div class="deadline-card">
+                    <h3>Summer Session</h3>
+                    <div class="deadline-date">April 15</div>
+                    <p>Limited programs available for summer start</p>
+                    <ul>
+                        <li>Application Opens: January 15</li>
+                        <li>Final Deadline: April 15</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Section -->
+    <section class="requirements-section" aria-labelledby="requirements-heading">
+        <div class="container">
+            <h2 id="requirements-heading">Admission Requirements</h2>
+            <div class="requirements-grid">
+                <div class="requirement-category">
+                    <h3>Undergraduate</h3>
+                    <ul>
+                        <li>High school diploma or equivalent</li>
+                        <li>Minimum 3.0 GPA (on 4.0 scale)</li>
+                        <li>Personal statement</li>
+                        <li>2 letters of recommendation</li>
+                        <li>Official transcripts</li>
+                    </ul>
+                </div>
+
+                <div class="requirement-category">
+                    <h3>Graduate</h3>
+                    <ul>
+                        <li>Bachelor's degree from accredited institution</li>
+                        <li>Minimum 3.0 GPA</li>
+                        <li>GRE/GMAT scores (program dependent)</li>
+                        <li>3 letters of recommendation</li>
+                        <li>Statement of purpose</li>
+                    </ul>
+                </div>
+
+                <div class="requirement-category">
+                    <h3>International Students</h3>
+                    <ul>
+                        <li>TOEFL 80+ or IELTS 6.5+</li>
+                        <li>Financial documentation</li>
+                        <li>Passport copy</li>
+                        <li>Visa eligibility</li>
+                        <li>Credential evaluation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Aid Section -->
+    <section class="financial-aid-section" aria-labelledby="financial-heading">
+        <div class="container">
+            <div class="financial-content">
+                <div class="financial-text">
+                    <h2 id="financial-heading">Financial Aid & Scholarships</h2>
+                    <p>We believe cost should never be a barrier to quality education. Explore our financial aid options to make your education affordable.</p>
+                    <div class="aid-options">
+                        <div class="aid-option">
+                            <h4>Merit Scholarships</h4>
+                            <p>Up to full tuition based on academic achievement</p>
+                        </div>
+                        <div class="aid-option">
+                            <h4>Need-Based Aid</h4>
+                            <p>Grants and scholarships based on financial need</p>
+                        </div>
+                        <div class="aid-option">
+                            <h4>Work-Study Programs</h4>
+                            <p>On-campus employment opportunities</p>
+                        </div>
+                    </div>
+                    <a href="financial-aid.html" class="btn btn-secondary">Learn About Financial Aid</a>
+                </div>
+                <div class="financial-image">
+                    <img src="images/financial-aid.png" alt="Students discussing financial aid options with counselor">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Apply?</h2>
+                <p>Start your application today and take the first step toward your future.</p>
+                <div class="cta-buttons">
+                    <a href="Apply.html" class="btn btn-primary btn-large">Begin Application</a>
+                    <a href="contact.html" class="btn btn-outline">Contact Admissions</a>
+                </div>
+                <div class="cta-info">
+                    <p><strong>Questions?</strong> Contact our admissions team at <a href="mailto:admissions@university.edu">admissions@university.edu</a> or call (555) 123-4567</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="index.html" class="footer-logo">
+                    <img src="images/logo.png" alt="University Logo">
+                </a>
+                <p class="footer-description">Dedicated to excellence in education, research, and community engagement since 1965.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="departments.html">Departments</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Admissions</h3>
+                <ul class="footer-links">
+                    <li><a href="Apply.html">Apply Now</a></li>
+                    <li><a href="financial-aid.html">Financial Aid</a></li>
+                    <li><a href="campus-tour.html">Campus Tours</a></li>
+                    <li><a href="international.html">International Students</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <address>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 University Ave, City, State 12345</p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> admissions@university.edu</p>
+                </address>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> University Name. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="JS/admissions.js"></script>
+</body>
+</html>

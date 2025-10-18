@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #d9d9d9;
+    padding: 5rem 35rem 5px;
+}
+.container{
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 0;
+}
+.logo img{
+    width: 215px;
+    margin: 0;
+}
+.logo h2{
+    font-size: 1.5rem;
+    padding-right: 20px;
+    white-space: nowrap;
+}
+.logo p{
+    font-size: 0.9rem;
+    color: #333;
+}
+.cautions{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: auto;
+    background: #a9f2ff;
+    padding: 2rem 0 2rem 2rem;
+    border-radius: 10px;
+    gap: 1rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+.cautions p{
+    color: #111;
+    font-size: 1.2rem;
+}
+.caution{
+    display: flex;
+    gap: 5px;
+}
+#text{
+    width: 500px;
+}
+.managePassword{
+    width: 590px;
+}
+.managePassword{
+    padding: 15px;
+}
+.managePassword a{
+    text-decoration: none;
+    color: #1442fb;
+}
+.input-field{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.input-field > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.input-field > div label{
+    display: block;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.input-field > div input{
+    width: 100%;
+    border: 1px solid #666;
+    outline: none;
+    background: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+button{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #a14a08;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: background .25s ease, 1s ease;
+}
+button:hover{
+    background: #8c4006;
+}
+button:active{
+    transform: scale(0.97);
+}
+.screenMode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1.5rem;
+}
+.screenMode h2{
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-family: "Poppins", sans-serif;
+}
+.forgot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.forgot a{
+    text-decoration: none;
+    color: #1442fb;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    color: #333;
+    font-size: 1rem;
+}

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our diverse range of academic courses at University">
+    <title>University Website - Courses</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/courses.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/42f44dae01.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Header Section -->
+<header class="header" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="../index.html" class="logo-link">
+                <img src="images/logo.png" alt="University Logo - Return to homepage" class="logo">
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+
+            <div class="nav-links" id="navLinks" role="navigation" aria-label="Main menu">
+                <ul>
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="departments.html" class="nav-link">Departments</a></li>
+                    <li><a href="admissions.html" class="nav-link">Admission</a></li>
+                    <li><a href="courses.html" class="nav-link active" aria-current="page">Courses</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="courses-hero">
+        <div class="container">
+            <h1>Our Academic Courses</h1>
+            <p>Discover our comprehensive range of undergraduate and graduate programs designed to prepare you for success in your chosen field.</p>
+            <a href="#courses-grid" class="btn btn-primary">Browse Courses</a>
+        </div>
+    </div>
+</header>
+
+<!-- Courses Filter Section -->
+<section class="courses-filter" aria-labelledby="filter-heading">
+    <div class="container">
+        <h2 class="sr-only" id="filter-heading">Course Filter Options</h2>
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="department-filter">Department</label>
+                <select id="department-filter" class="filter-select">
+                    <option value="all">All Departments</option>
+                    <option value="business">Business Administration</option>
+                    <option value="computer-science">Computer Science</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="humanities">Humanities</option>
+                    <option value="sciences">Natural Sciences</option>
+                    <option value="arts">Fine Arts</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="level-filter">Level</label>
+                <select id="level-filter" class="filter-select">
+                    <option value="all">All Levels</option>
+                    <option value="undergraduate">Undergraduate</option>
+                    <option value="graduate">Graduate</option>
+                    <option value="phd">PhD</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="duration-filter">Duration</label>
+                <select id="duration-filter" class="filter-select">
+                    <option value="all">Any Duration</option>
+                    <option value="1">1 Year</option>
+                    <option value="2">2 Years</option>
+                    <option value="3">3 Years</option>
+                    <option value="4">4 Years</option>
+                </select>
+            </div>
+
+            <div class="search-box">
+                <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                <input type="text" id="course-search" class="search-input" placeholder="Search courses...">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Courses Grid Section -->
+<section class="courses-section" aria-labelledby="courses-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="courses-heading">All Courses</h2>
+            <p class="section-subtitle">Explore our comprehensive curriculum across various disciplines</p>
+        </div>
+
+        <div class="courses-grid" id="courses-grid">
+            <!-- Business Courses -->
+            <article class="course-card" data-department="business" data-level="undergraduate" data-duration="4">
+                <div class="course-badge business">Business</div>
+                <div class="course-content">
+                    <h3 class="course-title">Bachelor of Business Administration</h3>
+                    <p class="course-description">Develop essential business skills in management, marketing, finance, and entrepreneurship.</p>
+                    <div class="course-meta">
+                        <span class="course-level"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Undergraduate</span>
+                        <span class="course-duration"><i class="far fa-clock" aria-hidden="true"></i> 4 Years</span>
+                    </div>
+                    <div class="course-actions">
+                        <a href="course-detail.html" class="btn btn-outline">View Details</a>
+                        <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="course-card" data-department="business" data-level="graduate" data-duration="2">
+                <div class="course-badge business">Business</div>
+                <div class="course-content">
+                    <h3 class="course-title">Master of Business Administration (MBA)</h3>
+                    <p class="course-description">Advanced business leadership program focusing on strategic management and innovation.</p>
+                    <div class="course-meta">
+                        <span class="course-level"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Graduate</span>
+                        <span class="course-duration"><i class="far fa-clock" aria-hidden="true"></i> 2 Years</span>
+                    </div>
+                    <div class="course-actions">
+                        <a href="course-detail.html" class="btn btn-outline">View Details</a>
+                        <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Computer Science Courses -->
+            <article class="course-card" data-department="computer-science" data-level="undergraduate" data-duration="4">
+                <div class="course-badge computer-science">Computer Science</div>
+                <div class="course-content">
+                    <h3 class="course-title">Bachelor of Science in Computer Science</h3>
+                    <p class="course-description">Comprehensive program covering algorithms, software development, AI, and data structures.</p>
+                    <div class="course-meta">
+                        <span class="course-level"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Undergraduate</span>
+                        <span class="course-duration"><i class="far fa-clock" aria-hidden="true"></i> 4 Years</span>
+                    </div>
+                    <div class="course-actions">
+                        <a href="course-detail.html" class="btn btn-outline">View Details</a>
+                        <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="course-card" data-department="computer-science" data-level="graduate" data-duration="2">
+                <div class="course-badge computer-science">Computer Science</div>
+                <div class="course-content">
+                    <h3 class="course-title">Master of Science in Data Science</h3>
+                    <p class="course-description">Advanced study in data analysis, machine learning, and big data technologies.</p>
+                    <div class="course-meta">
+                        <span class="course-level"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Graduate</span>
+                        <span class="course-duration"><i class="far fa-clock" aria-hidden="true"></i> 2 Years</span>
+                    </div>
+                    <div class="course-actions">
+                        <a href="course-detail.html" class="btn btn-outline">View Details</a>
+                        <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Engineering Courses -->
+            <article class="course-card" data-department="engineering" data-level="undergraduate" data-duration="4">
+                <div class="course-badge engineering">Engineering</div>
+                <div class="course-content">
+                    <h3 class="course-title">Bachelor of Engineering</h3>
+                    <p class="course-description">Specialize in mechanical, electrical, civil, or chemical engineering with hands-on projects.</p>
+                    <div class="course-meta">
+                        <span class="course-level"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Undergraduate</span>
+                        <span class="course-duration"><i class="far fa-clock" aria-hidden="true"></i> 4 Years</span>
+                    </div>
+                    <div class="course-actions">
+                        <a href="course-detail.html" class="btn btn-outline">View Details</a>
+                        <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="course-card" data-department="engineering" data-level="phd" data-duration="4">
+                <div class="course-badge engineering">Engineering</div>
+                <div class="course-content">
+                    <h3 class="course-title">PhD in Electrical Engineering</h3>
+                    <p class="course-description">Research-focused doctoral program in advanced electrical systems and technologies.</p>
+                    <div class="course-meta">
+                        <span class="course-level"><i class="fas fa-graduation-cap" aria-hidden="true"></i> PhD</span>
+                        <span class="course-duration"><i class="far fa-clock" aria-hidden="true"></i> 4 Years</span>
+                    </div>
+                    <div class="course-actions">
+                        <a href="course-detail.html" class="btn btn-outline">View Details</a>
+                        <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Humanities Courses -->
+            <article class="course-card" data-department="humanities" data-level="undergraduate" data-duration="3">
+                <div class="course-badge humanities">Humanities</div>
+                <div class="course-content">
+                    <h3 class="course-title">Bachelor of Arts in English Literature</h3>
+                    <p class="course-description">Explore literary traditions, critical theory, and creative writing across historical periods.</p>
+                    <div class="course-meta">
+                        <span class="course-level"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Undergraduate</span>
+                        <span class="course-duration"><i class="far fa-clock" aria-hidden="true"></i> 3 Years</span>
+                    </div>
+                    <div class="course-actions">
+                        <a href="course-detail.html" class="btn btn-outline">View Details</a>
+                        <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Sciences Courses -->
+            <article class="course-card" data-department="sciences" data-level="undergraduate" data-duration="4">
+                <div class="course-badge sciences">Sciences</div>
+                <div class="course-content">
+                    <h3 class="course-title">Bachelor of Science in Biology</h3>
+                    <p class="course-description">Comprehensive study of living organisms from molecular to ecosystem levels.</p>
+                    <div class="course-meta">
+                        <span class="course-level"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Undergraduate</span>
+                        <span class="course-duration"><i class="far fa-clock" aria-hidden="true"></i> 4 Years</span>
+                    </div>
+                    <div class="course-actions">
+                        <a href="course-detail.html" class="btn btn-outline">View Details</a>
+                        <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Arts Courses -->
+            <article class="course-card" data-department="arts" data-level="undergraduate" data-duration="3">
+                <div class="course-badge arts">Fine Arts</div>
+                <div class="course-content">
+                    <h3 class="course-title">Bachelor of Fine Arts</h3>
+                    <p class="course-description">Develop your artistic practice in painting, sculpture, digital media, or photography.</p>
+                    <div class="course-meta">
+                        <span class="course-level"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Undergraduate</span>
+                        <span class="course-duration"><i class="far fa-clock" aria-hidden="true"></i> 3 Years</span>
+                    </div>
+                    <div class="course-actions">
+                        <a href="course-detail.html" class="btn btn-outline">View Details</a>
+                        <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="no-results" id="no-results" style="display: none;">
+            <div class="no-results-content">
+                <i class="fas fa-search fa-3x" aria-hidden="true"></i>
+                <h3>No courses found</h3>
+                <p>Try adjusting your filters or search terms</p>
+                <button id="reset-filters" class="btn btn-primary">Reset All Filters</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to Start Your Journey?</h2>
+            <p>Contact our admissions team to learn more about our programs and application process.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-secondary">Contact Admissions</a>
+                <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="../index.html" class="footer-logo">
+                    <img src="images/logo.png" alt="University Logo">
+                </a>
+                <p class="footer-description">Dedicated to excellence in education, research, and community engagement since 1965.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="departments.html">Academic Departments</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <address>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 University Ave, City, State 12345</p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> info@university.edu</p>
+                </address>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> University Name. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="JS/courses.js"></script>
+</body>
+</html>
